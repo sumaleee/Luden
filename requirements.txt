@@ -1,0 +1,13 @@
+# --- Web Scraping & Networking ---
+requests==2.31.0
+beautifulsoup4==4.12.3
+urllib3==2.2.1
+
+# --- AI & Vector Database ---
+chromadb==1.5.0
+sentence-transformers==2.6.1
+latex2sympy==1.0.3
+
+# --- Computer Vision ---
+# pix2tex[gui] 
+# torch  (Usually installed automatically by sentence-transformers/pix2tex)
