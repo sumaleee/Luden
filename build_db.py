@@ -11,7 +11,7 @@ DB_PATH = os.path.join(SCRIPT_DIR, "math_knowledge_base")
 COLLECTION_NAME = "algebra_problems"
 MODEL_NAME = "all-mpnet-base-v2"
 
-# --- AGGRESSIVE NORMALIZATION (The Fix) ---
+# --- AGGRESSIVE NORMALIZATION (regex) ---
 def normalize_aggressive(latex_str):
     if not latex_str: return ""
     text = latex_str.lower()
