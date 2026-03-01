@@ -1,1 +1,0 @@
-2026-02-28 10:19:11,982 | WARNING | SUSPICIOUS OUTPUT | model=arcee-ai/trinity-large-preview:free | input='5y - 3(4 - y) = 2y + 9' | output='5y - 3(4 - y) = 2y + 9'

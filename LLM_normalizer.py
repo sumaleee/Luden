@@ -4,9 +4,7 @@ import json
 import hashlib
 import logging
 from datetime import datetime
-from sympy import expand, symbols, latex
-from sympy.core import Symbol, Integer, Float, Rational
-from sympy.core.traversal import preorder_traversal
+from sympy import expand, symbols, cancel, fraction, Poly
 from latex2sympy2_extended import latex2sympy
 from openai import OpenAI
 
@@ -165,26 +163,26 @@ def to_latex(text):
 # all numeric coefficients, and re-serializes to a normalized LaTeX string.
 # This is the mathematically principled replacement for normalize_aggressive().
 
-def _abstract_numbers(expr):
-    """
-    Walk the SymPy expression tree and:
-    1. Replace all numeric atoms (Integer, Float, Rational) with symbol N.
-    2. Replace all variable symbols with canonical symbol x.
-    This makes structurally identical equations with different variable
-    names or coefficients produce identical canonical strings.
-    Preserves mathematical constants (pi, E) which are not Symbol instances.
-    """
-    N = symbols('N')
-    x = symbols('x')
-    substitutions = {}
-    for atom in preorder_traversal(expr):
-        if isinstance(atom, (Integer, Float, Rational)):
-            if atom != -1:
-                substitutions[atom] = N
-        elif isinstance(atom, Symbol) and atom.name not in ('N', 'x'):
-            # Replace any variable (y, z, t, w, etc.) with x
-            substitutions[atom] = x
-    return expr.subs(substitutions)
+def _poly_signature(expr):
+    from sympy import Abs, symbols, cancel, fraction, Poly, expand
+    try:
+        # Check for absolute value first
+        if expr.has(Abs):
+            return "ABS"
+            
+        cancelled = cancel(expr)
+        numer, denom = fraction(cancelled)
+        free = cancelled.free_symbols
+        var = next(iter(free)) if free else symbols('x')
+        n = Poly(expand(numer), var)
+        d = Poly(expand(denom), var)
+        nd = n.degree() if n.degree() != float('-inf') else 0
+        dd = d.degree() if d.degree() != float('-inf') else 0
+        if dd == 0:
+            return f"P:{nd}"
+        return f"R:{nd}/{dd}"
+    except Exception:
+        return "UNKNOWN"
 
 def _parse_equation(latex_str):
     """
@@ -192,6 +190,13 @@ def _parse_equation(latex_str):
     parsing each side separately, then reassembling.
     Returns a tuple (lhs_expr, rhs_expr) or raises on failure.
     """
+    # Strip display/inline math delimiters: \( \), $$ $$, $ $
+    cleaned = latex_str.strip()
+    cleaned = re.sub(r'^\\\(|\\\)$', '', cleaned).strip()
+    cleaned = re.sub(r'^\$\$|\$\$$', '', cleaned).strip()
+    cleaned = re.sub(r'^\$|\$$', '', cleaned).strip()
+    latex_str = cleaned
+
     # Split on = but not == and not \leq, \geq etc.
     sides = re.split(r'(?<![<>!\\])=(?!=)', latex_str, maxsplit=1)
     if len(sides) == 2:
@@ -202,33 +207,69 @@ def _parse_equation(latex_str):
         # No equals sign - treat as single expression
         return latex2sympy(latex_str), None
 
+def _normalized_latex(lhs, rhs=None):
+    """
+    Rebuild a LaTeX string from SymPy expressions with all variables
+    replaced by canonical x, and both sides fully expanded.
+    Numbers are abstracted to 'C' to prevent embedding distance penalization,
+    but exponents are strictly preserved.
+    """
+    from sympy import latex, symbols, expand, cancel, fraction
+    import re
+    x = symbols('x')
+
+    def normalize_expr(expr):
+        # Substitute all variables with x
+        subs = {s: x for s in expr.free_symbols if s.name != 'x'}
+        expr = expr.subs(subs)
+        # For rational expressions, cancel then keep as fraction
+        # For polynomials, just expand to combine like terms
+        num, den = fraction(expr)
+        if den == 1:
+            return expand(expr)
+        else:
+            return cancel(expr)
+
+    def abstract_latex(expr):
+        # Convert SymPy expression to LaTeX string
+        raw = latex(expr)
+        
+        # Group 1: Matches exponents like ^2 or ^{10} (Kept as-is)
+        # Group 2: Matches coefficients and constants like 5, 14, or 3.14 (Replaced with 'C')
+        def repl(m):
+            if m.group(1):
+                return m.group(1)
+            return 'C'
+            
+        return re.sub(r'(\^\{?\d+\}?)|(\d+(\.\d+)?)', repl, raw)
+
+    lhs_norm = normalize_expr(lhs)
+    if rhs is not None:
+        rhs_norm = normalize_expr(rhs)
+        return abstract_latex(lhs_norm) + " = " + abstract_latex(rhs_norm)
+    
+    return abstract_latex(lhs_norm)
+
 def canonicalize(latex_str):
     """
-    Stage 2: Convert a LaTeX string to a canonical normalized string for embedding.
+    Convert a LaTeX equation string to an embedding-ready string.
+    Format: '[LHS_sig|RHS_sig] <variable-normalized LaTeX>'
 
-    Pipeline:
-        LaTeX -> SymPy tree -> expand() -> abstract coefficients -> re-serialize
-
-    Falls back to the regex normalizer if SymPy parsing fails.
-    All failures are logged to normalizer_failures.log for later analysis.
+    The fingerprint clusters by equation type.
+    The normalized LaTeX gives the embedding model consistent content
+    across problems with different variable names or coefficients.
+    Falls back to regex normalizer if SymPy parsing fails.
     """
     try:
         lhs, rhs = _parse_equation(latex_str)
-
-        # Expand both sides (distributes multiplication, removes factored forms)
-        lhs_expanded = expand(lhs)
-
+        lhs_sig = _poly_signature(lhs)
         if rhs is not None:
-            rhs_expanded = expand(rhs)
-            # Abstract numeric coefficients on both sides
-            lhs_abstract = _abstract_numbers(lhs_expanded)
-            rhs_abstract = _abstract_numbers(rhs_expanded)
-            # Re-serialize to LaTeX string
-            return latex(lhs_abstract) + " = " + latex(rhs_abstract)
+            rhs_sig = _poly_signature(rhs)
+            fingerprint = f"[{lhs_sig}|{rhs_sig}]"
         else:
-            lhs_abstract = _abstract_numbers(lhs_expanded)
-            return latex(lhs_abstract)
-
+            fingerprint = f"[{lhs_sig}]"
+        norm_latex = _normalized_latex(lhs, rhs)
+        return f"{fingerprint} {norm_latex}"
     except Exception as e:
         logging.warning(f"SYMPY PARSE FAILED | input={latex_str!r} | error={e} | falling back to regex")
         return _regex_fallback(latex_str)

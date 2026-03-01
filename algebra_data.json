@@ -1,0 +1,426 @@
+[
+    {
+        "id": "alg_0_1",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveLinearEqns/Prob1.aspx",
+        "problem_latex": "\\(4x - 7\\left( {2 - x} \\right) = 3x + 2\\)",
+        "solution_text": "First, we need to clear out the parenthesis on the left side and then simplify the left side. \\[\\begin{align*}4x - 7\\left( {2 - x} \\right) & = 3x + 2\\\\ 4x - 14 + 7x & = 3x + 2\\\\ 11x - 14 & = 3x + 2\\end{align*}\\] Show Step 2 Now we can subtract 3\\(x\\) and add 14 to both sides to get all the \\(x\\)’s on one side and the terms without an \\(x\\) on the other side. \\[\\begin{align*}11x - 14 & = 3x + 2\\\\ 8x & = 16\\end{align*}\\] Show Step 3 Finally, all we need to do is divide both sides by the coefficient of the \\(x\\) ( i.e. the 8) to get the solution of \\(x = 2\\). Show Step 4 Now all we need to do is check our answer from Step 3 and verify that it is a solution to the equation.  It is important when doing this step to verify by plugging the solution from Step 3 into the equation given in the problem statement. Here is the verification work. \\[\\begin{align*}4\\left( 2 \\right) - 7\\left( {2 - 2} \\right) & \\mathop  = \\limits^? 3\\left( 2 \\right) + 2\\\\ 8 & = 8\\hspace{0.5in}{\\mbox{OK}}\\end{align*}\\] So, we can see that our solution from Step 3 is in fact the solution to the equation.",
+        "topic": "Linear Equations",
+        "chapter": "SolveLinearEqns"
+    },
+    {
+        "id": "alg_0_2",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveLinearEqns/Prob2.aspx",
+        "problem_latex": "\\(2\\left( {w + 3} \\right) - 10 = 6\\left( {32 - 3w} \\right)\\)",
+        "solution_text": "First, we need to clear out the parenthesis on each side and then simplify each side. \\[\\begin{align*}2\\left( {w + 3} \\right) - 10 & = 6\\left( {32 - 3w} \\right)\\\\ 2w + 6 - 10 & = 192 - 18w\\\\ 2w - 4 & = 192 - 18w\\end{align*}\\] Show Step 2 Now we can add 18\\(w\\) and 4 to both sides to get all the \\(w\\)’s on one side and the terms without an \\(w\\) on the other side. \\[\\begin{align*}2w - 4 & = 192 - 18w\\\\ 20w & = 196\\end{align*}\\] Show Step 3 Finally, all we need to do is divide both sides by the coefficient of the \\(w\\) ( i.e. the 20) to get the solution of \\(w = \\frac{{196}}{{20}} = \\frac{{49}}{5}\\). Don’t get excited about solutions that are fractions.  They happen more often than people tend to realize. Show Step 4 Now all we need to do is check our answer from Step 3 and verify that it is a solution to the equation.  It is important when doing this step to verify by plugging the solution from Step 3 into the equation given in the problem statement. Here is the verification work. \\[\\begin{align*}2\\left( {\\frac{{49}}{5} + 3} \\right) - 10 & \\mathop  = \\limits^? 6\\left( {32 - 3\\left( {\\frac{{49}}{5}} \\right)} \\right)\\\\ 2\\left( {\\frac{{64}}{5}} \\right) - 10 & \\mathop  = \\limits^? 6\\left( {\\frac{{13}}{5}} \\right)\\\\ \\frac{{78}}{5} & = \\frac{{78}}{5}\\hspace{0.5in}{\\mbox{OK}}\\end{align*}\\] So, we can see that our solution from Step 3 is in fact the solution to the equation.",
+        "topic": "Linear Equations",
+        "chapter": "SolveLinearEqns"
+    },
+    {
+        "id": "alg_0_3",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveLinearEqns/Prob3.aspx",
+        "problem_latex": "\\(\\displaystyle \\frac{{4 - 2z}}{3} = \\frac{3}{4} - \\frac{{5z}}{6}\\)",
+        "solution_text": "The first step here is to multiply both sides by the LCD, which happens to be 12 for this problem. \\[\\begin{align*}12\\left( {\\frac{{4 - 2z}}{3}} \\right) & = 12\\left( {\\frac{3}{4} - \\frac{{5z}}{6}} \\right)\\\\ 12\\left( {\\frac{{4 - 2z}}{3}} \\right) & = 12\\left( {\\frac{3}{4}} \\right) - 12\\left( {\\frac{{5z}}{6}} \\right)\\\\ 4\\left( {4 - 2z} \\right) & = 3\\left( 3 \\right) - 2\\left( {5z} \\right)\\end{align*}\\] Show Step 2 Now we need to find the solution and so all we need to do is go through the same process that we used in the first two practice problems.  Here is that work. \\[\\begin{align*}4\\left( {4 - 2z} \\right) & = 3\\left( 3 \\right) - 2\\left( {5z} \\right)\\\\ 16 - 8z & = 9 - 10z\\\\ 2z & =  - 7\\\\ z & =  - \\frac{7}{2}\\end{align*}\\] Show Step 3 Now all we need to do is check our answer from Step 2 and verify that it is a solution to the equation.  It is important when doing this step to verify by plugging the solution from Step 2 into the equation given in the problem statement. Here is the verification work. \\[\\begin{align*}\\frac{{4 - 2\\left( { - \\frac{7}{2}} \\right)}}{3} & \\mathop  = \\limits^? \\frac{3}{4} - \\frac{{5\\left( { - \\frac{7}{2}} \\right)}}{6}\\\\  \\frac{{4 + 7}}{3} & \\mathop  = \\limits^? \\frac{3}{4} - \\frac{{ - \\frac{{35}}{2}}}{6}\\\\ \\frac{{11}}{3} & \\mathop  = \\limits^? \\frac{3}{4} + \\frac{{35}}{{12}}\\\\ \\frac{{11}}{3} & = \\frac{{11}}{3}\\hspace{0.2in} {\\mbox{OK}}\\end{align*}\\] So, we can see that our solution from Step 2 is in fact the solution to the equation. Note that the verification work can often be quite messy so don’t get excited about it when it does.  Verification is an important step to always remember for these kinds of problems.  You should always know if you got the answer correct before you check the answers and/or your instructor grades the problem!",
+        "topic": "Linear Equations",
+        "chapter": "SolveLinearEqns"
+    },
+    {
+        "id": "alg_0_4",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveLinearEqns/Prob4.aspx",
+        "problem_latex": "\\(\\displaystyle \\frac{{4t}}{{{t^2} - 25}} = \\frac{1}{{5 - t}}\\)",
+        "solution_text": "Let’s first factor the denominator on the left side so we can identify the LCD.  While we are at it we will also factor a minus out of the denominator on the right side. \\[\\begin{align*}\\frac{{4t}}{{{t^2} - 25}} & = \\frac{1}{{5 - t}}\\\\ \\frac{{4t}}{{\\left( {t - 5} \\right)\\left( {t + 5} \\right)}} & = \\frac{1}{{ - \\left( {t - 5} \\right)}}\\\\  \\frac{{4t}}{{\\left( {t - 5} \\right)\\left( {t + 5} \\right)}} & =  - \\frac{1}{{t - 5}}\\end{align*}\\] So, after factoring the left side and factoring the minus sign out of the denominator on the right side we can quickly see that the LCD for this equation is, \\[\\left( {t - 5} \\right)\\left( {t + 5} \\right)\\] From this we can also see that we’ll need to avoid \\(t = 5\\) and \\(t =  - 5\\).  Remember that we have to avoid division by zero and we will clearly get division by zero with each of these values of \\(t\\). Show Step 2 Next, we need to do find the solution.  To get the solution we’ll need to multiply both sides by the LCD and the go through the same process we used in the first couple of practice problems.  Here is that work. \\[\\begin{align*}\\left( {t - 5} \\right)\\left( {t + 5} \\right)\\left( {\\frac{{4t}}{{\\left( {t - 5} \\right)\\left( {t + 5} \\right)}}} \\right) & =  - \\left( {\\frac{1}{{t - 5}}} \\right)\\left( {t - 5} \\right)\\left( {t + 5} \\right)\\\\ 4t & =  - \\left( {t + 5} \\right)\\\\ 4t & =  - t - 5\\\\ 5t & =  - 5\\\\ t & =  - 1\\end{align*}\\] Show Step 3 Finally, we need to verify that our answer from Step 2 is in fact a solution. The first thing to note is that it is not one of the values of \\(t\\) that we need to avoid.  Having determined that we know that we do have a potential solution ( i.e. it’s not a value of \\(t\\) we need to avoid) all we need to do is plug the solution into the equation given in the problem statement. Here is the verification work. \\[\\begin{align*}\\frac{{4\\left( { - 1} \\right)}}{{{{\\left( { - 1} \\right)}^2} - 25}} & \\mathop  = \\limits^? \\frac{1}{{5 - \\left( { - 1} \\right)}}\\\\ \\frac{{ - 4}}{{1 - 25}} & \\mathop  = \\limits^? \\frac{1}{{5 + 1}}\\\\ \\frac{1}{6} & = \\frac{1}{6}\\hspace{0.5in} {\\mbox{OK}}\\end{align*}\\] So, we can see that our solution from Step 2 is in fact the solution to the equation.",
+        "topic": "Linear Equations",
+        "chapter": "SolveLinearEqns"
+    },
+    {
+        "id": "alg_0_5",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveLinearEqns/Prob5.aspx",
+        "problem_latex": "\\(\\displaystyle \\frac{{3y + 4}}{{y - 1}} = 2 + \\frac{7}{{y - 1}}\\)",
+        "solution_text": "First, we can see that the LCD for this equation is, \\[y - 1\\] From this we can also see that we’ll need to avoid \\(y = 1\\).  Remember that we have to avoid division by zero and we will clearly get division by zero with this value of \\(y\\). Show Step 2 Next, we need to do find the solution.  To get the solution we’ll need to multiply both sides by the LCD and the go through the same process we used in the first couple of practice problems.  Here is that work. \\[\\begin{align*}\\left( {y - 1} \\right)\\left( {\\frac{{3y + 4}}{{y - 1}}} \\right) & = \\left( {2 + \\frac{7}{{y - 1}}} \\right)\\left( {y - 1} \\right)\\\\ 3y + 4 & = 2\\left( {y - 1} \\right) + 7\\\\ 3y + 4 & = 2y + 5\\\\ y & = 1\\end{align*}\\] Show Step 3 Finally, we need to verify that our answer from Step 2 is in fact a solution and in this case there isn’t a lot of work to that process.  We can see that our potential solution from Step 2 is in fact the value of \\(y\\) that we need to avoid and so this equation has no solution . We could also see this if we plugged the value of \\(y\\) from Step 2 into the equation given in the problem statement.  Had we done that we would have gotten a division by zero in two of the terms!  That, of course, is why we needed to avoid \\(y = 1\\) . Note as well that we only have caught the division by zero if we verify by plugging into the equation in the problem statement.  Had we checked in the equation we got by multiplying by the LCD it would have appeared to be a solution!  This is the reason that we need to always check in the equation from the problem statement.",
+        "topic": "Linear Equations",
+        "chapter": "SolveLinearEqns"
+    },
+    {
+        "id": "alg_0_6",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveLinearEqns/Prob6.aspx",
+        "problem_latex": "\\(\\displaystyle \\frac{{5x}}{{3x - 3}} + \\frac{6}{{x + 2}} = \\frac{5}{3}\\)",
+        "solution_text": "Let’s first factor a 3 out of the denominator of the first tem on the left side so we can identify the LCD. \\[\\frac{{5x}}{{3\\left( {x - 1} \\right)}} + \\frac{6}{{x + 2}} = \\frac{5}{3}\\] So, after factoring doing the factoring on the first term we can quickly see that the LCD for this equation is, \\[3\\left( {x - 1} \\right)\\left( {x + 2} \\right)\\] From this we can also see that we’ll need to avoid \\(x = 1\\) and \\(x =  - 2\\).  Remember that we have to avoid division by zero and we will clearly get division by zero with each of these values of \\(x\\). Show Step 2 Next, we need to do find the solution.  To get the solution we’ll need to multiply both sides by the LCD and the go through the same process we used in the first couple of practice problems.  Here is that work. \\[\\begin{align*}3\\left( {x - 1} \\right)\\left( {x + 2} \\right)\\left( {\\frac{{5x}}{{3\\left( {x - 1} \\right)}} + \\frac{6}{{x + 2}}} \\right) & = \\left( {\\frac{5}{3}} \\right)\\left[ {3\\left( {x - 1} \\right)\\left( {x + 2} \\right)} \\right]\\\\ 5x\\left( {x + 2} \\right) + 3\\left( {x - 1} \\right)\\left( 6 \\right) & = 5\\left( {x - 1} \\right)\\left( {x + 2} \\right)\\\\ 5{x^2} + 10x + 18\\left( {x - 1} \\right) & = 5\\left( {{x^2} + x - 2} \\right)\\\\ 5{x^2} + 10x + 18x - 18 & = 5{x^2} + 5x - 10\\\\ 28x - 18 & = 5x - 10\\\\ 23x & = 8\\\\  x & = \\frac{8}{{23}}\\end{align*}\\] Show Step 3 Finally, we need to verify that our answer from Step 2 is in fact a solution. The first thing to note is that it is not one of the values of \\(x\\) that we need to avoid.  Having determined that we know that we do have a potential solution ( i.e. it’s not a value of \\(x\\) we need to avoid) all we need to do is plug the solution into the equation given in the problem statement. Here is the verification work. \\[\\begin{align*}\\frac{{5\\left( {\\frac{8}{{23}}} \\right)}}{{3\\left( {\\frac{8}{{23}}} \\right) - 3}} + \\frac{6}{{\\left( {\\frac{8}{{23}}} \\right) + 2}}& \\mathop  = \\limits^? \\frac{5}{3}\\\\ \\frac{{\\frac{{40}}{{23}}}}{{ - \\frac{{45}}{{23}}}} + \\frac{6}{{\\frac{{54}}{{23}}}} & \\mathop  = \\limits^? \\frac{5}{3}\\\\  - \\,\\frac{8}{9} + \\frac{{23}}{9} & \\mathop  = \\limits^? \\frac{5}{3}\\\\ \\frac{5}{3} & = \\frac{5}{3}\\hspace{0.5in} {\\mbox{OK}}\\end{align*}\\] So, we can see that our solution from Step 2 is in fact the solution to the equation. With this problem we have seen that both the solution and the verification step can be somewhat “messy”.  That will happen on occasion and we shouldn’t get excited about it when it does.  It is just the way these problems work on occasion.",
+        "topic": "Linear Equations",
+        "chapter": "SolveLinearEqns"
+    },
+    {
+        "id": "alg_1_1",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob1.aspx",
+        "problem_latex": "\\({u^2} - 5u - 14 = 0\\)",
+        "solution_text": "Not much to this problem.  We already have zero on one side of the equation, which we need to proceed with this problem.  Therefore, all we need to do is actually factor the quadratic. \\[\\left( {u + 2} \\right)\\left( {u - 7} \\right) = 0\\] Show Step 2 Now all we need to do is use the zero factor property to get, \\[\\begin{array}{*{20}{c}}{u + 2 = 0}\\\\{u =  - 2}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{u - 7 = 0}\\\\{u = 7}\\end{array}\\] Therefore the two solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{u =  - 2\\,\\,{\\mbox{and  }}u = 7}}\\) We’ll leave it to you to verify that they really are solutions if you’d like to by plugging them back into the equation.",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_2",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob2.aspx",
+        "problem_latex": "\\({x^2} + 15x =  - 50\\)",
+        "solution_text": "The first thing we need to do is get everything on one side of the equation and then factor the quadratic. \\[\\begin{align*}{x^2} + 15x + 50 & = 0\\\\  \\left( {x + 5} \\right)\\left( {x + 10} \\right) & = 0\\end{align*}\\] Show Step 2 Now all we need to do is use the zero factor property to get, \\[\\begin{array}{*{20}{c}}{x + 5 = 0}\\\\{x =  - 5}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{x + 10 = 0}\\\\{x =  - 10}\\end{array}\\] Therefore the two solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - 5\\,\\,{\\mbox{and  }}x =  - 10}}\\) We’ll leave it to you to verify that they really are solutions if you’d like to by plugging them back into the equation.",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_3",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob3.aspx",
+        "problem_latex": "\\({y^2} = 11y - 28\\)",
+        "solution_text": "The first thing we need to do is get everything on one side of the equation and then factor the quadratic. \\[\\begin{align*}{y^2} - 11y + 28 & = 0\\\\ \\left( {y - 4} \\right)\\left( {y - 7} \\right) & = 0\\end{align*}\\] Show Step 2 Now all we need to do is use the zero factor property to get, \\[\\begin{array}{*{20}{c}}{y - 4 = 0}\\\\{y = 4}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{y - 7 = 0}\\\\{y = 7}\\end{array}\\] Therefore the two solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{y = 4\\,\\,{\\mbox{and  }}y = 7}}\\) We’ll leave it to you to verify that they really are solutions if you’d like to by plugging them back into the equation.",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_4",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob4.aspx",
+        "problem_latex": "\\(19x = 7 - 6{x^2}\\)",
+        "solution_text": "The first thing we need to do is get everything on one side of the equation and then factor the quadratic. \\[\\begin{align*}6{x^2} + 19x - 7 & = 0\\\\ \\left( {3x - 1} \\right)\\left( {2x + 7} \\right) & = 0\\end{align*}\\] Show Step 2 Now all we need to do is use the zero factor property to get, \\[\\begin{array}{*{20}{c}}{3x - 1 = 0}\\\\{\\displaystyle x = \\frac{1}{3}}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{2x + 7 = 0}\\\\{\\displaystyle x =  - \\frac{7}{2}}\\end{array}\\] Therefore the two solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = \\frac{1}{3}\\,\\,{\\mbox{and  }}x =  - \\frac{7}{2}}}\\) We’ll leave it to you to verify that they really are solutions if you’d like to by plugging them back into the equation.",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_5",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob5.aspx",
+        "problem_latex": "\\(6{w^2} - w = 5\\)",
+        "solution_text": "The first thing we need to do is get everything on one side of the equation and then factor the quadratic. \\[\\begin{align*}6{w^2} - w - 5 & = 0\\\\ \\left( {6w + 5} \\right)\\left( {w - 1} \\right) & = 0\\end{align*}\\] Show Step 2 Now all we need to do is use the zero factor property to get, \\[\\begin{array}{*{20}{c}}{6w + 5 = 0}\\\\{\\displaystyle w =  - \\frac{5}{6}}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{w - 1 = 0}\\\\{w = 1}\\end{array}\\] Therefore the two solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{w =  - \\frac{5}{6}\\,\\,{\\mbox{and  }}w = 1}}\\) We’ll leave it to you to verify that they really are solutions if you’d like to by plugging them back into the equation.",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_6",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob6.aspx",
+        "problem_latex": "\\({z^2} - 16z + 61 = 2z - 20\\)",
+        "solution_text": "The first thing we need to do is get everything on one side of the equation and then factor the quadratic. \\[\\begin{align*}{z^2} - 18z + 81 & = 0\\\\ {\\left( {z - 9} \\right)^2} & = 0\\end{align*}\\] Show Step 2 From the factored form we can quickly see that the solution is  : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{z = 9}}\\]",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_7",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob7.aspx",
+        "problem_latex": "\\(12{x^2} = 25x\\)",
+        "solution_text": "The first thing we need to do is get everything on one side of the equation and then factor the quadratic. \\[\\begin{align*}12{x^2} - 25x & = 0\\\\ x\\left( {12x - 25} \\right) & = 0\\end{align*}\\] Make sure that you do not just cancel an \\(x\\) from both sides of the equation! Show Step 2 Now all we need to do is use the zero factor property to get, \\[\\begin{array}{*{20}{c}}{x = 0}\\\\{}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{12x - 25 = 0}\\\\{\\displaystyle x = \\frac{{25}}{{12}}}\\end{array}\\] Therefore the two solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 0\\,\\,{\\mbox{and  }}x = \\frac{{25}}{{12}}}}\\) Note that if we’d canceled an \\(x\\) from both sides of the equation in the first step we would have missed the solution \\(x = 0\\)!",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_8",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob8.aspx",
+        "problem_latex": "\\[{x^4} - 2{x^3} - 3{x^2} = 0\\]",
+        "solution_text": "Do not let the fact that this equation is not a quadratic equation convince you that you can’t do it!  Note that we can factor an \\({x^2}\\)out of the equation.  Doing that gives, \\[{x^2}\\left( {{x^2} - 2x - 3} \\right) = 0\\] The quantity in the parenthesis is a quadratic and we can factor it.  The full factoring of the equation is then, \\[{x^2}\\left( {x - 3} \\right)\\left( {x + 1} \\right) = 0\\] Show Step 2 Now all we need to do is use the zero factor property to get, \\[\\begin{array}{*{20}{c}}{{x^2} = 0}\\\\{x = 0}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{x - 3 = 0}\\\\{x = 3}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{x + 1 = 0}\\\\{x =  - 1}\\end{array}\\] Therefore the three solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 0,\\,\\,x = 3\\,\\,{\\mbox{and  }}x =  - 1}}\\)",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_9",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob9.aspx",
+        "problem_latex": "\\[{t^5} = 9{t^3}\\]",
+        "solution_text": "Do not let the fact that this equation is not a quadratic equation convince you that you can’t do it!  Note that we move both terms to one side we can factor a \\({t^3}\\)out of the equation.  Doing that gives, \\[\\begin{align*}{t^5} - 9{t^3} & = 0\\\\ {t^3}\\left( {{t^2} - 9} \\right) & = 0\\end{align*}\\] The quantity in the parenthesis is a quadratic and we can factor it.  The full factoring of the equation is then, \\[{t^3}\\left( {t - 3} \\right)\\left( {t + 3} \\right) = 0\\] Show Step 2 Now all we need to do is use the zero factor property to get, \\[\\begin{array}{*{20}{c}}{{t^3} = 0}\\\\{t = 0}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{t - 3 = 0}\\\\{t = 3}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{t + 3 = 0}\\\\{t =  - 3}\\end{array}\\] Therefore the three solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{t = 0,\\,\\,t = 3\\,\\,{\\mbox{and  }}t =  - 3}}\\)",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_10",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob10.aspx",
+        "problem_latex": "\\[\\frac{{{w^2} - 10}}{{w + 2}} + w - 4 = w - 3\\]",
+        "solution_text": "This is an equation containing rational expressions so we know that the first step is to clear out the denominator by multiplying by the LCD, which is \\(w + 2\\) in this case.  Also, note that we now know that we must avoid \\(w =  - 2\\) so we do not get division by zero. Multiplying by the LCD and doing some basic simplification gives, \\[\\begin{align*}\\left( {w + 2} \\right)\\left( {\\frac{{{w^2} - 10}}{{w + 2}} + w - 4} \\right) & = \\left( {w - 3} \\right)\\left( {w + 2} \\right)\\\\ {w^2} - 10 + \\left( {w - 4} \\right)\\left( {w + 2} \\right) & = \\left( {w - 3} \\right)\\left( {w + 2} \\right)\\\\ {w^2} - 10 + {w^2} - 2w - 8 & = {w^2} - w - 6\\\\  {w^2} - w - 12 & = 0\\end{align*}\\] Show Step 2 We can now factor the quadratic to get, \\[\\left( {w - 4} \\right)\\left( {w + 3} \\right) = 0\\] The zero factor property now tells us, \\[\\begin{array}{*{20}{c}}{w - 4 = 0}\\\\{w = 4}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{w + 3 = 0}\\\\{w =  - 3}\\end{array}\\] Therefore the two solutions are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{w = 4\\,\\,{\\mbox{and }}w =  - 3}}\\). Note as well that because neither of these are \\(w =  - 2\\) we know that we won’t get division by zero.  Do not forget this important part of the solution process for equations involving rational expressions!",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_11",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob11.aspx",
+        "problem_latex": "\\[\\frac{{4z}}{{z + 1}} + \\frac{5}{z} = \\frac{{6z + 5}}{{{z^2} + z}}\\]",
+        "solution_text": "This is an equation containing rational expressions so we know that the first step is to clear out the denominator by multiplying by the LCD, which is \\(z\\left( {z + 1} \\right)\\) in this case.  Also, note that we now know that we must avoid \\(z = 0\\) and  \\(z =  - 1\\) so we do not get division by zero. Multiplying by the LCD and doing some basic simplification gives, \\[\\begin{align*}z\\left( {z + 1} \\right)\\left( {\\frac{{4z}}{{z + 1}} + \\frac{5}{z}} \\right) & = \\left( {\\frac{{6z + 5}}{{{z^2} + z}}} \\right)z\\left( {z + 1} \\right)\\\\  \\left( z \\right)\\left( {4z} \\right) + 5\\left( {z + 1} \\right) & = 6z + 5\\\\  4{z^2} + 5z + 5 & = 6z + 5\\\\ 4{z^2} - z & = 0\\end{align*}\\] Show Step 2 We can now factor the quadratic to get, \\[z\\left( {4z - 1} \\right) = 0\\] The zero factor property now tells us, \\[\\begin{array}{*{20}{c}}{z = 0}\\\\{}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{4z - 1 = 0}\\\\{\\displaystyle z = \\frac{1}{4}}\\end{array}\\] Note that we cannot use the first potential solution since that would give us division by zero!  Therefore the only solution is : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{z = \\frac{1}{4}}}\\] . When dealing with equations that have rational expressions do not forget to verify that you do not get division by zero with any of the potential solutions!  As we saw in this case if we had not checked we would have gotten a value of \\(z\\) that seemed to be a solution but in fact was not because of the division by zero issue.",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_12",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob12.aspx",
+        "problem_latex": "\\[x + 1 = \\frac{{2x - 7}}{{x + 5}} - \\frac{{5x + 8}}{{x + 5}}\\]",
+        "solution_text": "This is an equation containing rational expressions so we know that the first step is to clear out the denominator by multiplying by the LCD, which is \\(x + 5\\) in this case.  Also, note that we now know that we must avoid \\(x =  - 5\\) so we do not get division by zero. Multiplying by the LCD and doing some basic simplification gives, \\[\\begin{align*}\\left( {x + 5} \\right)\\left( {x + 1} \\right) & = \\left( {\\frac{{2x - 7}}{{x + 5}} - \\frac{{5x + 8}}{{x + 5}}} \\right)\\left( {x + 5} \\right)\\\\ \\left( {x + 5} \\right)\\left( {x + 1} \\right) & = \\left( {\\frac{{2x - 7}}{{x + 5}}} \\right)\\left( {x + 5} \\right) - \\left( {\\frac{{5x + 8}}{{x + 5}}} \\right)\\left( {x + 5} \\right)\\\\ \\left( {x + 5} \\right)\\left( {x + 1} \\right) & = 2x - 7 - \\left( {5x + 8} \\right)\\\\ {x^2} + 6x + 5 & = 2x - 7 - 5x - 8\\\\ {x^2} + 9x + 20 & = 0\\end{align*}\\] Show Step 2 We can now factor the quadratic to get, \\[\\left( {x + 4} \\right)\\left( {x + 5} \\right) = 0\\] The zero factor property now tells us, \\[\\begin{array}{*{20}{c}}{x + 4 = 0}\\\\{x =  - 4}\\end{array}\\hspace{0.25in}{\\mbox{OR}}\\hspace{0.25in}\\begin{array}{*{20}{c}}{x + 5 = 0}\\\\{x =  - 5}\\end{array}\\] Note that we cannot use the second potential solution since that would give us division by zero!  Therefore the only solution is : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - 4}}\\). When dealing with equations that have rational expressions do not forget to verify that you do not get division by zero with any of the potential solutions!  As we saw in this case if we had not checked we would have gotten a value of \\(x\\) that seemed to be a solution but in fact was not because of the division by zero issue.",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_13",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob13.aspx",
+        "problem_latex": "\\[9{u^2} - 16 = 0\\]",
+        "solution_text": "There really isn’t too much to this problem.  Just recall that we need to get the variable on one side of the equation by itself with a coefficient of one.  For this problem that gives, \\[\\begin{align*}9{u^2} & = 16\\\\  {u^2} & = \\frac{{16}}{9}\\end{align*}\\] Show Step 2 Now all we need to do is use the Square Root Property to get, \\[u =  \\pm \\sqrt {\\frac{{16}}{9}}  =  \\pm \\frac{{\\sqrt {16} }}{{\\sqrt 9 }} =  \\pm \\frac{4}{3}\\] So we have the following two solutions : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{u =  - \\frac{4}{3}\\,\\,\\,{\\mbox{and  }}u = \\frac{4}{3}}}\\).",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_14",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob14.aspx",
+        "problem_latex": "\\[{x^2} + 15 = 0\\]",
+        "solution_text": "There really isn’t too much to this problem.  Just recall that we need to get the variable on one side of the equation by itself with a coefficient of one.  For this problem that gives, \\[{x^2} =  - 15\\] Show Step 2 Now all we need to do is use the Square Root Property to get, \\[x =  \\pm \\sqrt { - 15}  =  \\pm \\sqrt {15} \\,i\\] So we have the following two solutions : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - \\sqrt {15} \\,i\\,\\,\\,{\\mbox{and  }}x = \\sqrt {15} \\,i}}\\] . Do not get excited about complex solutions.  They will happen fairly regularly when solving quadratic equations so we need to be able to deal with them.",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_15",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob15.aspx",
+        "problem_latex": "\\[{\\left( {z - 2} \\right)^2} - 36 = 0\\]",
+        "solution_text": "There really isn’t too much to this problem.  Just recall that we need to get the squared term on one side of the equation by itself with a coefficient of one.  For this problem that gives, \\[{\\left( {z - 2} \\right)^2} = 36\\] Show Step 2 Using the Square Root Property gives, \\[z - 2 =  \\pm \\sqrt {36}  =  \\pm 6\\] To finish this off all we need to do then is solve for \\(z\\) by adding 2 to both sides.  This gives, \\[z = 2 \\pm 6\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}z = 2 - 6 =  - 4,\\,\\,\\,\\,\\,\\,z = 2 + 6 = 8\\] So, after we did a little arithmetic, have the following two solutions : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{z =  - 4\\,\\,\\,{\\mbox{and  }}z = 8}}\\).",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_1_16",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsI/Prob16.aspx",
+        "problem_latex": "\\[{\\left( {6t + 1} \\right)^2} + 3 = 0\\]",
+        "solution_text": "There really isn’t too much to this problem.  Just recall that we need to get the squared term on one side of the equation by itself with a coefficient of one.  For this problem that gives, \\[{\\left( {6t + 1} \\right)^2} =  - 3\\] Show Step 2 Using the Square Root Property gives, \\[6t + 1 =  \\pm \\sqrt { - 3}  =  \\pm \\sqrt 3 \\,i\\] To finish this off all we need to do then is solve for \\(t\\) by subtracting 1 from both sides and then dividing by the 6.  This gives, \\[\\begin{align*}6t & =  - 1 \\pm \\sqrt 3 \\,i\\\\ t & = \\frac{{ - 1 \\pm \\sqrt 3 \\,i}}{6} =  - \\frac{1}{6} \\pm \\frac{{\\sqrt 3 }}{6}i\\end{align*}\\] Note that we did a little rewrite after dividing by the 6 to put the answer in a more standard form for complex numbers. We then have the following two solutions : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{t =  - \\frac{1}{6} - \\frac{{\\sqrt 3 }}{6}i\\,\\,\\,{\\mbox{and  }}t =  - \\frac{1}{6} + \\frac{{\\sqrt 3 }}{6}i}}\\).",
+        "topic": "Quadratic Equations I",
+        "chapter": "SolveQuadraticEqnsI"
+    },
+    {
+        "id": "alg_2_1",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob1.aspx",
+        "problem_latex": "\\({x^2} + 8x\\)",
+        "solution_text": "First, we need to identify the number we need to add to this.  Recall that we will need the coefficient of the \\(x\\) to do this.  The number we need is, \\[{\\left( {\\frac{8}{2}} \\right)^2} = {\\left( 4 \\right)^2} = 16\\] Show Step 2 To complete the square all we need to do then is add this to the expression and factor the result.  Doing this gives, \\[\\require{color}\\require{bbox} \\bbox[2pt,border:1px solid black]{{{x^2} + 8x \\,{\\color{Red} + 16} = {{\\left( {x + 4} \\right)}^2}}}\\]",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_2",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob2.aspx",
+        "problem_latex": "\\({u^2} - 11u\\)",
+        "solution_text": "First, we need to identify the number we need to add to this.  Recall that we will need the coefficient of the \\(u\\) to do this.  The number we need is, \\[{\\left( {\\frac{{ - 11}}{2}} \\right)^2} = \\frac{{{{\\left( { - 11} \\right)}^2}}}{{{{\\left( 2 \\right)}^2}}} = \\frac{{121}}{4}\\] Show Step 2 To complete the square all we need to do then is add this to the expression and factor the result.  Doing this gives, \\[\\require{color}\\require{bbox} \\bbox[2pt,border:1px solid black]{{{u^2} - 11u \\,{\\color{Red} + \\frac{{121}}{4}} = {{\\left( {u - \\frac{{11}}{2}} \\right)}^2}}}\\] Recall that this will always factor as \\(u\\) plus the number inside the parenthesis in the first step, \\( - \\frac{{11}}{2}\\) in this case. Do not get too excited about the fractions that can show up in these problems.  They will be there occasionally and so we need to be able to deal with them.  Luckily, if you can recall the “trick” to the factoring they aren’t all that bad.",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_3",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob3.aspx",
+        "problem_latex": "\\(2{z^2} - 12z\\)",
+        "solution_text": "Remember that prior to completing the square we need a coefficient of one on the squared variable.  However, we can’t just “cancel” it since that requires an equation which we don’t have. Therefore, we need to first factor a 2 out of the expression as follows, \\[2{z^2} - 12z = 2\\left( {{z^2} - 6z} \\right)\\] We can now proceed with completing the square on the expression inside the parenthesis. Show Step 2 Next, we’ll need the number we need to add onto the expression inside the parenthesis.  We’ll need the coefficient of the \\(z\\) to do this.  The number we need is, \\[{\\left( {\\frac{{ - 6}}{2}} \\right)^2} = {\\left( { - 3} \\right)^2} = 9\\] Show Step 3 To complete the square all we need to do then is add this to the expression inside the parenthesis and factor the result.  Doing this gives, \\[\\require{color}\\require{bbox} \\bbox[2pt,border:1px solid black]{{2{z^2} - 12z = 2\\left( {{z^2} - 6z \\,{\\color{Red} + 9}} \\right) = 2{{\\left( {z - 3} \\right)}^2}}}\\] Be careful when the coefficient of the squared term is not a one!  In order to get the correct answer to completing the square we must have a coefficient of one on the squared term!",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_4",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob4.aspx",
+        "problem_latex": "\\[{t^2} - 10t + 34 = 0\\]",
+        "solution_text": "First, let’s get the equation put into the form where all the variables are on one side and the number is on the other side.  Doing this gives, \\[{t^2} - 10t =  - 34\\] Show Step 2 We can now complete the square on the expression on the left side of the equation. The number that we’ll need to do this is, \\[{\\left( {\\frac{{ - 10}}{2}} \\right)^2} = {\\left( { - 5} \\right)^2} = 25\\] Show Step 3 At this point we need to recall that we have an equation here and what we do to one side of the equation we also need to do the other.  In other words, don’t forget to add the number from the previous step to both sides of the equation from Step 1. \\[\\require{color}\\begin{align*}{t^2} - 10t \\,{\\color{Red}+ 25} & =  - 34 \\,{\\color{Red}+ 25}\\\\  {\\left( {t - 5} \\right)^2} & =  - 9\\end{align*}\\] Show Step 4 Now all we need to do to finish solving the equation is to use the Square Root Property on the equation from the previous step.  Doing this gives, \\[\\begin{align*}t - 5 & =  \\pm \\sqrt { - 9}  =  \\pm 3i\\\\ t & = 5 \\pm 3i\\end{align*}\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{t = 5 - 3i\\,\\,{\\mbox{and  }}t = 5 + 3i}}\\] .",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_5",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob5.aspx",
+        "problem_latex": "\\[{v^2} + 8v - 9 = 0\\]",
+        "solution_text": "First, let’s get the equation put into the form where all the variables are on one side and the number is on the other side.  Doing this gives, \\[{v^2} + 8v = 9\\] Show Step 2 We can now complete the square on the expression on the left side of the equation. The number that we’ll need to do this is, \\[{\\left( {\\frac{8}{2}} \\right)^2} = {\\left( 4 \\right)^2} = 16\\] Show Step 3 At this point we need to recall that we have an equation here and what we do to one side of the equation we also need to do the other.  In other words, don’t forget to add the number from the previous step to both sides of the equation from Step 1. \\[\\require{color}\\begin{align*}{v^2} + 8v \\,{\\color{Red}+ 16} & = 9 \\,{\\color{Red}+ 16}\\\\ {\\left( {v + 4} \\right)^2} & = 25\\end{align*}\\] Show Step 4 Now all we need to do to finish solving the equation is to use the Square Root Property on the equation from the previous step.  Doing this gives, \\[\\begin{align*}v + 4 & =  \\pm \\sqrt {25}  =  \\pm 5\\\\ v & =  - 4 \\pm 5\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}v =  - 4 - 5 =  - 9,\\,\\,\\,\\,\\,v =  - 4 + 5 = 1\\end{align*}\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{v =  - 9\\,\\,{\\mbox{and  }}v = 1}}\\] .",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_6",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob6.aspx",
+        "problem_latex": "\\[{x^2} + 9x + 16 = 0\\]",
+        "solution_text": "First, let’s get the equation put into the form where all the variables are on one side and the number is on the other side.  Doing this gives, \\[{x^2} + 9x =  - 16\\] Show Step 2 We can now complete the square on the expression on the left side of the equation. The number that we’ll need to do this is, \\[{\\left( {\\frac{9}{2}} \\right)^2} = \\frac{{{{\\left( 9 \\right)}^2}}}{{{{\\left( 2 \\right)}^2}}} = \\frac{{81}}{4}\\] Show Step 3 At this point we need to recall that we have an equation here and what we do to one side of the equation we also need to do the other.  In other words, don’t forget to add the number from the previous step to both sides of the equation from Step 1. \\[\\require{color}\\begin{align*}{x^2} + 9x \\,{\\color{Red} + \\frac{{81}}{4}} & =  - 16 \\,{\\color{Red} + \\frac{{81}}{4}}\\\\ {\\left( {x + \\frac{9}{2}} \\right)^2} & = \\frac{{17}}{4}\\end{align*}\\] Show Step 4 Now all we need to do to finish solving the equation is to use the Square Root Property on the equation from the previous step.  Doing this gives, \\[\\begin{align*}x + \\frac{9}{2} & =  \\pm \\sqrt {\\frac{{17}}{4}}  =  \\pm \\frac{{\\sqrt {17} }}{{\\sqrt 4 }} =  \\pm \\frac{{\\sqrt {17} }}{2}\\\\ x & =  - \\frac{9}{2} \\pm \\frac{{\\sqrt {17} }}{2}\\end{align*}\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - \\frac{9}{2} - \\frac{{\\sqrt {17} }}{2}\\,\\,{\\mbox{and  }}x =  - \\frac{9}{2} + \\frac{{\\sqrt {17} }}{2}}}\\] . Often, we will get “messy” answers when using completing the square to solve equations.  This is not something to get too excited about as many applications that involve solving quadratic equations have this kind of solution and so it is something that we just need to be able to deal with.",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_7",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob7.aspx",
+        "problem_latex": "\\[4{u^2} - 8u + 5 = 0\\]",
+        "solution_text": "First, let’s get the equation put into the form where all the variables are on one side, with a coefficient of one on the \\({u^2}\\), and the number is on the other side.  Doing this gives, \\[\\begin{align*}{u^2} - 2u + \\frac{5}{4} & = 0\\\\ {u^2} - 2u & =  - \\frac{5}{4}\\end{align*}\\] Show Step 2 We can now complete the square on the expression on the left side of the equation. The number that we’ll need to do this is, \\[{\\left( {\\frac{{ - 2}}{2}} \\right)^2} = {\\left( { - 1} \\right)^2} = 1\\] Show Step 3 At this point we need to recall that we have an equation here and what we do to one side of the equation we also need to do the other.  In other words, don’t forget to add the number from the previous step to both sides of the equation from Step 1. \\[\\require{color}\\begin{align*}{u^2} - 2u \\,{\\color{Red} + 1} & =  - \\frac{5}{4} \\,{\\color{Red} + 1}\\\\ {\\left( {u - 1} \\right)^2} & =  - \\frac{1}{4}\\end{align*}\\] Show Step 4 Now all we need to do to finish solving the equation is to use the Square Root Property on the equation from the previous step.  Doing this gives, \\[\\begin{align*}u - 1 =  \\pm \\sqrt { - \\frac{1}{4}}  & =  \\pm \\frac{{\\sqrt 1 }}{{\\sqrt 4 }}\\,i =  \\pm \\frac{1}{2}i\\\\ u & = 1 \\pm \\frac{1}{2}i\\end{align*}\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{u = 1 - \\frac{1}{2}i\\,\\,{\\mbox{and  }}u = 1 + \\frac{1}{2}i}}\\] .",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_8",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob8.aspx",
+        "problem_latex": "\\[2{x^2} + 5x + 3 = 0\\]",
+        "solution_text": "First, let’s get the equation put into the form where all the variables are on one side, with a coefficient of one on the \\({x^2}\\), and the number is on the other side.  Doing this gives, \\[\\begin{align*}{x^2} + \\frac{5}{2}x + \\frac{3}{2} & = 0\\\\ {x^2} + \\frac{5}{2}x & =  - \\frac{3}{2}\\end{align*}\\] Show Step 2 We can now complete the square on the expression on the left side of the equation. The number that we’ll need to do this is, \\[{\\left( {\\frac{{\\frac{5}{2}}}{2}} \\right)^2} = {\\left( {\\frac{5}{4}} \\right)^2} = \\frac{{25}}{{16}}\\] Show Step 3 At this point we need to recall that we have an equation here and what we do to one side of the equation we also need to do the other.  In other words, don’t forget to add the number from the previous step to both sides of the equation from Step 1. \\[\\require{color}\\begin{align*}{x^2} + \\frac{5}{2}x \\,{\\color{Red} + \\frac{{25}}{{16}}} & =  - \\frac{3}{2} \\,{\\color{Red} + \\frac{{25}}{{16}}}\\\\ {\\left( {x + \\frac{5}{4}} \\right)^2} & = \\frac{1}{{16}}\\end{align*}\\] Show Step 4 Now all we need to do to finish solving the equation is to use the Square Root Property on the equation from the previous step.  Doing this gives, \\[\\begin{align*}x + \\frac{5}{4} & =  \\pm \\sqrt {\\frac{1}{{16}}}  =  \\pm \\frac{1}{4}\\\\ x & =  - \\frac{5}{4} \\pm \\frac{1}{4}\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x =  - \\frac{5}{4} - \\frac{1}{4} =  - \\frac{3}{2},\\,\\,\\,\\,\\,\\,\\,\\,x =  - \\frac{5}{4} + \\frac{1}{4} =  - 1\\end{align*}\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - \\frac{3}{2}\\,\\,{\\mbox{and  }}x =  - 1}}\\] .",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_9",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob9.aspx",
+        "problem_latex": "\\[{x^2} - 6x + 4 = 0\\]",
+        "solution_text": "There really isn’t too much to this problem.  First, we need to identify the values for the quadratic formula. \\[a = 1\\hspace{0.25in}b =  - 6\\hspace{0.25in}c = 4\\] Show Step 2 Plugging these into the quadratic formula gives, \\[x = \\frac{{ - \\left( { - 6} \\right) \\pm \\sqrt {{{\\left( { - 6} \\right)}^2} - 4\\left( 1 \\right)\\left( 4 \\right)} }}{{2\\left( 1 \\right)}} = \\frac{{6 \\pm \\sqrt {20} }}{2} = \\frac{{6 \\pm 2\\sqrt 5 }}{2} = 3 \\pm \\sqrt 5 \\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 3 - \\sqrt 5 \\,\\,{\\mbox{and  }}x = 3 + \\sqrt 5 }}\\] .",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_10",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob10.aspx",
+        "problem_latex": "\\[9{w^2} - 6w = 101\\]",
+        "solution_text": "First, we need to get the quadratic equation in standard form.  This is, \\[9{w^2} - 6w - 101 = 0\\] Show Step 2 Now we need to identify the values for the quadratic formula. \\[a = 9\\hspace{0.25in}b =  - 6\\hspace{0.25in}c =  - 101\\] Show Step 3 Plugging these into the quadratic formula gives, \\[\\begin{align*}w = \\frac{{ - \\left( { - 6} \\right) \\pm \\sqrt {{{\\left( { - 6} \\right)}^2} - 4\\left( 9 \\right)\\left( { - 101} \\right)} }}{{2\\left( 9 \\right)}} = \\frac{{6 \\pm \\sqrt {3672} }}{{18}} & = \\frac{{6 \\pm \\sqrt {\\left( {36} \\right)\\left( {102} \\right)} }}{{18}}\\\\ & = \\frac{{6 \\pm 6\\sqrt {102} }}{{18}} = \\frac{{1 \\pm \\sqrt {102} }}{3}\\end{align*}\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{w = \\frac{1}{3} - \\frac{{\\sqrt {102} }}{3}\\,\\,{\\mbox{and  }}w = \\frac{1}{3} + \\frac{{\\sqrt {102} }}{3}}}\\] .",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_11",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob11.aspx",
+        "problem_latex": "\\[8{u^2} + 5u + 70 = 5 - 7u\\]",
+        "solution_text": "First, we need to get the quadratic equation in standard form.  This is, \\[8{u^2} + 12u + 65 = 0\\] Show Step 2 Now we need to identify the values for the quadratic formula. \\[a = 8\\hspace{0.25in}b = 12\\hspace{0.25in}c = 65\\] Show Step 3 Plugging these into the quadratic formula gives, \\[u = \\frac{{ - 12 \\pm \\sqrt {{{\\left( {12} \\right)}^2} - 4\\left( 8 \\right)\\left( {65} \\right)} }}{{2\\left( 8 \\right)}} = \\frac{{ - 12 \\pm \\sqrt { - 1936} }}{{16}} = \\frac{{ - 12 \\pm 44i}}{{16}} = \\frac{{ - 3 \\pm 11i}}{4}\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{u = \\frac{{ - 3}}{4} - \\frac{{11}}{4}i\\,\\,{\\mbox{and  }}u = \\frac{{ - 3}}{4} + \\frac{{11}}{4}i}}\\] .",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_12",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob12.aspx",
+        "problem_latex": "\\[169 - 20t + 4{t^2} = 0\\]",
+        "solution_text": "First, we need to get the quadratic equation in standard form.  This is, \\[4{t^2} - 20t + 169 = 0\\] Note that in this case we just rearranged the terms to have decreasing exponents. Show Step 2 Now we need to identify the values for the quadratic formula. \\[a = 4\\hspace{0.25in}b =  - 20\\hspace{0.25in}c = 169\\] Show Step 3 Plugging these into the quadratic formula gives, \\[t = \\frac{{ - \\left( { - 20} \\right) \\pm \\sqrt {{{\\left( { - 20} \\right)}^2} - 4\\left( 4 \\right)\\left( {169} \\right)} }}{{2\\left( 4 \\right)}} = \\frac{{20 \\pm \\sqrt { - 2304} }}{8} = \\frac{{20 \\pm 48i}}{8} = \\frac{5}{2} \\pm 6i\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{t = \\frac{5}{2} - 6i\\,\\,{\\mbox{and  }}t = \\frac{5}{2} + 6i}}\\] .",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_2_13",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveQuadraticEqnsII/Prob13.aspx",
+        "problem_latex": "\\[2{z^2} + z - 72 = {z^2} - 2z + 58\\]",
+        "solution_text": "First, we need to get the quadratic equation in standard form.  This is, \\[{z^2} + 3z - 130 = 0\\] In this case  we just moved everything from the right side over to the left side. Show Step 2 Now we need to identify the values for the quadratic formula. \\[a = 1\\hspace{0.25in}b = 3\\hspace{0.25in}c =  - 130\\] Show Step 3 Plugging these into the quadratic formula gives, \\[z = \\frac{{ - 3 \\pm \\sqrt {{{\\left( 3 \\right)}^2} - 4\\left( 1 \\right)\\left( { - 130} \\right)} }}{{2\\left( 1 \\right)}} = \\frac{{ - 3 \\pm \\sqrt {529} }}{2} = \\frac{{ - 3 \\pm 23}}{2}\\] In this case because there are no roots or complex numbers we can go further to reduce the solutions to “nicer” values. \\[z = \\frac{{ - 3 - 23}}{2} =  - 13,\\,\\,\\,\\,\\,z = \\frac{{ - 3 + 23}}{2} = 10\\] The two solutions to this equation are then : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{z =  - 13\\,\\,{\\mbox{and  }}z = 10}}\\] . As a final comment we can also note that because the solutions were integers we could have also gotten the answer by factoring!  The quadratic (once written in standard form) factors as, \\[\\left( {z + 13} \\right)\\left( {z - 10} \\right) = 0\\] and this clearly would arrive at the same solutions. The point of all this is to note that if more than one technique can be used it won’t matter which we use.  Regardless of the solution technique used you will arrive at the same solutions.",
+        "topic": "Quadratic Equations II",
+        "chapter": "SolveQuadraticEqnsII"
+    },
+    {
+        "id": "alg_3_1",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/ReducibleToQuadratic/Prob1.aspx",
+        "problem_latex": "\\({x^6} - 9{x^3} + 8 = 0\\)",
+        "solution_text": "First let’s notice that \\(6 = 2\\left( 3 \\right)\\) and so we can use the following substitution to reduce the equation to a quadratic equation. \\[u = {x^3}\\hspace{0.25in}\\hspace{0.25in}{u^2} = {\\left( {{x^3}} \\right)^2} = {x^6}\\] Show Step 2 Using this substitution the equation becomes, \\[\\begin{align*}{u^2} - 9u + 8 & = 0\\\\ \\left( {u - 1} \\right)\\left( {u - 8} \\right) & = 0\\end{align*}\\] We can easily see that the solution to this equation is : \\(u = 1\\) and \\(u = 8\\) . Show Step 3 Now all we need to do is use our substitution from the first step to determine the solution to the original equation. \\[u = 1:\\hspace{0.25in}{x^3} = 1\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = {\\left( 1 \\right)^{\\frac{1}{3}}} = 1\\]\r\n    \r\n      \\[u = 8:\\hspace{0.25in}{x^3} = 8\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = {\\left( 8 \\right)^{\\frac{1}{3}}} = 2\\] Therefore the two solutions to the original equation are : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 1\\,\\,{\\mbox{and  }}x = 2}}\\) .",
+        "topic": "Reducible to Quadratic",
+        "chapter": "ReducibleToQuadratic"
+    },
+    {
+        "id": "alg_3_2",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/ReducibleToQuadratic/Prob2.aspx",
+        "problem_latex": "\\({x^{ - 4}} - 7{x^{ - 2}} - 18 = 0\\)",
+        "solution_text": "First let’s notice that \\( - 4 = 2\\left( { - 2} \\right)\\) and so we can use the following substitution to reduce the equation to a quadratic equation. \\[u = {x^{ - 2}}\\hspace{0.25in}\\hspace{0.25in}{u^2} = {\\left( {{x^{ - 2}}} \\right)^2} = {x^{ - 4}}\\] Show Step 2 Using this substitution the equation becomes, \\[\\begin{align*}{u^2} - 7u - 18 & = 0\\\\ \\left( {u - 9} \\right)\\left( {u + 2} \\right) & = 0\\end{align*}\\] We can easily see that the solution to this equation is : \\(u =  - 2\\) and \\(u = 9\\) . Show Step 3 Now all we need to do is use our substitution from the first step to determine the solution to the original equation. \\[u =  - 2:\\hspace{0.25in}{x^{ - 2}} = \\frac{1}{{{x^2}}} =  - 2\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}{x^2} =  - \\frac{1}{2}\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x =  \\pm \\sqrt { - \\frac{1}{2}}  =  \\pm \\frac{1}{{\\sqrt 2 }}i\\]\r\n    \r\n      \\[u = 9:\\hspace{0.25in}{x^{ - 2}} = \\frac{1}{{{x^2}}} = 9\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}{x^2} = \\frac{1}{9}\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x =  \\pm \\sqrt {\\frac{1}{9}}  =  \\pm \\frac{1}{3}\\] Therefore the four solutions to the original equation are : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  \\pm \\frac{1}{{\\sqrt 2 }}i\\,\\,{\\mbox{and  }}x =  \\pm \\frac{1}{3}}}\\] .",
+        "topic": "Reducible to Quadratic",
+        "chapter": "ReducibleToQuadratic"
+    },
+    {
+        "id": "alg_3_3",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/ReducibleToQuadratic/Prob3.aspx",
+        "problem_latex": "\\(4{x^{\\frac{2}{3}}} + 21{x^{\\frac{1}{3}}} + 27 = 0\\)",
+        "solution_text": "First let’s notice that \\(\\frac{2}{3} = 2\\left( {\\frac{1}{3}} \\right)\\) and so we can use the following substitution to reduce the equation to a quadratic equation. \\[u = {x^{\\frac{1}{3}}}\\hspace{0.25in}\\hspace{0.25in}{u^2} = {\\left( {{x^{\\frac{1}{3}}}} \\right)^2} = {x^{\\frac{2}{3}}}\\] Show Step 2 Using this substitution the equation becomes, \\[\\begin{align*}4{u^2} + 21u + 27 & = 0\\\\ \\left( {4u + 9} \\right)\\left( {u + 3} \\right) & = 0\\end{align*}\\] We can easily see that the solution to this equation is : \\(u =  - \\frac{9}{4}\\) and \\(u =  - 3\\) . Show Step 3 Now all we need to do is use our substitution from the first step to determine the solution to the original equation. \\[u =  - \\frac{9}{4}:\\hspace{0.25in}{x^{\\frac{1}{3}}} =  - \\frac{9}{4}\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = {\\left( { - \\frac{9}{4}} \\right)^3} =  - \\frac{{729}}{{64}}\\]\r\n    \r\n      \\[u =  - 3:\\hspace{0.25in}{x^{\\frac{1}{3}}} =  - 3\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = {\\left( { - 3} \\right)^3} =  - 27\\] Therefore the two solutions to the original equation are : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - \\frac{{729}}{{64}}\\,\\,{\\mbox{and  }}x =  - 27}}\\] .",
+        "topic": "Reducible to Quadratic",
+        "chapter": "ReducibleToQuadratic"
+    },
+    {
+        "id": "alg_3_4",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/ReducibleToQuadratic/Prob4.aspx",
+        "problem_latex": "\\({x^{10}} - 6{x^5} + 7 = 0\\)",
+        "solution_text": "First let’s notice that \\(10 = 2\\left( 5 \\right)\\) and so we can use the following substitution to reduce the equation to a quadratic equation. \\[u = {x^5}\\hspace{0.25in}\\hspace{0.25in}{u^2} = {\\left( {{x^5}} \\right)^2} = {x^{10}}\\] Show Step 2 Using this substitution the equation becomes, \\[{u^2} - 6u + 7 = 0\\] Now, this equation does not factor.  That happens on occasion but luckily enough we know how to solve it anyway.  All we need to do is use the quadratic formula to find the solutions to this equation. \\[u = \\frac{{ - \\left( { - 6} \\right) \\pm \\sqrt {{{\\left( { - 6} \\right)}^2} - 4\\left( 1 \\right)\\left( 7 \\right)} }}{{2\\left( 1 \\right)}} = \\frac{{6 \\pm \\sqrt 8 }}{2} = \\frac{{6 \\pm 2\\sqrt 2 }}{2} = 3 \\pm \\sqrt 2 \\] Do not get excited about the “messy” numbers here!  These kinds of solutions happen on occasion and we just need to be able to deal with them.  Just keep in mind that they are just numbers even if they are not the integers we are used to seeing! Show Step 3 Now all we need to do is use our substitution from the first step to determine the solution to the original equation. \\[u = 3 + \\sqrt 2 :\\hspace{0.25in}{x^5} = 3 + \\sqrt 2 \\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = {\\left( {3 + \\sqrt 2 } \\right)^{\\frac{1}{5}}} = {\\left( {4.4142} \\right)^{\\frac{1}{5}}} = 1.1358\\]\r\n    \r\n      \\[u = 3 - \\sqrt 2 :\\hspace{0.25in}{x^5} = 3 - \\sqrt 2 \\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = {\\left( {3 - \\sqrt 2 } \\right)^{\\frac{1}{5}}} = {\\left( {1.5858} \\right)^{\\frac{1}{5}}} = 1.0966\\] Therefore the two solutions to the original equation are : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 1.0966\\,\\,{\\mbox{and  }}x = 1.3458}}\\] .",
+        "topic": "Reducible to Quadratic",
+        "chapter": "ReducibleToQuadratic"
+    },
+    {
+        "id": "alg_3_5",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/ReducibleToQuadratic/Prob5.aspx",
+        "problem_latex": "\\(\\displaystyle \\frac{2}{{{x^2}}} + \\frac{{17}}{x} + 21 = 0\\)",
+        "solution_text": "First let’s notice that \\(2 = 2\\left( 1 \\right)\\) and so we can use the following substitution to reduce the equation to a quadratic equation. \\[u = \\frac{1}{x}\\hspace{0.25in}\\hspace{0.25in}{u^2} = {\\left( {\\frac{1}{x}} \\right)^2} = \\frac{{{1^2}}}{{{x^2}}} = \\frac{1}{{{x^2}}}\\] Show Step 2 Using this substitution the equation becomes, \\[\\begin{align*}2{u^2} + 17u + 21 & = 0\\\\ \\left( {2u + 3} \\right)\\left( {u + 7} \\right) & = 0\\end{align*}\\] We can easily see that the solution to this equation is : \\(u =  - \\frac{3}{2}\\) and \\(u =  - 7\\) . Show Step 3 Now all we need to do is use our substitution from the first step to determine the solution to the original equation. \\[u =  - \\frac{3}{2}:\\hspace{0.25in}\\frac{1}{x} =  - \\frac{3}{2}\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = \\frac{1}{{ - \\frac{3}{2}}} =  - \\frac{2}{3}\\]\r\n    \r\n      \\[u =  - 7:\\hspace{0.25in}\\frac{1}{x} =  - 7\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = \\frac{1}{{ - 7}} =  - \\frac{1}{7}\\] Therefore the two solutions to the original equation are : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - \\frac{2}{3}\\,\\,{\\mbox{and  }}x =  - \\frac{1}{7}}}\\] .",
+        "topic": "Reducible to Quadratic",
+        "chapter": "ReducibleToQuadratic"
+    },
+    {
+        "id": "alg_3_6",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/ReducibleToQuadratic/Prob6.aspx",
+        "problem_latex": "\\(\\displaystyle \\frac{1}{x} - \\frac{{11}}{{\\sqrt x }} + 18 = 0\\)",
+        "solution_text": "First let’s notice that \\(1 = 2\\left( {\\frac{1}{2}} \\right)\\) and recall that  \\(\\sqrt x  = {x^{\\frac{1}{2}}}\\) .  So we can use the following substitution to reduce the equation to a quadratic equation. \\[u = \\frac{1}{{\\sqrt x }}\\hspace{0.25in}\\hspace{0.25in}{u^2} = {\\left( {\\frac{1}{{\\sqrt x }}} \\right)^2} = {\\left( {\\frac{1}{{{x^{\\frac{1}{2}}}}}} \\right)^2} = \\frac{1}{x}\\] Show Step 2 Using this substitution the equation becomes, \\[\\begin{align*}{u^2} - 11u + 18 & = 0\\\\ \\left( {u - 2} \\right)\\left( {u - 9} \\right) & = 0\\end{align*}\\] We can easily see that the solution to this equation is : \\(u = 2\\) and \\(u = 9\\) . Show Step 3 Now all we need to do is use our substitution from the first step to determine the solution to the original equation. \\[u = 2:\\hspace{0.25in}\\frac{1}{{\\sqrt x }} = 2\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}\\sqrt x  = \\frac{1}{2}\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = {\\left( {\\frac{1}{2}} \\right)^2} = \\frac{1}{4}\\]\r\n    \r\n      \\[u = 9:\\hspace{0.25in}\\frac{1}{{\\sqrt x }} = 9\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}\\sqrt x  = \\frac{1}{9}\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = {\\left( {\\frac{1}{9}} \\right)^2} = \\frac{1}{{81}}\\] Therefore the two solutions to the original equation are : \\[\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = \\frac{1}{4}\\,\\,{\\mbox{and  }}x = \\frac{1}{{81}}}}\\] .",
+        "topic": "Reducible to Quadratic",
+        "chapter": "ReducibleToQuadratic"
+    },
+    {
+        "id": "alg_4_1",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveRadicalEqns/Prob1.aspx",
+        "problem_latex": "\\(2x = \\sqrt {x + 3}\\)",
+        "solution_text": "The first step here is to square both sides to get, \\[\\begin{align*}{\\left( {2x} \\right)^2} & = {\\left( {\\sqrt {x + 3} } \\right)^2}\\\\ 4{x^2} & = x + 3\\\\  4{x^2} - x - 3 & = 0\\end{align*}\\] Show Step 2 This is just a quadratic equation and we know how to solve it so let’s do that. \\[\\left( {4x + 3} \\right)\\left( {x - 1} \\right) = 0\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x =  - \\frac{3}{4},\\,\\,\\,\\,\\,x = 1\\] As shown we have two solutions to the quadratic we got from the first step. Hint : Recall that the solution process used here can, and often does, introduce values that are not in fact solutions to the original equation! Show Step 3 We’re not done with this problem.  Recall from the notes that the solution process we used here has the unfortunate side effect of sometimes introducing values that are not solutions to the original equation. So, to finish this out we need to check both of the potential solutions from the previous step in the original equation (recall it’s important to check the potential solutions in the original equation). \\[x =  - \\frac{3}{4}:2\\left( { - \\frac{3}{4}} \\right)\\mathop  = \\limits^? \\sqrt { - \\frac{3}{4} + 3} \\hspace{0.25in} \\to \\hspace{0.25in} - \\frac{3}{2}\\mathop  = \\limits^? \\sqrt {\\frac{9}{4}} \\hspace{0.25in} \\to \\hspace{0.25in} - \\frac{3}{2} \\ne \\frac{3}{2}\\hspace{0.25in}{\\mbox{NOT}}{\\mbox{ OK}}\\]\r\n    \r\n      \\[x = 1:\\hspace{0.25in}2\\left( 1 \\right)\\mathop  = \\limits^? \\sqrt {1 + 3} \\hspace{0.25in} \\to \\hspace{0.25in}2\\mathop  = \\limits^? \\sqrt 4 \\hspace{0.25in} \\to \\hspace{0.25in}2 = 2\\hspace{0.25in}{\\mbox{OK}}\\] Only one of the potential solutions work out and so the original equation has a single solution : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 1}}\\) .",
+        "topic": "Radical Equations",
+        "chapter": "SolveRadicalEqns"
+    },
+    {
+        "id": "alg_4_2",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveRadicalEqns/Prob2.aspx",
+        "problem_latex": "\\(\\sqrt {33 - 2x}  = x + 1\\)",
+        "solution_text": "The first step here is to square both sides to get, \\[\\begin{align*}{\\left( {\\sqrt {33 - 2x} } \\right)^2} & = {\\left( {x + 1} \\right)^2}\\\\ 33 - 2x & = {x^2} + 2x + 1\\\\ {x^2} + 4x - 32 & = 0\\end{align*}\\] Show Step 2 This is just a quadratic equation and we know how to solve it so let’s do that. \\[\\left( {x + 8} \\right)\\left( {x - 4} \\right) = 0\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x =  - 8,\\,\\,\\,\\,\\,x = 4\\] As shown we have two solutions to the quadratic we got from the first step. Hint : Recall that the solution process used here can, and often does, introduce values that are not in fact solutions to the original equation! Show Step 3 We’re not done with this problem.  Recall from the notes that the solution process we used here has the unfortunate side effect of sometimes introducing values that are not solutions to the original equation. So, to finish this out we need to check both of the potential solutions from the previous step in the original equation (recall it’s important to check the potential solutions in the original equation). \\[x =  - 8:\\hspace{0.25in}\\sqrt {33 - 2\\left( { - 8} \\right)} \\mathop  = \\limits^?  - 8 + 1\\hspace{0.25in} \\to \\hspace{0.25in}\\sqrt {49} \\mathop  = \\limits^?  - 7\\hspace{0.25in} \\to \\hspace{0.25in}7 \\ne  - 7\\hspace{0.25in}{\\mbox{NOT}}{\\mbox{ OK}}\\]\r\n    \r\n      \\[x = 4:\\hspace{0.25in}\\sqrt {33 - 2\\left( 4 \\right)} \\mathop  = \\limits^? 4 + 1\\hspace{0.25in} \\to \\hspace{0.25in}\\sqrt {25} \\mathop  = \\limits^? 5\\hspace{0.25in} \\to \\hspace{0.25in}5 = 5\\hspace{0.25in}{\\mbox{OK}}\\] Only one of the potential solutions work out and so the original equation has a single solution : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 4}}\\) .",
+        "topic": "Radical Equations",
+        "chapter": "SolveRadicalEqns"
+    },
+    {
+        "id": "alg_4_3",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveRadicalEqns/Prob3.aspx",
+        "problem_latex": "\\(7 = \\sqrt {39 + 3x}  - x\\)",
+        "solution_text": "The first step here is to square both sides.  However, before we do that we need to get the root on one side by itself. \\[7 + x = \\sqrt {39 + 3x} \\] Now we can square both sides to get, \\[\\begin{align*}{\\left( {7 + x} \\right)^2} & = {\\left( {\\sqrt {39 + 3x} } \\right)^2}\\\\ {x^2} + 14x + 49 & = 39 + 3x\\\\ {x^2} + 11x + 10 & = 0\\end{align*}\\] Show Step 2 This is just a quadratic equation and we know how to solve it so let’s do that. \\[\\left( {x + 10} \\right)\\left( {x + 1} \\right) = 0\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x =  - 10,\\,\\,\\,\\,\\,x =  - 1\\] As shown we have two solutions to the quadratic we got from the first step. Hint : Recall that the solution process used here can, and often does, introduce values that are not in fact solutions to the original equation! Show Step 3 We’re not done with this problem.  Recall from the notes that the solution process we used here has the unfortunate side effect of sometimes introducing values that are not solutions to the original equation. So, to finish this out we need to check both of the potential solutions from the previous step in the original equation (recall it’s important to check the potential solutions in the original equation). \\[x =  - 10:\\hspace{0.25in}7\\mathop  = \\limits^? \\sqrt {39 + 3\\left( { - 10} \\right)}  - \\left( { - 10} \\right)\\hspace{0.25in} \\to \\hspace{0.25in}7\\mathop  = \\limits^? \\sqrt 9  + 10\\hspace{0.25in} \\to \\hspace{0.25in}7 \\ne 13\\hspace{0.25in}{\\mbox{NOT}}{\\mbox{ OK}}\\]\r\n    \r\n      \\[x =  - 1:\\hspace{0.25in}7\\mathop  = \\limits^? \\sqrt {39 + 3\\left( { - 1} \\right)}  - \\left( { - 1} \\right)\\hspace{0.25in} \\to \\hspace{0.25in}7\\mathop  = \\limits^? \\sqrt {36}  + 1\\hspace{0.25in} \\to \\hspace{0.25in}7 = 7\\hspace{0.25in}{\\mbox{OK}}\\] Only one of the potential solutions work out and so the original equation has a single solution : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - 1}}\\) .",
+        "topic": "Radical Equations",
+        "chapter": "SolveRadicalEqns"
+    },
+    {
+        "id": "alg_4_4",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveRadicalEqns/Prob4.aspx",
+        "problem_latex": "\\(x = 1 + \\sqrt {2x - 2}\\)",
+        "solution_text": "The first step here is to square both sides.  However, before we do that we need to get the root on one side by itself. \\[x - 1 = \\sqrt {2x - 2} \\] Now we can square both sides to get, \\[\\begin{align*}{\\left( {x - 1} \\right)^2} & = {\\left( {\\sqrt {2x - 2} } \\right)^2}\\\\ {x^2} - 2x + 1 & = 2x - 2\\\\ {x^2} - 4x + 3 & = 0\\end{align*}\\] Show Step 2 This is just a quadratic equation and we know how to solve it so let’s do that. \\[\\left( {x - 1} \\right)\\left( {x - 3} \\right) = 0\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = 1,\\,\\,\\,\\,\\,x = 3\\] As shown we have two solutions to the quadratic we got from the first step. Hint : Recall that the solution process used here can, and often does, introduce values that are not in fact solutions to the original equation! Show Step 3 We’re not done with this problem.  Recall from the notes that the solution process we used here has the unfortunate side effect of sometimes introducing values that are not solutions to the original equation. So, to finish this out we need to check both of the potential solutions from the previous step in the original equation (recall it’s important to check the potential solutions in the original equation). \\[x = 1:\\hspace{0.25in}1\\mathop  = \\limits^? 1 + \\sqrt {2\\left( 1 \\right) - 2} \\hspace{0.25in} \\to \\hspace{0.25in}1\\mathop  = \\limits^? 1 + \\sqrt 0 \\hspace{0.25in} \\to \\hspace{0.25in}1 = 1\\hspace{0.25in}{\\mbox{OK}}\\]\r\n    \r\n      \\[x = 3:\\hspace{0.25in}3\\mathop  = \\limits^? 1 + \\sqrt {2\\left( 3 \\right) - 2} \\hspace{0.25in} \\to \\hspace{0.25in}3\\mathop  = \\limits^? 1 + \\sqrt 4 \\hspace{0.25in} \\to \\hspace{0.25in}3 = 3\\hspace{0.25in}{\\mbox{OK}}\\] Both of the potential solutions work out and so the original equation has a two solutions : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 1\\,\\,\\,{\\mbox{and  }}x = 3}}\\) .",
+        "topic": "Radical Equations",
+        "chapter": "SolveRadicalEqns"
+    },
+    {
+        "id": "alg_4_5",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveRadicalEqns/Prob5.aspx",
+        "problem_latex": "\\(1 + \\sqrt {1 - x}  = \\sqrt {2x + 4}\\)",
+        "solution_text": "The first step here is to square both sides to get, \\[\\begin{align*}{\\left( {1 + \\sqrt {1 - x} } \\right)^2} & = {\\left( {\\sqrt {2x + 4} } \\right)^2}\\\\ 1 + 2\\sqrt {1 - x}  + {\\left( {\\sqrt {1 - x} } \\right)^2} & = 2x + 4\\\\ 1 + 2\\sqrt {1 - x}  + 1 - x & = 2x + 4\\\\ 2\\sqrt {1 - x} & = 3x + 2\\end{align*}\\] Show Step 2 Unlike the previous problems squaring both sides once isn’t sufficient to eliminate the square roots from the problem.  So, once we get the remaining root on one side by itself, as we did in the previous step, we need to square both sides once again. Doing that gives, \\[\\begin{align*}{\\left( {2\\sqrt {1 - x} } \\right)^2} & = {\\left( {3x + 2} \\right)^2}\\\\ 4\\left( {1 - x} \\right) & = 9{x^2} + 12x + 4\\\\ 9{x^2} + 16x & = 0\\end{align*}\\] Show Step 3 This is just a quadratic equation and we know how to solve it so let’s do that. \\[x\\left( {9x + 16} \\right) = 0\\hspace{0.25in} \\Rightarrow \\hspace{0.25in}x = 0,\\,\\,\\,\\,\\,x =  - \\frac{{16}}{9}\\] As shown we have two solutions to the quadratic we got from the first step. Hint : Recall that the solution process used here can, and often does, introduce values that are not in fact solutions to the original equation! Show Step 4 We’re not done with this problem.  Recall from the notes that the solution process we used here has the unfortunate side effect of sometimes introducing values that are not solutions to the original equation. So, to finish this out we need to check both of the potential solutions from the previous step in the original equation (recall it’s important to check the potential solutions in the original equation). \\[x = 0:\\hspace{0.25in}1 + \\sqrt {1 - 0} \\mathop  = \\limits^? \\sqrt {2\\left( 0 \\right) + 4} \\hspace{0.25in} \\to \\hspace{0.25in}1 + \\sqrt 1 \\mathop  = \\limits^? \\sqrt 4 \\hspace{0.25in} \\to \\hspace{0.25in}2 = 2\\hspace{0.25in}{\\mbox{OK}}\\]\r\n    \r\n      \\[x =  - \\frac{{16}}{9}:\\hspace{0.25in}1 + \\sqrt {1 - \\left( { - \\frac{{16}}{9}} \\right)} \\mathop  = \\limits^? \\sqrt {2\\left( { - \\frac{{16}}{9}} \\right) + 4} \\hspace{0.25in} \\to \\hspace{0.25in}1 + \\sqrt {\\frac{{25}}{9}} \\mathop  = \\limits^? \\sqrt {\\frac{4}{9}} \\hspace{0.25in} \\to \\,\\,\\,\\,\\,\\,\\frac{8}{3} \\ne \\frac{2}{3}\\hspace{0.25in}{\\mbox{NOT}}\\,\\,{\\mbox{OK}}\\] Only one of the potential solutions work out and so the original equation has a single solution : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = 0}}\\) .",
+        "topic": "Radical Equations",
+        "chapter": "SolveRadicalEqns"
+    },
+    {
+        "id": "alg_5_1",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveAbsValueEqns/Prob1.aspx",
+        "problem_latex": "\\(\\left| {4p - 7} \\right| = 3\\)",
+        "solution_text": "There really isn’t all that much to this problem.  All we need to do is use the formula we discussed in the notes for this section.  Doing that gives, \\[4p - 7 =  - 3\\hspace{0.25in}{\\mbox{or}}\\hspace{0.25in}4p - 7 = 3\\] Do not make the common mistake of just turning every minus sign inside the absolute value bars into a plus sign.  That is just not how these work.  The only way for the value of the absolute value to be 3 is for the quantity inside to be either -3 or 3.  In other words, we get rid of the absolute value bars by using the formula from the notes. Show Step 2 At this point all we need to do is solve each of the linear equations we got in the previous step.  Doing that gives, \\[\\begin{align*}4p & = 4 & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}4p & = 10\\\\  p & = 1 & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}p & = \\frac{{10}}{4} = \\frac{5}{2}\\end{align*}\\] The two solutions are then : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{p = 1\\,\\,\\,\\,{\\mbox{and  }}p = \\frac{5}{2}}}\\) .",
+        "topic": "Absolute Value Equations",
+        "chapter": "SolveAbsValueEqns"
+    },
+    {
+        "id": "alg_5_2",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveAbsValueEqns/Prob2.aspx",
+        "problem_latex": "\\(\\left| {2 - 4x} \\right| = 1\\)",
+        "solution_text": "There really isn’t all that much to this problem.  All we need to do is use the formula we discussed in the notes for this section.  Doing that gives, \\[2 - 4x =  - 1\\hspace{0.25in}{\\mbox{or}}\\hspace{0.25in}2 - 4x = 1\\] Do not make the common mistake of just turning every minus sign inside the absolute value bars into a plus sign.  That is just not how these work.  The only way for the value of the absolute value to be 1 is for the quantity inside to be either -1 or 1.  In other words, we get rid of the absolute value bars by using the formula from the notes. Show Step 2 At this point all we need to do is solve each of the linear equations we got in the previous step.  Doing that gives, \\[\\begin{align*} - 4x & =  - 3 & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in} - 4x & =  - 1\\\\ x & = \\frac{3}{4} & \\hspace{0.25in} & {\\mbox{or}}& \\hspace{0.25in}x & = \\frac{1}{4}\\end{align*}\\] The two solutions are then : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x = \\frac{1}{4}\\,\\,\\,\\,{\\mbox{and  }}x = \\frac{3}{4}}}\\) .",
+        "topic": "Absolute Value Equations",
+        "chapter": "SolveAbsValueEqns"
+    },
+    {
+        "id": "alg_5_3",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveAbsValueEqns/Prob3.aspx",
+        "problem_latex": "\\(6u = \\left| {1 + 3u} \\right|\\)",
+        "solution_text": "Despite the fact that the quantity outside of the absolute value bars is not a positive number doesn’t mean that we can’t use the same process that we used in the first two problems. Using the formula from the notes gives, \\[1 + 3u =  - 6u\\hspace{0.25in}{\\mbox{or}}\\hspace{0.25in}1 + 3u = 6u\\] Show Step 2 Now solving each these linear equations gives, \\[\\begin{align*}1 + 3u & =  - 6u & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}1 + 3u & = 6u\\\\ 1 & =  - 9u & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}1 & = 3u\\\\ u & =  - \\frac{1}{9} & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}u & = \\frac{1}{3}\\end{align*}\\] Show Step 3 Now, because the quantity outside of the absolute value bars was not a positive constant we need to be careful with the answers we got in the previous step.  It is possible that one or both are not in fact solutions to the original equation.  So, we need to verify each of the possible solutions from the previous step by checking them in the original equation. \\[u =  - \\frac{1}{9}:\\,\\,\\,\\,\\,\\,\\,\\,6\\left( { - \\frac{1}{9}} \\right)\\mathop  = \\limits^? \\left| {1 + 3\\left( { - \\frac{1}{9}} \\right)} \\right|\\,\\,\\,\\,\\,\\,\\,\\, \\to \\,\\,\\,\\,\\,\\,\\, - \\frac{2}{3}\\mathop  = \\limits^? \\left| {\\frac{2}{3}} \\right|\\,\\,\\,\\,\\,\\,\\, \\to \\,\\,\\,\\,\\,\\,\\, - \\frac{2}{3} \\ne \\frac{2}{3}\\hspace{0.25in}{\\mbox{NOT}}{\\mbox{ OK}}\\]\r\n    \r\n      \\[u = \\frac{1}{3}:\\,\\,\\,\\,\\,\\,\\,\\,6\\left( {\\frac{1}{3}} \\right)\\mathop  = \\limits^? \\left| {1 + 3\\left( {\\frac{1}{3}} \\right)} \\right|\\,\\,\\,\\,\\,\\,\\,\\, \\to \\,\\,\\,\\,\\,\\,\\,2\\mathop  = \\limits^? \\left| 2 \\right|\\,\\,\\,\\,\\,\\,\\, \\to \\,\\,\\,\\,\\,\\,\\,2 = 2\\hspace{0.25in}{\\mbox{OK}}\\] Therefore, the only solution to the original equation is then : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{u = \\frac{1}{3}}}\\) .",
+        "topic": "Absolute Value Equations",
+        "chapter": "SolveAbsValueEqns"
+    },
+    {
+        "id": "alg_5_4",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveAbsValueEqns/Prob4.aspx",
+        "problem_latex": "\\(\\left| {2x - 3} \\right| = 4 - x\\)",
+        "solution_text": "Despite the fact that the quantity outside of the absolute value bars is not a positive number doesn’t mean that we can’t use the same process that we used in the first two problems. Using the formula from the notes gives, \\[2x - 3 =  - \\left( {4 - x} \\right) = x - 4\\hspace{0.25in}{\\mbox{or}}\\hspace{0.25in}2x - 3 = 4 - x\\] Show Step 2 Now solving each these linear equations gives, \\[\\begin{align*}2x - 3 & = x - 4 & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}2x - 3 & = 4 - x\\\\ x & =  - 1 & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}3x & = 7\\\\ x & =  - 1 & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}x & = \\frac{7}{3}\\end{align*}\\] Show Step 3 Now, because the quantity outside of the absolute value bars was not a positive constant we need to be careful with the answers we got in the previous step.  It is possible that one or both are not in fact solutions to the original equation.  So, we need to verify each of the possible solutions from the previous step by checking them in the original equation. \\[x =  - 1:\\,\\,\\,\\,\\,\\,\\,\\,\\left| {2\\left( { - 1} \\right) - 3} \\right|\\mathop  = \\limits^? 4 - \\left( { - 1} \\right)\\,\\,\\,\\,\\,\\,\\,\\, \\to \\,\\,\\,\\,\\,\\,\\,\\left| { - 5} \\right|\\mathop  = \\limits^? 5\\,\\,\\,\\,\\,\\,\\, \\to \\,\\,\\,\\,\\,\\,\\,5 = 5\\hspace{0.25in}{\\mbox{OK}}\\]\r\n    \r\n      \\[x = \\frac{7}{3}:\\,\\,\\,\\,\\,\\,\\,\\,\\left| {2\\left( {\\frac{7}{3}} \\right) - 3} \\right|\\mathop  = \\limits^? 4 - \\left( {\\frac{7}{3}} \\right)\\,\\,\\,\\,\\,\\,\\,\\, \\to \\,\\,\\,\\,\\,\\,\\,\\left| {\\frac{5}{3}} \\right|\\mathop  = \\limits^? \\frac{5}{3}\\,\\,\\,\\,\\,\\,\\, \\to \\,\\,\\,\\,\\,\\,\\,\\frac{5}{3} = \\frac{5}{3}\\hspace{0.25in}{\\mbox{OK}}\\] Therefore, the two solutions to the original equation are then : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - 1\\,\\,\\,\\,\\,{\\mbox{and}}\\,\\,\\,\\,\\,x = \\frac{7}{3}}}\\) .",
+        "topic": "Absolute Value Equations",
+        "chapter": "SolveAbsValueEqns"
+    },
+    {
+        "id": "alg_5_5",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveAbsValueEqns/Prob5.aspx",
+        "problem_latex": "\\(\\displaystyle \\left| {\\frac{1}{2}z + 4} \\right| = \\left| {4z - 6} \\right|\\)",
+        "solution_text": "This problem works identically to all the problems in this section.  The only way the two absolute values can be equal is if the quantities inside them are the same value or the same value except for opposite signs.  Doing this gives, \\[\\frac{1}{2}z + 4 =  - \\left( {4z - 6} \\right) = 6 - 4z\\hspace{0.25in}{\\mbox{or}}\\hspace{0.25in}\\frac{1}{2}z + 4 = 4z - 6\\] In other words, we can use the formula discussed in this section to do this problem! Show Step 2 Now solving each these linear equations gives, \\[\\begin{align*}\\frac{1}{2}z + 4 & = 6 - 4z & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}\\frac{1}{2}z + 4 & = 4z - 6\\\\ \\frac{9}{2}z & = 2 & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in} - \\frac{7}{2}z & =  - 10\\\\ z & = \\frac{4}{9} & \\hspace{0.25in} & {\\mbox{or}} & \\hspace{0.25in}z & = \\frac{{20}}{7}\\end{align*}\\] Now, because both sides of the equation have absolute values, we know that regardless of the value of \\(x\\) we plug into the original equation the absolute value will guarantee that the result will be positive and so we don’t need to verify either of these solutions. Therefore, the two solutions to the original equation are then : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{z = \\frac{4}{9}\\,\\,\\,\\,\\,{\\mbox{and}}\\,\\,\\,\\,\\,z = \\frac{{20}}{7}}}\\) .",
+        "topic": "Absolute Value Equations",
+        "chapter": "SolveAbsValueEqns"
+    },
+    {
+        "id": "alg_5_6",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveAbsValueEqns/Prob6.aspx",
+        "problem_latex": "\\[\\left| {{x^2} + 2x} \\right| = 15\\]",
+        "solution_text": "To this point we’ve only worked problems that have linear terms in the absolute value bars.  In this case we have a quadratic in the absolute value bars.  That doesn’t change how the problem works however.  We work this exactly like the previous problems. Applying the formula from this section gives, \\[{x^2} + 2x =  - 15\\hspace{0.25in}{\\mbox{or}}\\hspace{0.25in}{x^2} + 2x = 15\\] Show Step 2 To finish this problem all we need to do is solve each of the quadratic equations we got in the previous step. Here is the solution to the first one given above. \\[\\begin{align*}{x^2} + 2x & =  - 15\\\\ {x^2} + 2x + 15 & = 0\\hspace{0.25in} \\to \\hspace{0.25in}x = \\frac{{ - 2 \\pm \\sqrt {4 - 4\\left( 1 \\right)\\left( {15} \\right)} }}{{2\\left( 1 \\right)}} = \\frac{{ - 2 \\pm \\sqrt {56} \\,i}}{2}\\end{align*}\\] Note that the instructions asked for “ real valued solutions ”.  This basically means that we don’t want complex solutions and the solutions to the first quadratic are clearly complex and so we won’t use them in our solution. The solution to the second quadratic is, \\[\\begin{align*}{x^2} + 2x - 15 & = 0\\\\ \\left( {x + 5} \\right)\\left( {x - 3} \\right) & = 0\\hspace{0.25in} \\to \\hspace{0.25in}x =  - 5,\\,\\,\\,x = 3\\end{align*}\\] Both of these are real solutions and so are acceptable solutions. Therefore, the two solutions to the original equation are then : \\(\\require{bbox} \\bbox[2pt,border:1px solid black]{{x =  - 5\\,\\,\\,\\,\\,{\\mbox{and}}\\,\\,\\,\\,\\,x = 3}}\\) .",
+        "topic": "Absolute Value Equations",
+        "chapter": "SolveAbsValueEqns"
+    },
+    {
+        "id": "alg_5_7",
+        "url": "https://tutorial.math.lamar.edu/Solutions/Alg/SolveAbsValueEqns/Prob7.aspx",
+        "problem_latex": "\\[\\left| {{x^2} + 4} \\right| = 1\\]",
+        "solution_text": "To this point we’ve only worked problems that have linear terms in the absolute value bars.  In this case we have a quadratic in the absolute value bars.  That doesn’t change how the problem works however.  We work this exactly like the previous problems. Applying the formula from this section gives, \\[{x^2} + 4 =  - 1\\hspace{0.25in}{\\mbox{or}}\\hspace{0.25in}{x^2} + 4 = 1\\] Show Step 2 To finish this problem all we need to do is solve each of the quadratic equations we got in the previous step.  Here is the solution to each of them. \\[\\begin{align*}{x^2} + 4 & =  - 1\\hspace{0.25in} \\to \\hspace{0.25in}{x^2} =  - 5\\hspace{0.25in} \\to \\hspace{0.25in}x =  \\pm \\sqrt 5 \\,i\\\\ {x^2} + 4 & = 1\\hspace{0.25in} \\to \\hspace{0.25in}{x^2} =  - 3\\hspace{0.25in} \\to \\hspace{0.25in}x =  \\pm \\sqrt 3 \\,i\\end{align*}\\] Note that the instructions asked for “ real valued solutions ”.  This basically means that we don’t want complex solutions and the solutions to both of the quadratic equations from the first step are complex and so, for this equation, there are no solutions .",
+        "topic": "Absolute Value Equations",
+        "chapter": "SolveAbsValueEqns"
+    }
+]

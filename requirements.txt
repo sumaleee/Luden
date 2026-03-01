@@ -6,8 +6,8 @@ urllib3==2.2.1
 # --- AI & Vector Database ---
 chromadb==1.5.0
 sentence-transformers==2.6.1
-latex2sympy==1.0.3
+openai
 
-# --- Computer Vision ---
-# pix2tex[gui] 
-# torch  (Usually installed automatically by sentence-transformers/pix2tex)
+# --- Math / LaTeX ---
+sympy==1.14.0
+latex2sympy2-extended
