@@ -5,4 +5,5 @@ math_knowledge_base/
 normalizer_cache.json
 normalizer_failures.log
 .claude/
-
+target_urls.json
+ast_database.json
