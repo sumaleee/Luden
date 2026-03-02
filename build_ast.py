@@ -1,25 +1,56 @@
 import json
 import re
 from sympy.core.parameters import evaluate
+from sympy import Tuple
 from latex2sympy2_extended import latex2sympy
 
 DATA_FILE = "algebra_data.json"
 DB_FILE = "ast_database.json"
+LOG_FILE = "failed_parses.log"
 
 def clean_latex(latex_str):
     s = latex_str.strip()
     s = re.sub(r'^\\\(|\\\)$', '', s).strip()
     s = re.sub(r'^\\\[|\\\]$', '', s).strip()
+    
+    # Remove purely visual formatting
     s = s.replace(r'\displaystyle', '')
     s = s.replace(r'\left', '')
     s = s.replace(r'\right', '')
     s = s.replace(r'\,', '')  
-    s = re.sub(r'\{\{+', '{', s)
-    s = re.sub(r'\}\}+', '}', s)
+    
+    # Fix specific LaTeX syntax quirks that break the parser
+    s = s.replace(r'\centerdot', r'\cdot')
+    s = s.replace(r'\bf{e}', 'e')
+    s = s.replace(r'{\bf{e}}', 'e')
+    
+    # NOTE: The destructive brace replacement regexes were intentionally removed 
+    # from here to prevent nested fractions and exponents from unbalancing.
     return s.strip()
 
+def parse_to_ast(cleaned_latex):
+    """Custom parser to handle standard LaTeX and Systems of Equations."""
+    # Intercept and structurally map Systems of Equations
+    if r'\begin{align*}' in cleaned_latex:
+        match = re.search(r'\\begin\{align\*\}(.*?)\\end\{align\*\}', cleaned_latex, re.DOTALL)
+        if match:
+            contents = match.group(1)
+            # Split equations by newline
+            eqs = contents.split(r'\\')
+            parsed_eqs = []
+            for eq in eqs:
+                # Remove alignment ampersands
+                eq_clean = eq.replace('&', '').strip()
+                if eq_clean:
+                    parsed_eqs.append(latex2sympy(eq_clean))
+            # Return them as a grouped Tuple node in the AST
+            if parsed_eqs:
+                return Tuple(*parsed_eqs)
+    
+    # Normal single equation parsing
+    return latex2sympy(cleaned_latex)
+
 def to_prefix(node, var_map):
-    """Recursively converts an AST node into pure mathematical Prefix Notation."""
     if getattr(node, 'is_Number', False):
         return "C"
     if node in var_map:
@@ -34,47 +65,52 @@ def get_canonical_ast_signature(latex_str):
     cleaned = clean_latex(latex_str)
     try:
         with evaluate(False):
-            expr = latex2sympy(cleaned)
+            expr = parse_to_ast(cleaned)
             
-            # Extract variables and map deterministically
             free_syms = sorted(list(expr.free_symbols), key=lambda var: var.name)
             var_map = {sym: f"X{i+1}" for i, sym in enumerate(free_syms)}
             
-            # Generate pure prefix notation
             prefix_str = to_prefix(expr, var_map)
-            return prefix_str, len(free_syms)
+            return prefix_str, len(free_syms), None
             
-    except Exception:
-        return None, 0
+    except Exception as e:
+        return None, 0, str(e)
 
 def main():
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         problems = json.load(f)
         
-    print(f"Parsing {len(problems)} equations into Prefix ASTs...")
+    print(f"Parsing {len(problems)} equations into Abstract Syntax Trees...")
     
     ast_database = []
     success_count = 0
     
-    for p in problems:
-        raw_latex = p["problem_latex"]
-        ast_result = get_canonical_ast_signature(raw_latex)
+    with open(LOG_FILE, "w", encoding="utf-8") as log:
+        log.write("--- AST PARSING FAILURES ---\n\n")
         
-        if ast_result and ast_result[0]:
-            ast_signature, num_vars = ast_result
-            success_count += 1
-            ast_database.append({
-                "id": p["id"],
-                "raw_latex": raw_latex,
-                "source_url": p["source_url"],
-                "ast_signature": ast_signature,
-                "num_vars": num_vars
-            })
+        for p in problems:
+            raw_latex = p["problem_latex"]
+            ast_signature, num_vars, error_msg = get_canonical_ast_signature(raw_latex)
+            
+            if ast_signature:
+                success_count += 1
+                ast_database.append({
+                    "id": p["id"],
+                    "raw_latex": raw_latex,
+                    "source_url": p["source_url"],
+                    "ast_signature": ast_signature,
+                    "num_vars": num_vars
+                })
+            else:
+                log.write(f"ID: {p['id']}\n")
+                log.write(f"RAW LATEX: {raw_latex}\n")
+                log.write(f"ERROR: {error_msg}\n")
+                log.write("-" * 50 + "\n")
             
     with open(DB_FILE, "w", encoding="utf-8") as f:
         json.dump(ast_database, f, indent=4)
         
-    print(f"AST Database built. Successfully mapped {success_count}/{len(problems)} structures.")
+    print(f"\nAST Database built. Successfully mapped {success_count}/{len(problems)} structures.")
 
 if __name__ == "__main__":
     main()
