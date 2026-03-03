@@ -7,3 +7,4 @@ normalizer_failures.log
 .claude/
 target_urls.json
 ast_database.json
+failed_parses.log

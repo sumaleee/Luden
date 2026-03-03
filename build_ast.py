@@ -22,7 +22,7 @@ def clean_latex(latex_str):
     # Normalize \frac shorthand (MathLive omits braces for single chars)
     # \frac12 -> \frac{1}{2},  \frac{1}2 -> \frac{1}{2},  \frac1{2} -> \frac{1}{2}
     s = re.sub(r'\\frac([^{\\])([^{\\])', r'\\frac{\1}{\2}', s)
-    s = re.sub(r'\\frac(\{[^}]*\})([^{\\])', r'\\frac\1{\2}', s)
+    s = re.sub(r'\\frac(\{[^{}]*\})([^{\\])', r'\\frac\1{\2}', s)
     s = re.sub(r'\\frac([^{\\])(\{)', r'\\frac{\1}\2', s)
 
     # Fix specific LaTeX syntax quirks that break the parser
@@ -67,9 +67,34 @@ def to_prefix(node, var_map):
         return var_map[node]
     if not node.args:
         return str(node.func.__name__)
-    
+
+    func_name = node.func.__name__
+
+    # Detect a/b: Mul where some args are Pow(expr, -1) — the SymPy representation
+    # of division. Separating these out prevents rational expressions from being
+    # indistinguishable from plain multiplication.
+    if func_name == 'Mul':
+        numer_args, denom_args = [], []
+        for arg in node.args:
+            if arg.func.__name__ == 'Pow' and len(arg.args) == 2 and arg.args[1] == -1:
+                denom_args.append(arg.args[0])
+            else:
+                numer_args.append(arg)
+        if denom_args:
+            if not numer_args:
+                numer_str = "C"
+            elif len(numer_args) == 1:
+                numer_str = to_prefix(numer_args[0], var_map)
+            else:
+                numer_str = "Mul " + " ".join(to_prefix(a, var_map) for a in numer_args)
+            if len(denom_args) == 1:
+                denom_str = to_prefix(denom_args[0], var_map)
+            else:
+                denom_str = "Mul " + " ".join(to_prefix(d, var_map) for d in denom_args)
+            return f"Div {numer_str} {denom_str}"
+
     args_prefix = " ".join(to_prefix(arg, var_map) for arg in node.args)
-    return f"{node.func.__name__} {args_prefix}"
+    return f"{func_name} {args_prefix}"
 
 def get_canonical_ast_signature(latex_str):
     cleaned = clean_latex(latex_str)
