@@ -40,6 +40,9 @@
         </form>
     </div>
 
+    {% if query %}
+        <p style="font-family:monospace;font-size:12px;color:#999;">Raw submitted: {{ query | e }}</p>
+    {% endif %}
     {% if query_ast %}
         <h3>Your Query's Mathematical Structure:</h3>
         <div class="query-ast-box">{{ query_ast }}</div>

@@ -19,6 +19,12 @@ def clean_latex(latex_str):
     s = s.replace(r'\right', '')
     s = s.replace(r'\,', '')  
     
+    # Normalize \frac shorthand (MathLive omits braces for single chars)
+    # \frac12 -> \frac{1}{2},  \frac{1}2 -> \frac{1}{2},  \frac1{2} -> \frac{1}{2}
+    s = re.sub(r'\\frac([^{\\])([^{\\])', r'\\frac{\1}{\2}', s)
+    s = re.sub(r'\\frac(\{[^}]*\})([^{\\])', r'\\frac\1{\2}', s)
+    s = re.sub(r'\\frac([^{\\])(\{)', r'\\frac{\1}\2', s)
+
     # Fix specific LaTeX syntax quirks that break the parser
     s = s.replace(r'\centerdot', r'\cdot')
     s = s.replace(r'\bf{e}', 'e')
@@ -52,6 +58,10 @@ def parse_to_ast(cleaned_latex):
 
 def to_prefix(node, var_map):
     if getattr(node, 'is_Number', False):
+        if getattr(node, 'is_Rational', False) and not getattr(node, 'is_Integer', False):
+            # Rational atom (e.g. 1/2, 3/4) has no args in SymPy, so expand it
+            # explicitly as division: numerator C / denominator C
+            return "Div C C"
         return "C"
     if node in var_map:
         return var_map[node]

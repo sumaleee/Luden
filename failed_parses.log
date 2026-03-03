@@ -1,5 +1,95 @@
 --- AST PARSING FAILURES ---
 
+ID: pauls_alg_0002
+RAW LATEX: \(\displaystyle \frac{{{{\left( { - 2} \right)}^4}}}{{{{\left( {{3^2} + {2^2}} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{{{( { - 2}{ })}^4}}}{{{{( {{3^2} + {2^2}} )}^2}}}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0003
+RAW LATEX: \(\displaystyle \frac{{{4^0} \cdot {2^{ - 2}}}}{{{3^{ - 1}} \cdot {4^{ - 2}}}}\)
+ERROR: I expected something else here
+\frac{{{4^0}{ }\cdot {2^{ - 2}}}}{{{3^{ - 1}} \cdot {4^{ - 2}}}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0007
+RAW LATEX: \(\displaystyle \frac{{{m^{ - 2}}{n^{ - 10}}}}{{{m^{ - 7}}{n^{ - 3}}}}\)
+ERROR: I expected something else here
+\frac{{{m^{ - 2}{}}{n^{ - 10}}}}{{{m^{ - 7}}{n^{ - 3}}}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0008
+RAW LATEX: \(\displaystyle \frac{{{{\left( {2{p^2}} \right)}^{ - 3}}{q^4}}}{{{{\left( {6q} \right)}^{ - 1}}{p^{ - 7}}}}\)
+ERROR: I expected something else here
+\frac{{{{( {2{p^2}{}} )}^{ - 3}}{q^4}}}{{{{( {6q} )}^{ - 1}}{p^{ - 7}}}}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0018
+RAW LATEX: \(\displaystyle \frac{{{3^2} \cdot {{\left( { - 2} \right)}^3}}}{{{6^{ - 2}}}}\)
+ERROR: I expected something else here
+\frac{{{3^2}{ }\cdot {{( { - 2} )}^3}}}{{{6^{ - 2}}}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0019
+RAW LATEX: \(\displaystyle \frac{{{4^{ - 2}} \cdot {5^3}}}{{{3^{ - 4}}}}\)
+ERROR: I expected something else here
+\frac{{{4^{ - 2}{}} \cdot {5^3}}}{{{3^{ - 4}}}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0022
+RAW LATEX: \(\displaystyle \frac{{{c^{ - 6}}{b^{10}}}}{{{b^9}{c^{ - 11}}}}\)
+ERROR: I expected something else here
+\frac{{{c^{ - 6}{}}{b^{10}}}}{{{b^9}{c^{ - 11}}}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0024
+RAW LATEX: \(\displaystyle \frac{{{{\left( {6{v^2}} \right)}^{ - 1}}{w^{ - 4}}}}{{{{\left( {2v} \right)}^{ - 3}}{w^{10}}}}\)
+ERROR: I expected something else here
+\frac{{{{( {6{v^2}{}} )}^{ - 1}}{w^{ - 4}}}}{{{{( {2v} )}^{ - 3}}{w^{10}}}}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0025
+RAW LATEX: \({\left( {\displaystyle \frac{{{{\left( {8{x^{21}}} \right)}^0}{y^{ - 3}}{x^8}}}{{{y^{ - 9}}{x^{ - 1}}}}} \right)^6}\)
+ERROR: I expected something else here
+{( { \frac{{{{( {8{x^{21}{}}} )}^0}{y^{ - 3}}{x^8}}}{{{y^{ - 9}}{x^{ - 1}}}}} )^6}
+~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0027
+RAW LATEX: \({\left( {\displaystyle \frac{{{p^{ - 6}}{q^7}{{\left( {{p^2}q} \right)}^{ - 3}}}}{{{{\left( {{p^{ - 1}}{q^{ - 4}}} \right)}^2}{p^{10}}}}} \right)^3}\)
+ERROR: I expected something else here
+{( { \frac{{{p^{ - 6}{}}{q^7}{{( {{p^2}q} )}^{ - 3}}}}{{{{( {{p^{ - 1}}{q^{ - 4}}} )}^2}{p^{10}}}}} )^3}
+~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0050
+RAW LATEX: \({\left( { \displaystyle \frac{{625}}{{256}}} \right)^{\frac{1}{4}}}\)
+ERROR: I expected something else here
+{( {  \frac{{625}{}}{{256}}} )^{\frac{1}{4}}}
+~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0051
+RAW LATEX: \({\left( { \displaystyle  - \frac{{27}}{8}} \right)^{\frac{1}{3}}}\)
+ERROR: I expected something else here
+{( {   - \frac{{27}{}}{8}} )^{\frac{1}{3}}}
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0055
+RAW LATEX: \({\left( { \displaystyle \frac{{121}}{{36}}} \right)^{ - \,\,\frac{3}{2}}}\)
+ERROR: I expected something else here
+{( {  \frac{{121}{}}{{36}}} )^{ - \frac{3}{2}}}
+~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0056
+RAW LATEX: \({\left( { \displaystyle  - \frac{{32}}{{243}}} \right)^{\frac{2}{5}}}\)
+ERROR: I expected something else here
+{( {   - \frac{{32}{}}{{243}}} )^{\frac{2}{5}}}
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0057
+RAW LATEX: \({\left( { \displaystyle \frac{{81}}{{625}}} \right)^{\frac{3}{4}}}\)
+ERROR: I expected something else here
+{( {  \frac{{81}{}}{{625}}} )^{\frac{3}{4}}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
 ID: pauls_alg_0080
 RAW LATEX: \(\sqrt x \left( {4 - 3\sqrt x } \right)\)
 ERROR: I expected something else here
@@ -27,8 +117,8 @@ ERROR: I expected something else here
 ID: pauls_alg_0086
 RAW LATEX: \(\displaystyle \frac{{10}}{{3 - 5\sqrt x }}\)
 ERROR: I expected something else here
-\frac{{10}}{{3 - 5\sqrt x }}
-~~~~~~~~~~~~~~~~~~~~~~~~^
+\frac{{10}{}}{{3 - 5\sqrt x }}
+~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0109
 RAW LATEX: \(\left( {2\sqrt x  + 4} \right)\left( {\sqrt x  - 7} \right)\)
@@ -48,6 +138,12 @@ ERROR: I expected something else here
 \frac{9}{{\sqrt y }}
 ~~~~~~~~~~~~~~~~^
 --------------------------------------------------
+ID: pauls_alg_0116
+RAW LATEX: \(\displaystyle \frac{{12}}{{\sqrt[5]{{3{x^2}}}}}\)
+ERROR: I expected something else here
+\frac{{12}{}}{{\sqrt[5]{{3{x^2}}}}}
+~~~~~~~~~~~^
+--------------------------------------------------
 ID: pauls_alg_0117
 RAW LATEX: \(\displaystyle \frac{2}{{4 - \sqrt x }}\)
 ERROR: I expected something else here
@@ -63,14 +159,14 @@ ERROR: I expected something else here
 ID: pauls_alg_0120
 RAW LATEX: \(\displaystyle \frac{{ - 6}}{{\sqrt {5x}  + 10\sqrt y }}\)
 ERROR: I expected something else here
-\frac{{ - 6}}{{\sqrt {5x}  + 10\sqrt y }}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+\frac{{ - 6}{}}{{\sqrt {5x}  + 10\sqrt y }}
+~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0121
 RAW LATEX: \(\displaystyle \frac{{4 + x}}{{x - \sqrt x }}\)
 ERROR: I expected something else here
-\frac{{4 + x}}{{x - \sqrt x }}
-~~~~~~~~~~~~~~~~~~~~~~~~~~^
+\frac{{4 + x}{}}{{x - \sqrt x }}
+~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0124
 RAW LATEX: \(\sqrt[4]{{{x^2}}} = \sqrt x\)
@@ -78,23 +174,545 @@ ERROR: I expected one of these: '{' '['
 \sqrt[4]{{{x^2}}} = \sqrt x
 ~~~~~~~~~~~~~~~~~~~~~~~~~~^
 --------------------------------------------------
+ID: pauls_alg_0217
+RAW LATEX: \({x^4} - \frac{{49}}{{{x^2}}}\)
+ERROR: I expected something else here
+{x^4} - \frac{{49}{}}{{{x^2}}}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
 ID: pauls_alg_0218
 RAW LATEX: \(x - 7\sqrt x  - 18\)
 ERROR: I expected something else here
 x - 7\sqrt x  - 18
 ~~~~~~~~~~~^
 --------------------------------------------------
+ID: pauls_alg_0219
+RAW LATEX: \(\displaystyle \frac{{{x^2} - 6x - 7}}{{{x^2} - 10x + 21}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }- 6x - 7}}{{{x^2} - 10x + 21}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0220
+RAW LATEX: \(\displaystyle \frac{{{x^2} + 6x + 9}}{{{x^2} - 9}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }+ 6x + 9}}{{{x^2} - 9}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0221
+RAW LATEX: \(\displaystyle \frac{{2{x^2} - x - 28}}{{20 - x - {x^2}}}\)
+ERROR: I expected something else here
+\frac{{2{x^2}{ }- x - 28}}{{20 - x - {x^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0222
+RAW LATEX: \(\displaystyle \frac{{{x^2} + 5x - 24}}{{{x^2} + 6x + 8}}\,\centerdot \,\frac{{{x^2} + 4x + 4}}{{{x^2} - 3x}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }+ 5x - 24}}{{{x^2} + 6x + 8}}\cdot \frac{{{x^2}{ }+ 4x + 4}}{{{x^2} - 3x}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0223
+RAW LATEX: \(\displaystyle \frac{{{x^2} - 49}}{{2{x^2} - 3x - 5}} \div \frac{{{x^2} - x - 42}}{{{x^2} + 7x + 6}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }- 49}}{{2{x^2} - 3x - 5}} \div \frac{{{x^2}{ }- x - 42}}{{{x^2} + 7x + 6}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0224
+RAW LATEX: \(\displaystyle \frac{{{x^2} - 2x - 8}}{{2{x^2} - 8x - 24}} \div \frac{{{x^2} - 9x + 20}}{{{x^2} - 11x + 30}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }- 2x - 8}}{{2{x^2} - 8x - 24}} \div \frac{{{x^2}{ }- 9x + 20}}{{{x^2} - 11x + 30}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0225
+RAW LATEX: \(\displaystyle \frac{{\displaystyle \frac{3}{{x + 1}}}}{{\displaystyle \frac{{x + 4}}{{{x^2} + 11x + 10}}}}\)
+ERROR: I expected something else here
+\frac{{ \frac{3}{{x + 1}}}}{{ \frac{{x + 4}{}}{{{x^2} + 11x + 10}}}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0228
+RAW LATEX: \(\displaystyle \frac{x}{{{x^2} + 12x + 36}} - \frac{{x - 8}}{{x + 6}}\)
+ERROR: I expected something else here
+\frac{x}{{{x^2} + 12x + 36}} - \frac{{x - 8}{}}{{x + 6}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0229
+RAW LATEX: \(\displaystyle \frac{1}{{{x^2} - 13x + 42}} + \frac{{x + 1}}{{x - 6}} - \frac{{{x^2}}}{{x - 7}}\)
+ERROR: I expected something else here
+\frac{1}{{{x^2} - 13x + 42}} + \frac{{x + 1}{}}{{x - 6}} - \frac{{{x^2}{}}}{{x - 7}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0230
+RAW LATEX: \(\displaystyle \frac{{x + 10}}{{{{\left( {3x + 8} \right)}^3}}} + \frac{x}{{{{\left( {3x + 8} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{x + 10}{}}{{{{( {3x + 8} )}^3}}} + \frac{x}{{{{( {3x + 8} )}^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0231
+RAW LATEX: \(\displaystyle \frac{{{x^3} + 10{x^2}}}{{{x^2} + 6x - 40}}\)
+ERROR: I expected something else here
+\frac{{{x^3}{ }+ 10{x^2}}}{{{x^2} + 6x - 40}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0232
+RAW LATEX: \(\displaystyle \frac{{{x^2} + 18x + 72}}{{2{x^2} + 11x - 6}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }+ 18x + 72}}{{2{x^2} + 11x - 6}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0233
+RAW LATEX: \(\displaystyle \frac{{{x^2} - 3x - 28}}{{49 - {x^2}}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }- 3x - 28}}{{49 - {x^2}}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0234
+RAW LATEX: \(\displaystyle \frac{{6{x^2} + 13x + 5}}{{3{x^2} + 26x + 35}}\)
+ERROR: I expected something else here
+\frac{{6{x^2}{ }+ 13x + 5}}{{3{x^2} + 26x + 35}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0235
+RAW LATEX: \(\displaystyle \frac{{ - {x^2} + 10x - 9}}{{ - {x^2} + 6x + 27}}\)
+ERROR: I expected something else here
+\frac{{ - {x^2}{ }+ 10x - 9}}{{ - {x^2} + 6x + 27}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0236
+RAW LATEX: \(\displaystyle \frac{{{x^3} + {x^2} - 20x}}{{{x^4} - 12{x^3} + 36{x^2}}}\)
+ERROR: I expected something else here
+\frac{{{x^3}{ }+ {x^2} - 20x}}{{{x^4} - 12{x^3} + 36{x^2}}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0237
+RAW LATEX: \(\displaystyle \frac{{{x^2} + 14x + 40}}{{{x^2} + 2x - 8}}\,\centerdot \,\frac{{{x^2} + 5x - 14}}{{{x^2} + 7x - 30}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }+ 14x + 40}}{{{x^2} + 2x - 8}}\cdot \frac{{{x^2}{ }+ 5x - 14}}{{{x^2} + 7x - 30}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0238
+RAW LATEX: \(\displaystyle \frac{{4{x^3} - {x^2} - 3x}}{{{x^2} - 10x + 25}}\,\centerdot \,\frac{{10 + 3x - {x^2}}}{{{x^4} - {x^3}}}\)
+ERROR: I expected something else here
+\frac{{4{x^3}{ }- {x^2} - 3x}}{{{x^2} - 10x + 25}}\cdot \frac{{10 + 3x - {x^2}{}}}{{{x^4} - {x^3}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0239
+RAW LATEX: \(\displaystyle \frac{{{x^2} + 5x - 24}}{{{x^2} - 5x + 4}} \div \frac{{{x^2} + x - 12}}{{x - 1}}\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }+ 5x - 24}}{{{x^2} - 5x + 4}} \div \frac{{{x^2}{ }+ x - 12}}{{x - 1}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0240
+RAW LATEX: \(\displaystyle \frac{{6{x^2} + {x^3} - {x^4}}}{{{x^2} - 4}} \div \frac{{3{x^3} - 9{x^2}}}{{{x^2} + 6x - 16}}\)
+ERROR: I expected something else here
+\frac{{6{x^2}{ }+ {x^3} - {x^4}}}{{{x^2} - 4}} \div \frac{{3{x^3}{ }- 9{x^2}}}{{{x^2} + 6x - 16}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0241
+RAW LATEX: \(\displaystyle \frac{{3{x^2} + 23x + 14}}{{{x^2} + 4x + 3}} \div \frac{{6{x^2} + 13x + 6}}{{{x^2} + 2x + 1}}\)
+ERROR: I expected something else here
+\frac{{3{x^2}{ }+ 23x + 14}}{{{x^2} + 4x + 3}} \div \frac{{6{x^2}{ }+ 13x + 6}}{{{x^2} + 2x + 1}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0242
+RAW LATEX: \(\displaystyle \frac{{5{x^2} - 18x - 8}}{{\displaystyle \frac{{x - 4}}{{x + 6}}}}\)
+ERROR: I expected something else here
+\frac{{5{x^2}{ }- 18x - 8}}{{ \frac{{x - 4}{}}{{x + 6}}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0243
+RAW LATEX: \(\displaystyle \frac{{\displaystyle \frac{2}{{x + 4}}}}{{\displaystyle \frac{{6{x^3} + 17{x^2}}}{{{x^2} + 3x - 4}}}}\)
+ERROR: I expected something else here
+\frac{{ \frac{2}{{x + 4}}}}{{ \frac{{6{x^3}{ }+ 17{x^2}}}{{{x^2} + 3x - 4}}}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0245
+RAW LATEX: \(\displaystyle \frac{{2x}}{{x + 9}} - \frac{{x - 1}}{x}\)
+ERROR: I expected something else here
+\frac{{2x}{}}{{x + 9}} - \frac{{x - 1}{}}{x}
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0246
+RAW LATEX: \(\displaystyle \frac{{x + 1}}{{x - 1}} + \frac{6}{{x - 7}}\)
+ERROR: I expected something else here
+\frac{{x + 1}{}}{{x - 1}} + \frac{6}{{x - 7}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0247
+RAW LATEX: \(\displaystyle \frac{9}{{{x^2} - 4}} - \frac{{7x}}{{{x^2} - 4x + 4}}\)
+ERROR: I expected something else here
+\frac{9}{{{x^2} - 4}} - \frac{{7x}{}}{{{x^2} - 4x + 4}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0248
+RAW LATEX: \(\displaystyle \frac{{2x + 1}}{{4{x^2} - 3x - 7}} - \frac{{x + 3}}{{x + 1}} + \frac{x}{{4x - 7}}\)
+ERROR: I expected something else here
+\frac{{2x + 1}{}}{{4{x^2} - 3x - 7}} - \frac{{x + 3}{}}{{x + 1}} + \frac{x}{{4x - 7}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0250
+RAW LATEX: \(\displaystyle \frac{2}{{{x^2} - 4x - 12}} + \frac{{8x}}{{{x^2} + 12x + 20}}\)
+ERROR: I expected something else here
+\frac{2}{{{x^2} - 4x - 12}} + \frac{{8x}{}}{{{x^2} + 12x + 20}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0251
+RAW LATEX: \(\displaystyle \frac{3}{{{x^2}}} + \frac{{x + 9}}{{{x^2} + 5x}} - \frac{2}{{{x^2} + 10x + 25}}\)
+ERROR: I expected something else here
+\frac{3}{{{x^2}}} + \frac{{x + 9}{}}{{{x^2} + 5x}} - \frac{2}{{{x^2} + 10x + 25}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0270
+RAW LATEX: \(\displaystyle \frac{{1 + i}}{{7 - i}}\)
+ERROR: I expected something else here
+\frac{{1 + i}{}}{{7 - i}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0271
+RAW LATEX: \(\displaystyle \frac{{2 + 4i}}{{ - 9 + 3i}}\)
+ERROR: I expected something else here
+\frac{{2 + 4i}{}}{{ - 9 + 3i}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0272
+RAW LATEX: \(\displaystyle \frac{{6i}}{{ - 4 - 7i}}\)
+ERROR: I expected something else here
+\frac{{6i}{}}{{ - 4 - 7i}}
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0273
+RAW LATEX: \(\displaystyle \frac{{12 - 2i}}{{9i}}\)
+ERROR: I expected something else here
+\frac{{12 - 2i}{}}{{9i}}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0274
+RAW LATEX: \(\displaystyle \frac{{4 + 5i}}{{4 - 5i}}\)
+ERROR: I expected something else here
+\frac{{4 + 5i}{}}{{4 - 5i}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0275
+RAW LATEX: \(\displaystyle \frac{{i\left( {10 - 12i} \right)}}{{\left( {2 + i} \right)\left( { - 1 + 4i} \right)}}\)
+ERROR: I expected something else here
+\frac{{i( {10 - 12i}{ })}}{{( {2 + i} )( { - 1 + 4i} )}}
+~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0298
+RAW LATEX: \(\displaystyle \frac{{4 - 2z}}{3} = \frac{3}{4} - \frac{{5z}}{6}\)
+ERROR: I expected something else here
+\frac{{4 - 2z}{}}{3} = \frac{3}{4} - \frac{{5z}{}}{6}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0299
+RAW LATEX: \(\displaystyle \frac{{4t}}{{{t^2} - 25}} = \frac{1}{{5 - t}}\)
+ERROR: I expected something else here
+\frac{{4t}{}}{{{t^2} - 25}} = \frac{1}{{5 - t}}
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0300
+RAW LATEX: \(\displaystyle \frac{{3y + 4}}{{y - 1}} = 2 + \frac{7}{{y - 1}}\)
+ERROR: I expected something else here
+\frac{{3y + 4}{}}{{y - 1}} = 2 + \frac{7}{{y - 1}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0301
+RAW LATEX: \(\displaystyle \frac{{5x}}{{3x - 3}} + \frac{6}{{x + 2}} = \frac{5}{3}\)
+ERROR: I expected something else here
+\frac{{5x}{}}{{3x - 3}} + \frac{6}{{x + 2}} = \frac{5}{3}
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0306
+RAW LATEX: \(\displaystyle \frac{{3w - 1}}{5} + 1 = \frac{{7w + 2}}{{15}}\)
+ERROR: I expected something else here
+\frac{{3w - 1}{}}{5} + 1 = \frac{{7w + 2}{}}{{15}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0307
+RAW LATEX: \(\displaystyle \frac{{10y}}{9} + \frac{1}{3} = \frac{{2y - 1}}{9}\)
+ERROR: I expected something else here
+\frac{{10y}{}}{9} + \frac{1}{3} = \frac{{2y - 1}{}}{9}
+~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0308
+RAW LATEX: \(2\left( {3 - \frac{x}{4}} \right) = \frac{{2x + 5}}{3} - \frac{1}{3}\)
+ERROR: I don't understand this
+2( {3 - \frac{x}{4}} ) = \frac{{2x + 5}{}}{3} - \frac{1}{3}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0309
+RAW LATEX: \(\displaystyle \frac{{6x + 24}}{{x + 4}} = 5\)
+ERROR: I expected something else here
+\frac{{6x + 24}{}}{{x + 4}} = 5
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0310
+RAW LATEX: \(\displaystyle \frac{3}{{v + 7}} - \frac{{2 - 7v}}{{{v^2} + 5v - 14}} = \frac{4}{{v - 2}}\)
+ERROR: I expected something else here
+\frac{3}{{v + 7}} - \frac{{2 - 7v}{}}{{{v^2} + 5v - 14}} = \frac{4}{{v - 2}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0311
+RAW LATEX: \(\displaystyle \frac{{6t - 1}}{{{t^2} + 5t + 4}} =  - \frac{{19}}{{t + 1}}\)
+ERROR: I expected something else here
+\frac{{6t - 1}{}}{{{t^2} + 5t + 4}} =  - \frac{{19}{}}{{t + 1}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0312
+RAW LATEX: \(\displaystyle \frac{{8 - 4z}}{{3z - 2}} = 2 - \frac{{10z}}{{3z - 2}}\)
+ERROR: I expected something else here
+\frac{{8 - 4z}{}}{{3z - 2}} = 2 - \frac{{10z}{}}{{3z - 2}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0313
+RAW LATEX: \(\displaystyle \frac{{4w - 1}}{{w - 2}} + \frac{{8w}}{{{w^2} - 6w + 8}} = \frac{{4w + 3}}{{w - 4}}\)
+ERROR: I expected something else here
+\frac{{4w - 1}{}}{{w - 2}} + \frac{{8w}{}}{{{w^2} - 6w + 8}} = \frac{{4w + 3}{}}{{w - 4}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0315
+RAW LATEX: \(\displaystyle Q = \frac{{6h}}{{7s}} + 4\left( {1 - h} \right)\)
+ERROR: I expected something else here
+Q = \frac{{6h}{}}{{7s}} + 4( {1 - h} )
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0316
+RAW LATEX: \(\displaystyle Q = \frac{{6h}}{{7s}} + 4\left( {1 - h} \right)\)
+ERROR: I expected something else here
+Q = \frac{{6h}{}}{{7s}} + 4( {1 - h} )
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0317
+RAW LATEX: \(\displaystyle A - \frac{{1 - 2t}}{{4p}} = \frac{{4 + 3t}}{{5p}}\)
+ERROR: I expected something else here
+A - \frac{{1 - 2t}{}}{{4p}} = \frac{{4 + 3t}{}}{{5p}}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0318
+RAW LATEX: \(\displaystyle y = \frac{{10}}{{3 - 7x}}\)
+ERROR: I expected something else here
+y = \frac{{10}{}}{{3 - 7x}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0319
+RAW LATEX: \(\displaystyle y = \frac{{3 + x}}{{12 - 9x}}\)
+ERROR: I expected something else here
+y = \frac{{3 + x}{}}{{12 - 9x}}
+~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0322
+RAW LATEX: \(\displaystyle T = \frac{c}{3}\left( {6p + \frac{{3q}}{c}} \right) - 7p\)
+ERROR: I expected something else here
+T = \frac{c}{3}( {6p + \frac{{3q}{}}{c}} ) - 7p
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0323
+RAW LATEX: \(\displaystyle T = \frac{c}{3}\left( {6p + \frac{{3q}}{c}} \right) - 7p\)
+ERROR: I expected something else here
+T = \frac{c}{3}( {6p + \frac{{3q}{}}{c}} ) - 7p
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0328
+RAW LATEX: \(\displaystyle y = \frac{{4 - 9x}}{3}\)
+ERROR: I expected something else here
+y = \frac{{4 - 9x}{}}{3}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0329
+RAW LATEX: \(\displaystyle y = \frac{{12}}{{1 - x}}\)
+ERROR: I expected something else here
+y = \frac{{12}{}}{{1 - x}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0331
+RAW LATEX: \(\displaystyle y = \frac{{8 - 5x}}{{9 - 7x}}\)
+ERROR: I expected something else here
+y = \frac{{8 - 5x}{}}{{9 - 7x}}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0332
+RAW LATEX: \(\displaystyle y = \frac{{2 + 11x}}{{1 + 4x}}\)
+ERROR: I expected something else here
+y = \frac{{2 + 11x}{}}{{1 + 4x}}
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0333
+RAW LATEX: \(\displaystyle y = \frac{{9 + 2x}}{{4 - x}}\)
+ERROR: I expected something else here
+y = \frac{{9 + 2x}{}}{{4 - x}}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0343
+RAW LATEX: \(\displaystyle \frac{{{w^2} - 10}}{{w + 2}} + w - 4 = w - 3\)
+ERROR: I expected something else here
+\frac{{{w^2}{ }- 10}}{{w + 2}} + w - 4 = w - 3
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0344
+RAW LATEX: \(\displaystyle \frac{{4z}}{{z + 1}} + \frac{5}{z} = \frac{{6z + 5}}{{{z^2} + z}}\)
+ERROR: I expected something else here
+\frac{{4z}{}}{{z + 1}} + \frac{5}{z} = \frac{{6z + 5}{}}{{{z^2} + z}}
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0345
+RAW LATEX: \(\displaystyle x + 1 = \frac{{2x - 7}}{{x + 5}} - \frac{{5x + 8}}{{x + 5}}\)
+ERROR: I don't understand this
+x + 1 = \frac{{2x - 7}{}}{{x + 5}} - \frac{{5x + 8}{}}{{x + 5}}
+~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0368
+RAW LATEX: \(\displaystyle 1 + \frac{2}{{x - 2}} = \frac{{12 - x}}{{{x^2} + x - 6}}\)
+ERROR: I don't understand this
+1 + \frac{2}{{x - 2}} = \frac{{12 - x}{}}{{{x^2} + x - 6}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0369
+RAW LATEX: \(\displaystyle \frac{{t + 1}}{{t + 2}} = \frac{{4\left( {t - 5} \right)}}{{{t^2} + 2t}} + \frac{4}{t}\)
+ERROR: I expected something else here
+\frac{{t + 1}{}}{{t + 2}} = \frac{{4( {t - 5}{ })}}{{{t^2} + 2t}} + \frac{4}{t}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0370
+RAW LATEX: \(\displaystyle \frac{{{w^2} - 1}}{{w + 6}} = \frac{{5 - 5w}}{{w + 6}} - w\)
+ERROR: I expected something else here
+\frac{{{w^2}{ }- 1}}{{w + 6}} = \frac{{5 - 5w}{}}{{w + 6}} - w
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0371
+RAW LATEX: \(\displaystyle \frac{{y - 2}}{{y - 9}} + \frac{{{y^2} - 19y + 34}}{{{y^2} - 10y + 9}} = \frac{{y - 3}}{{y - 1}}\)
+ERROR: I expected something else here
+\frac{{y - 2}{}}{{y - 9}} + \frac{{{y^2}{ }- 19y + 34}}{{{y^2} - 10y + 9}} = \frac{{y - 3}{}}{{y - 1}}
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0430
+RAW LATEX: \(\displaystyle \frac{{49}}{9}{x^2} + \frac{{14}}{{15}}x + \frac{1}{{25}} = 0\)
+ERROR: I expected something else here
+\frac{{49}{}}{9}{x^2} + \frac{{14}{}}{{15}}x + \frac{1}{{25}} = 0
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0435
+RAW LATEX: \(\displaystyle \frac{2}{{{x^2}}} + \frac{{17}}{x} + 21 = 0\)
+ERROR: I expected something else here
+\frac{2}{{{x^2}}} + \frac{{17}{}}{x} + 21 = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
 ID: pauls_alg_0436
 RAW LATEX: \(\displaystyle \frac{1}{x} - \frac{{11}}{{\sqrt x }} + 18 = 0\)
 ERROR: I expected something else here
-\frac{1}{x} - \frac{{11}}{{\sqrt x }} + 18 = 0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+\frac{1}{x} - \frac{{11}{}}{{\sqrt x }} + 18 = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0440
 RAW LATEX: \(x - 8\sqrt x  + 15 = 0\)
 ERROR: I expected something else here
 x - 8\sqrt x  + 15 = 0
 ~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0445
+RAW LATEX: \(\displaystyle \frac{1}{{{x^4}}} + \frac{{10}}{{{x^2}}} + 22 = 0\)
+ERROR: I expected something else here
+\frac{1}{{{x^4}}} + \frac{{10}{}}{{{x^2}}} + 22 = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0497
+RAW LATEX: \(\displaystyle \frac{{4 - x}}{{x + 3}} > 0\)
+ERROR: I expected something else here
+\frac{{4 - x}{}}{{x + 3}} > 0
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0498
+RAW LATEX: \(\displaystyle \frac{{2z - 5}}{{z - 7}} \le 0\)
+ERROR: I expected something else here
+\frac{{2z - 5}{}}{{z - 7}} \le 0
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0499
+RAW LATEX: \(\displaystyle \frac{{{w^2} + 5w - 6}}{{w - 3}} \ge 0\)
+ERROR: I expected something else here
+\frac{{{w^2}{ }+ 5w - 6}}{{w - 3}} \ge 0
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0500
+RAW LATEX: \(\displaystyle \frac{{3x + 8}}{{x - 1}} <  - 2\)
+ERROR: I expected something else here
+\frac{{3x + 8}{}}{{x - 1}} <  - 2
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0502
+RAW LATEX: \(\displaystyle \frac{{{t^3} - 6{t^2}}}{{t - 2}} > 0\)
+ERROR: I expected something else here
+\frac{{{t^3}{ }- 6{t^2}}}{{t - 2}} > 0
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0503
+RAW LATEX: \(\displaystyle \frac{{t + 6}}{{t - 1}} < 0\)
+ERROR: I expected something else here
+\frac{{t + 6}{}}{{t - 1}} < 0
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0504
+RAW LATEX: \(\displaystyle \frac{{4x + 2}}{{3 - x}} \ge 0\)
+ERROR: I expected something else here
+\frac{{4x + 2}{}}{{3 - x}} \ge 0
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0505
+RAW LATEX: \(\displaystyle \frac{{2u + 3}}{{u + 6}} > 0\)
+ERROR: I expected something else here
+\frac{{2u + 3}{}}{{u + 6}} > 0
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0506
+RAW LATEX: \(\displaystyle \frac{{3 - z}}{{z + 1}} <  - 2\)
+ERROR: I expected something else here
+\frac{{3 - z}{}}{{z + 1}} <  - 2
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0507
+RAW LATEX: \(\displaystyle \frac{{w + 9}}{{w + 2}} \le 3\)
+ERROR: I expected something else here
+\frac{{w + 9}{}}{{w + 2}} \le 3
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0508
+RAW LATEX: \(\displaystyle \frac{{{x^2} + 9x + 14}}{{x - 1}} > 0\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }+ 9x + 14}}{{x - 1}} > 0
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0509
+RAW LATEX: \(\displaystyle \frac{{4{z^2} + 3z - 10}}{z} \ge 0\)
+ERROR: I expected something else here
+\frac{{4{z^2}{ }+ 3z - 10}}{z} \ge 0
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0510
+RAW LATEX: \(\displaystyle \frac{{{t^2} + 10t + 16}}{{{t^2} - 4t + 3}} \le 0\)
+ERROR: I expected something else here
+\frac{{{t^2}{ }+ 10t + 16}}{{{t^2} - 4t + 3}} \le 0
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0511
+RAW LATEX: \(\displaystyle \frac{{{z^2} - 6z + 4}}{{z - 5}} < 4\)
+ERROR: I expected something else here
+\frac{{{z^2}{ }- 6z + 4}}{{z - 5}} < 4
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0512
+RAW LATEX: \(\displaystyle w - 5 \ge \frac{{3 - {w^2}}}{w}\)
+ERROR: I expected something else here
+w - 5 \ge \frac{{3 - {w^2}{}}}{w}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0513
+RAW LATEX: \(\displaystyle \frac{{{x^2} + 8x + 16}}{x} > 0\)
+ERROR: I expected something else here
+\frac{{{x^2}{ }+ 8x + 16}}{x} > 0
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0514
+RAW LATEX: \(\displaystyle \frac{{u - 8}}{{3{u^4} - {u^5}}} \le 0\)
+ERROR: I expected something else here
+\frac{{u - 8}{}}{{3{u^4} - {u^5}}} \le 0
+~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0556
 RAW LATEX: \(y = 2 + \sqrt x\)
@@ -107,6 +725,12 @@ RAW LATEX: \(\sqrt 7\)
 ERROR: I expected something else here
 \sqrt 7
 ~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0631
+RAW LATEX: \(\displaystyle {x^2} + {\left( {y + 4} \right)^2} = \frac{{49}}{{144}}\)
+ERROR: I don't understand this
+{x^2} + {( {y + 4} )^2} = \frac{{49}{}}{{144}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0642
 RAW LATEX: \(\left\{ {\left( { - 1,8} \right),\left( {4, - 7} \right),\left( { - 1,6} \right),\left( {0,0} \right)} \right\}\)
@@ -123,6 +747,12 @@ RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}6&{{\rm{if }}x 
 ERROR: I don't understand this
 f( x ) = \{ {\begin{array}{*{20}{l}}6&{{\rm{if }}x \ge 9}\\{x + 9}&{{\rm{if }}2 < x < 9}\\{{x^2}}&{{\rm{if }}x \le 2}\end{array}} 0.
 ~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0656
+RAW LATEX: \(\displaystyle g\left( t \right) = \frac{{8t - 24}}{{{t^2} - 7t - 18}}\)
+ERROR: I don't understand this
+g( t ) = \frac{{8t - 24}{}}{{{t^2} - 7t - 18}}
+~~~~~~~~~~~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0677
 RAW LATEX: \(g\left( t \right) = \left\{ {\begin{array}{*{20}{l}}{2 + t}&{{\mbox{if }}t \ge 10}\\{t - 7}&{{\mbox{if }}t < 10}\end{array}} \right.\)
@@ -153,6 +783,42 @@ RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{2x}&{{\mbox{if
 ERROR: I don't understand this
 f( x ) = \{ {\begin{array}{*{20}{l}}{2x}&{{\mbox{if }}x < 6}\\{4 + x}&{{\mbox{if }}x = 6}\\{{x^2}}&{{\mbox{if }}x > 6}\end{array}} 0.
 ~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0689
+RAW LATEX: \(\displaystyle h\left( x \right) = \frac{{2 + x}}{{8x - 1}}\)
+ERROR: I don't understand this
+h( x ) = \frac{{2 + x}{}}{{8x - 1}}
+~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0690
+RAW LATEX: \(\displaystyle A\left( t \right) = \frac{{{t^2} - 4}}{{{t^2} + 6t - 7}}\)
+ERROR: I expected something else here
+A( t ) = \frac{{{t^2}{ }- 4}}{{{t^2} + 6t - 7}}
+~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0691
+RAW LATEX: \(\displaystyle h\left( w \right) = \frac{{{w^2} + 3w + 2}}{{{w^2} + 12w + 36}}\)
+ERROR: I expected something else here
+h( w ) = \frac{{{w^2}{ }+ 3w + 2}}{{{w^2} + 12w + 36}}
+~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0693
+RAW LATEX: \(\displaystyle f\left( t \right) = \frac{{10t}}{{\sqrt {6 - 4t} }}\)
+ERROR: I don't understand this
+f( t ) = \frac{{10t}{}}{{\sqrt {6 - 4t} }}
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0694
+RAW LATEX: \(\displaystyle f\left( w \right) = \frac{{\sqrt {w + 7} }}{{\sqrt {2 - w} }}\)
+ERROR: I expected something else here
+f( w ) = \frac{{\sqrt {w + 7}{ }}}{{\sqrt {2 - w} }}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0697
+RAW LATEX: \(\displaystyle g\left( t \right) = \sqrt {\frac{{6 + t}}{{5t - 10}}}\)
+ERROR: I don't understand this
+g( t ) = \sqrt {\frac{{6 + t}{}}{{5t - 10}}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0701
 RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{10 - 2x}&{{\rm{if }}x < 2}\\{{x^2} + 2}&{{\rm{if }}x \ge 2}\end{array}} \right.\)
@@ -202,6 +868,132 @@ ERROR: I expected one of these: '{' '['
 R( t ) = \sqrt t  - 2
 ~~~~~~~~~~~~~~~^
 --------------------------------------------------
+ID: pauls_alg_0735
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{4x}}{{5 - x}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{4x}{}}{{5 - x}}
+~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0736
+RAW LATEX: \(\displaystyle h\left( x \right) = \frac{{1 + 2x}}{{7 + x}}\)
+ERROR: I don't understand this
+h( x ) = \frac{{1 + 2x}{}}{{7 + x}}
+~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0744
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{10 - 3x}}{{8x}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{10 - 3x}{}}{{8x}}
+~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0745
+RAW LATEX: \(\displaystyle g\left( x \right) = \frac{{6x - 7}}{{4 + x}}\)
+ERROR: I don't understand this
+g( x ) = \frac{{6x - 7}{}}{{4 + x}}
+~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0746
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{3 - x}}{{9 - 7x}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{3 - x}{}}{{9 - 7x}}
+~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0782
+RAW LATEX: \(\displaystyle \frac{{{{\left( {x + 3} \right)}^2}}}{9} + \frac{{{{\left( {y - 5} \right)}^2}}}{3} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {x + 3}{ })}^2}}}{9} + \frac{{{{( {y - 5}{ })}^2}}}{3} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0783
+RAW LATEX: \(\displaystyle {x^2} + \frac{{{{\left( {y - 1} \right)}^2}}}{4} = 1\)
+ERROR: I expected something else here
+{x^2} + \frac{{{{( {y - 1}{ })}^2}}}{4} = 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0784
+RAW LATEX: \(\displaystyle 4{\left( {x + 2} \right)^2} + \frac{{{{\left( {y + 4} \right)}^2}}}{4} = 1\)
+ERROR: I expected something else here
+4{( {x + 2} )^2} + \frac{{{{( {y + 4}{ })}^2}}}{4} = 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0787
+RAW LATEX: \(\displaystyle \frac{{{{\left( {x + 5} \right)}^2}}}{4} + \frac{{{{\left( {y - 2} \right)}^2}}}{9} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {x + 5}{ })}^2}}}{4} + \frac{{{{( {y - 2}{ })}^2}}}{9} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0788
+RAW LATEX: \(\displaystyle {\left( {x - 4} \right)^2} + \frac{{{y^2}}}{{16}} = 1\)
+ERROR: I expected something else here
+{( {x - 4} )^2} + \frac{{{y^2}{}}}{{16}} = 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0789
+RAW LATEX: \(\displaystyle \frac{{{{\left( {x + 1} \right)}^2}}}{{25}} + \frac{{{{\left( {y + 6} \right)}^2}}}{4} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {x + 1}{ })}^2}}}{{25}} + \frac{{{{( {y + 6}{ })}^2}}}{4} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0790
+RAW LATEX: \(\displaystyle \frac{{{{\left( {x - 3} \right)}^2}}}{5} + \frac{{{{\left( {y + 1} \right)}^2}}}{{12}} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {x - 3}{ })}^2}}}{5} + \frac{{{{( {y + 1}{ })}^2}}}{{12}} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0792
+RAW LATEX: \(\displaystyle \frac{{{{\left( {x - 3} \right)}^2}}}{9} + 2{\left( {y + 4} \right)^2} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {x - 3}{ })}^2}}}{9} + 2{( {y + 4} )^2} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0793
+RAW LATEX: \(\displaystyle \frac{{{{\left( {x - 4} \right)}^2}}}{9} + \frac{{{{\left( {y - 1} \right)}^2}}}{9} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {x - 4}{ })}^2}}}{9} + \frac{{{{( {y - 1}{ })}^2}}}{9} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0797
+RAW LATEX: \(\displaystyle \frac{{{y^2}}}{{16}} - \frac{{{{\left( {x - 2} \right)}^2}}}{9} = 1\)
+ERROR: I expected something else here
+\frac{{{y^2}{}}}{{16}} - \frac{{{{( {x - 2}{ })}^2}}}{9} = 1
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0798
+RAW LATEX: \(\displaystyle \frac{{{{\left( {x + 3} \right)}^2}}}{4} - \frac{{{{\left( {y - 1} \right)}^2}}}{9} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {x + 3}{ })}^2}}}{4} - \frac{{{{( {y - 1}{ })}^2}}}{9} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0799
+RAW LATEX: \(\displaystyle 3{\left( {x - 1} \right)^2} - \frac{{{{\left( {y + 1} \right)}^2}}}{2} = 1\)
+ERROR: I expected something else here
+3{( {x - 1} )^2} - \frac{{{{( {y + 1}{ })}^2}}}{2} = 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0802
+RAW LATEX: \(\displaystyle \frac{{{x^2}}}{9} - \frac{{{y^2}}}{4} = 1\)
+ERROR: I expected something else here
+\frac{{{x^2}{}}}{9} - \frac{{{y^2}{}}}{4} = 1
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0803
+RAW LATEX: \(\displaystyle \frac{{{{\left( {y + 3} \right)}^2}}}{{36}} - \frac{{{{\left( {x + 2} \right)}^2}}}{{16}} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {y + 3}{ })}^2}}}{{36}} - \frac{{{{( {x + 2}{ })}^2}}}{{16}} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0804
+RAW LATEX: \(\displaystyle \frac{{{{\left( {y - 5} \right)}^2}}}{{49}} - \frac{{{x^2}}}{{64}} = 1\)
+ERROR: I expected something else here
+\frac{{{{( {y - 5}{ })}^2}}}{{49}} - \frac{{{x^2}{}}}{{64}} = 1
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0805
+RAW LATEX: \(\displaystyle 9{\left( {x - 4} \right)^2} - \frac{{{{\left( {y - 1} \right)}^2}}}{4} = 1\)
+ERROR: I expected something else here
+9{( {x - 4} )^2} - \frac{{{{( {y - 1}{ })}^2}}}{4} = 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
 ID: pauls_alg_0810
 RAW LATEX: \(f\left( x \right) = \sqrt x  + 4\)
 ERROR: I expected one of these: '{' '['
@@ -220,11 +1012,239 @@ ERROR: I expected one of these: '{' '['
 f( x ) =  - \sqrt x
 ~~~~~~~~~~~~~~~~~~^
 --------------------------------------------------
+ID: pauls_alg_0832
+RAW LATEX: \(\displaystyle \frac{{{y^2}}}{4} = 1 + \frac{{{x^2}}}{9}\)
+ERROR: I expected something else here
+\frac{{{y^2}{}}}{4} = 1 + \frac{{{x^2}{}}}{9}
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0838
+RAW LATEX: \(\displaystyle {y^2} = 8{x^4} + \frac{{{x^2}}}{{{y^2}}} - 1\)
+ERROR: I expected something else here
+{y^2} = 8{x^4} + \frac{{{x^2}{}}}{{{y^2}}} - 1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0844
+RAW LATEX: \(\displaystyle y = \frac{{{x^2}}}{{{x^2} + 1}}\)
+ERROR: I expected something else here
+y = \frac{{{x^2}{}}}{{{x^2} + 1}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0845
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{ - 4}}{{x - 2}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{ - 4}{}}{{x - 2}}
+~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0846
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{6 - 2x}}{{1 - x}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{6 - 2x}{}}{{1 - x}}
+~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0848
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{4{x^2} - 36}}{{{x^2} - 2x - 8}}\)
+ERROR: I expected something else here
+f( x ) = \frac{{4{x^2}{ }- 36}}{{{x^2} - 2x - 8}}
+~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0850
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{6 - x}}{{x - 3}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{6 - x}{}}{{x - 3}}
+~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0851
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{8x + 6}}{{4 - 2x}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{8x + 6}{}}{{4 - 2x}}
+~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0852
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{ - 2}}{{{x^2} - 5x}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{ - 2}{}}{{{x^2} - 5x}}
+~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0853
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{x + 3}}{{{x^2} + 4x - 5}}\)
+ERROR: I don't understand this
+f( x ) = \frac{{x + 3}{}}{{{x^2} + 4x - 5}}
+~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0855
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{5{x^2} + 1}}{{2{x^2} - 32}}\)
+ERROR: I expected something else here
+f( x ) = \frac{{5{x^2}{ }+ 1}}{{2{x^2} - 32}}
+~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0856
+RAW LATEX: \(\displaystyle f\left( x \right) = \frac{{{x^2} - 5x + 4}}{{{x^2} + 2x - 15}}\)
+ERROR: I expected something else here
+f( x ) = \frac{{{x^2}{ }- 5x + 4}}{{{x^2} + 2x - 15}}
+~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
 ID: pauls_alg_0876
 RAW LATEX: \(\begin{align*}A\left( x \right) & = {x^8} + 2{x^7} - 29{x^6} - 76{x^5} + 199{x^4} + 722{x^3} + 261{x^2} - 648x - 432\\ &  = {\left( {x + 1} \right)^2}{\left( {x - 4} \right)^2}\left( {x - 1} \right){\left( {x + 3} \right)^3}\end{align*}\)
 ERROR: I don't understand this
 = {( {x + 1} )^2}{( {x - 4} )^2}( {x - 1} ){( {x + 3} )^3}
 ^
+--------------------------------------------------
+ID: pauls_alg_0920
+RAW LATEX: \(\displaystyle \frac{{17x - 53}}{{{x^2} - 2x - 15}}\)
+ERROR: I expected something else here
+\frac{{17x - 53}{}}{{{x^2} - 2x - 15}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0921
+RAW LATEX: \(\displaystyle \frac{{34 - 12x}}{{3{x^2} - 10x - 8}}\)
+ERROR: I expected something else here
+\frac{{34 - 12x}{}}{{3{x^2} - 10x - 8}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0922
+RAW LATEX: \(\displaystyle \frac{{125 + 4x - 9{x^2}}}{{\left( {x - 1} \right)\left( {x + 3} \right)\left( {x + 4} \right)}}\)
+ERROR: I expected something else here
+\frac{{125 + 4x - 9{x^2}{}}}{{( {x - 1} )( {x + 3} )( {x + 4} )}}
+~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0923
+RAW LATEX: \(\displaystyle \frac{{10x + 35}}{{{{\left( {x + 4} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{10x + 35}{}}{{{{( {x + 4} )}^2}}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0924
+RAW LATEX: \(\displaystyle \frac{{6x + 5}}{{{{\left( {2x - 1} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{6x + 5}{}}{{{{( {2x - 1} )}^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0925
+RAW LATEX: \(\displaystyle \frac{{7{x^2} - 17x + 38}}{{\left( {x + 6} \right){{\left( {x - 1} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{7{x^2}{ }- 17x + 38}}{{( {x + 6} ){{( {x - 1} )}^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0926
+RAW LATEX: \(\displaystyle \frac{{4{x^2} - 22x + 7}}{{\left( {2x + 3} \right){{\left( {x - 2} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{4{x^2}{ }- 22x + 7}}{{( {2x + 3} ){{( {x - 2} )}^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0927
+RAW LATEX: \(\displaystyle \frac{{3{x^2} + 7x + 28}}{{x\left( {{x^2} + x + 7} \right)}}\)
+ERROR: I expected something else here
+\frac{{3{x^2}{ }+ 7x + 28}}{{x( {{x^2} + x + 7} )}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0928
+RAW LATEX: \(\displaystyle \frac{{4{x^3} + 16x + 7}}{{{{\left( {{x^2} + 4} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{4{x^3}{ }+ 16x + 7}}{{{{( {{x^2} + 4} )}^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0929
+RAW LATEX: \(\displaystyle \frac{{22 + 7x}}{{{x^2} + 5x + 4}}\)
+ERROR: I expected something else here
+\frac{{22 + 7x}{}}{{{x^2} + 5x + 4}}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0930
+RAW LATEX: \(\displaystyle \frac{{7x - 44}}{{4{x^2} + 25x - 21}}\)
+ERROR: I expected something else here
+\frac{{7x - 44}{}}{{4{x^2} + 25x - 21}}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0931
+RAW LATEX: \(\displaystyle \frac{{ - x - 47}}{{{x^2} - 11x + 24}}\)
+ERROR: I expected something else here
+\frac{{ - x - 47}{}}{{{x^2} - 11x + 24}}
+~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0932
+RAW LATEX: \(\displaystyle \frac{{5 - 38x}}{{8{x^2} + 2x - 1}}\)
+ERROR: I expected something else here
+\frac{{5 - 38x}{}}{{8{x^2} + 2x - 1}}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0933
+RAW LATEX: \(\displaystyle \frac{{6{x^2} + 50x + 16}}{{\left( {x - 1} \right)\left( {x + 2} \right)\left( {x + 7} \right)}}\)
+ERROR: I expected something else here
+\frac{{6{x^2}{ }+ 50x + 16}}{{( {x - 1} )( {x + 2} )( {x + 7} )}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0934
+RAW LATEX: \(\displaystyle \frac{{32{x^2} + 39x - 8}}{{\left( {x + 1} \right)\left( {x + 2} \right)\left( {2x - 3} \right)}}\)
+ERROR: I expected something else here
+\frac{{32{x^2}{ }+ 39x - 8}}{{( {x + 1} )( {x + 2} )( {2x - 3} )}}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0935
+RAW LATEX: \(\displaystyle \frac{{36 + 115x - 19{x^2}}}{{\left( {x + 3} \right)\left( {x - 5} \right)\left( {4x - 3} \right)}}\)
+ERROR: I expected something else here
+\frac{{36 + 115x - 19{x^2}{}}}{{( {x + 3} )( {x - 5} )( {4x - 3} )}}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0936
+RAW LATEX: \(\displaystyle \frac{{3 - 5x}}{{{{\left( {x - 3} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{3 - 5x}{}}{{{{( {x - 3} )}^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0937
+RAW LATEX: \(\displaystyle \frac{{24x + 41}}{{{{\left( {3x + 5} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{24x + 41}{}}{{{{( {3x + 5} )}^2}}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0938
+RAW LATEX: \(\displaystyle \frac{{10x + 93}}{{{{\left( {x + 10} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{10x + 93}{}}{{{{( {x + 10} )}^2}}}
+~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0939
+RAW LATEX: \(\displaystyle \frac{{7{x^2} + 31x + 107}}{{\left( {x - 4} \right){{\left( {x + 3} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{7{x^2}{ }+ 31x + 107}}{{( {x - 4} ){{( {x + 3} )}^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0940
+RAW LATEX: \(\displaystyle \frac{{9{x^2} - 58x - 37}}{{\left( {x + 7} \right){{\left( {x - 2} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{9{x^2}{ }- 58x - 37}}{{( {x + 7} ){{( {x - 2} )}^2}}}
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0941
+RAW LATEX: \(\displaystyle \frac{{21{x^2} - 43x + 20}}{{\left( {3x - 2} \right){{\left( {x - 1} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{21{x^2}{ }- 43x + 20}}{{( {3x - 2} ){{( {x - 1} )}^2}}}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0942
+RAW LATEX: \(\displaystyle \frac{{ - 7{x^2} + 108x - 11}}{{x\left( {{x^2} - 9x + 1} \right)}}\)
+ERROR: I expected something else here
+\frac{{ - 7{x^2}{ }+ 108x - 11}}{{x( {{x^2} - 9x + 1} )}}
+~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0943
+RAW LATEX: \(\displaystyle \frac{{24{x^2} + 2x + 117}}{{x\left( {2{x^2} + x + 13} \right)}}\)
+ERROR: I expected something else here
+\frac{{24{x^2}{ }+ 2x + 117}}{{x( {2{x^2} + x + 13} )}}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0944
+RAW LATEX: \(\displaystyle \frac{{2 - 11x + {x^2} - 7{x^3}}}{{{{\left( {{x^2} + 2} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{2 - 11x + {x^2}{ }- 7{x^3}}}{{{{( {{x^2} + 2} )}^2}}}
+~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0945
+RAW LATEX: \(\displaystyle \frac{{4{x^3} - 3{x^2} - 5x - 5}}{{{{\left( {{x^2} + 1} \right)}^2}}}\)
+ERROR: I expected something else here
+\frac{{4{x^3}{ }- 3{x^2} - 5x - 5}}{{{{( {{x^2} + 1} )}^2}}}
+~~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0964
 RAW LATEX: \({\log _2}\,32 = 5\)
@@ -271,7 +1291,7 @@ ERROR: I expected something else here
 ID: pauls_alg_0975
 RAW LATEX: \({\log _4}\left( {\displaystyle \frac{{x - 4}}{{{y^2}\,\sqrt[5]{z}}}} \right)\)
 ERROR: I expected something else here
-{\log _4}( { \frac{{x - 4}}{{{y^2}\sqrt[5]{z}}}} )
+{\log _4}( { \frac{{x - 4}{}}{{{y^2}\sqrt[5]{z}}}} )
 ~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0976
@@ -291,6 +1311,12 @@ RAW LATEX: \({\log _{\frac{2}{3}}}53\)
 ERROR: I expected something else here
 {\log _{\frac{2}{3}}}53
 ~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0986
+RAW LATEX: \({\left( {\displaystyle \frac{2}{7}} \right)^{ - 3}} =\displaystyle  \frac{{343}}{8}\)
+ERROR: I don't understand this
+{( { \frac{2}{7}} )^{ - 3}} =  \frac{{343}{}}{8}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0989
 RAW LATEX: \({\log _{\frac{1}{6}}}\,36 =  - 2\)
@@ -337,7 +1363,7 @@ ERROR: I expected something else here
 ID: pauls_alg_0996
 RAW LATEX: \({\log _{\frac{3}{8}}}\displaystyle \frac{{27}}{{512}}\)
 ERROR: I expected something else here
-{\log _{\frac{3}{8}}} \frac{{27}}{{512}}
+{\log _{\frac{3}{8}}} \frac{{27}{}}{{512}}
 ~~~~~~~~~~~~~~~~~~~~^
 --------------------------------------------------
 ID: pauls_alg_0997
@@ -441,4 +1467,58 @@ RAW LATEX: \({\log _4}\left( x \right) = 2 - {\log _4}\left( {x + 6} \right)\)
 ERROR: I expected something else here
 {\log _4}( x ) = 2 - {\log _4}( {x + 6} )
 ~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1112
+RAW LATEX: \(\begin{align*}y & = 1 - 3x\\  \frac{{{x^2}}}{4} + {y^2} & = 1\end{align*}\)
+ERROR: I expected something else here
+\frac{{{x^2}{}}}{4} + {y^2}  = 1
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1113
+RAW LATEX: \(\begin{align*}xy & = 4\\  \frac{{{x^2}}}{4} + \frac{{{y^2}}}{{25}} & = 1\end{align*}\)
+ERROR: I expected something else here
+\frac{{{x^2}{}}}{4} + \frac{{{y^2}{}}}{{25}}  = 1
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1114
+RAW LATEX: \(\begin{align*}y & = 1 - 2{x^2}\\  {x^2} - \frac{{{y^2}}}{9} & = 1\end{align*}\)
+ERROR: I expected something else here
+{x^2} - \frac{{{y^2}{}}}{9}  = 1
+~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1117
+RAW LATEX: \(\begin{align*}{x^2} + \frac{{{y^2}}}{4} & = 1\\  y & = 4 - 4x\end{align*}\)
+ERROR: I expected something else here
+{x^2} + \frac{{{y^2}{}}}{4}  = 1
+~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1118
+RAW LATEX: \(\begin{align*}{x^2} + {y^2} & = 9\\  y & = 1 + \frac{{{x^2}}}{5}\end{align*}\)
+ERROR: I expected something else here
+y  = 1 + \frac{{{x^2}{}}}{5}
+~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1119
+RAW LATEX: \(\begin{align*}{x^2} + {y^2} & = 16\\  {y^2} - \frac{{{x^2}}}{{15}} & = 1\end{align*}\)
+ERROR: I expected something else here
+{y^2} - \frac{{{x^2}{}}}{{15}}  = 1
+~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1120
+RAW LATEX: \(\begin{align*}xy & =  - 2\\  {x^2} + \frac{{{y^2}}}{{25}} & = 1\end{align*}\)
+ERROR: I expected something else here
+{x^2} + \frac{{{y^2}{}}}{{25}}  = 1
+~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1121
+RAW LATEX: \(\begin{align*}{x^2} + {y^2} & = 1\\  \frac{{{x^2}}}{4} + {y^2} & = 1\end{align*}\)
+ERROR: I expected something else here
+\frac{{{x^2}{}}}{4} + {y^2}  = 1
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1122
+RAW LATEX: \(\begin{align*}{x^2} + {y^2} & = 3\\  \frac{{{x^2}}}{9} + {y^2} & = 1\end{align*}\)
+ERROR: I expected something else here
+\frac{{{x^2}{}}}{9} + {y^2}  = 1
+~~~~~~~~~~~~~^
 --------------------------------------------------
