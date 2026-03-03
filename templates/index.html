@@ -4,51 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luden Math Tutor MVP</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="https://unpkg.com/mathlive"></script>
+    
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
         .search-box { background: #f4f4f9; padding: 25px; border-radius: 8px; margin-bottom: 30px; }
-        textarea { width: 100%; height: 80px; padding: 12px; font-size: 16px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        
+        /* Styling the MathLive component to look like a clean input box */
+        math-field { font-size: 24px; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; background: white; width: 100%; box-sizing: border-box; }
+        math-field::part(virtual-keyboard-toggle) { color: #0056b3; } /* Colors the keyboard icon */
+        
         button { background: #0056b3; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 4px; cursor: pointer; }
         button:hover { background: #004494; }
         .result-card { border: 1px solid #e0e0e0; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .meta { color: #666; font-size: 0.9em; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
-        .solution { background: #fdfdfd; padding: 20px; border-left: 4px solid #28a745; overflow-x: auto; margin-top: 15px; }
+        .ast-box { background: #fdfdfd; padding: 15px; border-left: 4px solid #0056b3; overflow-x: auto; margin-top: 15px; font-family: monospace; font-size: 14px; color: #444; }
+        .query-ast-box { background: #eef2f5; padding: 15px; border-radius: 4px; border-left: 4px solid #6c757d; font-family: monospace; margin-bottom: 25px; overflow-x: auto;}
         .distance { font-weight: bold; color: #d9534f; }
         .distance.strong { color: #28a745; }
     </style>
 </head>
 <body>
     <h1>Luden Math Tutor</h1>
-    <p>Enter an algebra problem below. The system will retrieve the most structurally similar verified problems and their solutions.</p>
+    <p>Use the math keyboard below to enter an equation. The system will parse its Abstract Syntax Tree (AST) and retrieve the most topologically identical problems.</p>
     
     <div class="search-box">
-        <form method="POST">
-            <textarea name="query" placeholder="e.g., 5y - 3(4 - y) = 2y + 9" required>{{ query }}</textarea><br>
-            <button type="submit">Find Similar Problems</button>
+        <form method="POST" id="search-form">
+            <math-field id="math-input" virtual-keyboard-mode="manual">{% if query %}{{ query }}{% endif %}</math-field>
+            
+            <input type="hidden" name="query" id="hidden-query" value="{{ query }}">
+            
+            <button type="submit">Find Exact Structural Matches</button>
         </form>
     </div>
 
+    {% if query_ast %}
+        <h3>Your Query's Mathematical Structure:</h3>
+        <div class="query-ast-box">{{ query_ast }}</div>
+    {% endif %}
+
     {% if results %}
-        <h2>Top Matches</h2>
+        <h2>Top 5 Matches</h2>
         {% for res in results %}
             <div class="result-card">
                 <div class="meta">
-                    <strong>Topic:</strong> {{ res.topic }} | 
-                    <strong>Vector Distance:</strong> <span class="distance {% if res.distance < 0.15 %}strong{% endif %}">{{ res.distance }}</span> | 
+                    <strong>Structural Match Score:</strong> <span class="distance {% if res.distance > 0.85 %}strong{% endif %}">{{ res.distance }}</span> | 
                     <a href="{{ res.url }}" target="_blank">View on Paul's Online Notes</a>
                 </div>
                 
                 <p><strong>Problem:</strong></p>
                 <div style="font-size: 1.2em; padding: 10px 0;">{{ res.problem_latex | safe }}</div>
                 
-                <p><strong>Solution Steps:</strong></p>
-                <div class="solution">{{ res.solution | safe }}</div>
+                <p><strong>Database AST Signature:</strong></p>
+                <div class="ast-box">{{ res.ast_signature }}</div>
             </div>
         {% endfor %}
     {% elif query %}
-        <p>No matches found.</p>
+        <p>No matches found or equation could not be mathematically parsed.</p>
     {% endif %}
+
+    {% raw %}
+    <script>
+        // 1. Intercept the form submission to grab the raw LaTeX from the visual editor
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            const mathField = document.getElementById('math-input');
+            const hiddenInput = document.getElementById('hidden-query');
+
+            // Extract the perfect LaTeX string and pass it to Python
+            const latex = mathField.getValue('latex');
+            console.log('Submitting LaTeX:', JSON.stringify(latex));
+            hiddenInput.value = latex;
+        });
+
+        // 2. Override the MathLive Virtual Keyboard with our strict DB Schema
+        window.addEventListener('DOMContentLoaded', () => {
+            mathVirtualKeyboard.layouts = [
+                {
+                    label: 'Database Schema',
+                    tooltip: 'Strict Database Keyboard',
+                    rows: [
+                        // Row 1: Function notation & Specific Variables (f, g, h, A, P, Q, R)
+                        [
+                            { latex: "f" }, { latex: "g" }, { latex: "h" }, { class: "separator", width: 10 },
+                            { latex: "A" }, { latex: "P" }, { latex: "Q" }, { latex: "R" },
+                            { class: "action", label: "⌫", command: ["performWithFeedback", "deleteBackward"] }
+                        ],
+                        // Row 2: Standard Variables, Tuples, and FiniteSets
+                        [
+                            { latex: "x" }, { latex: "y" }, { latex: "z" }, { latex: "t" }, { latex: "w" },
+                            { latex: "(" }, { latex: ")" }, { latex: "\\{" }, { latex: "\\}" }, { latex: "," }
+                        ],
+                        // Row 3: Pow, Roots, Fractions, Abs
+                        [
+                            { latex: "^" }, { insert: "_{#?}", label: "x\u2082" }, { insert: "\\sqrt{#?}", label: "√" }, { insert: "\\sqrt[#?]{#?}", label: "ⁿ√" },
+                            { insert: "\\frac{#?}{#?}", label: "a/b" }, { insert: "\\left|#?\\right|", label: "|x|" },
+                            { latex: "7" }, { latex: "8" }, { latex: "9" }, { latex: "\\div" }
+                        ],
+                        // Row 4: Logarithms, Exp1 (e), and Equalities
+                        [
+                            { latex: "\\log" }, { insert: "\\log_{#?}(#?)", label: "log_n" }, { latex: "\\ln" }, { latex: "e" },
+                            { latex: "=" },
+                            { latex: "4" }, { latex: "5" }, { latex: "6" }, { latex: "\\times" }
+                        ],
+                        // Row 5: Relational Operators (GreaterThan, LessThan, etc.) and Navigation
+                        [
+                            { latex: "<" }, { latex: ">" }, { latex: "\\le" }, { latex: "\\ge" },
+                            { class: "action", label: "◀", command: ["performWithFeedback", "moveToPreviousChar"] },
+                            { class: "action", label: "▶", command: ["performWithFeedback", "moveToNextChar"] },
+                            { latex: "1" }, { latex: "2" }, { latex: "3" }, { latex: "-" }
+                        ],
+                        // Row 6: Numbers and Execution
+                        [
+                            { class: "separator", width: 5 },
+                            { latex: "0" }, { latex: "." }, { latex: "+" },
+                            { class: "action font-glyph bottom right", label: "↵", command: ["commit"] }
+                        ]
+                    ]
+                }
+            ];
+        });
+    </script>
+    {% endraw %}
+
 </body>
 </html>

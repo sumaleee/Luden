@@ -1,0 +1,444 @@
+--- AST PARSING FAILURES ---
+
+ID: pauls_alg_0080
+RAW LATEX: \(\sqrt x \left( {4 - 3\sqrt x } \right)\)
+ERROR: I expected something else here
+\sqrt x ( {4 - 3\sqrt x } )
+~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0081
+RAW LATEX: \(\left( {2\sqrt x  + 1} \right)\left( {3 - 4\sqrt x } \right)\)
+ERROR: I expected something else here
+( {2\sqrt x  + 1} )( {3 - 4\sqrt x } )
+~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0083
+RAW LATEX: \(\displaystyle \frac{6}{{\sqrt x }}\)
+ERROR: I expected something else here
+\frac{6}{{\sqrt x }}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0085
+RAW LATEX: \(\displaystyle \frac{4}{{\sqrt x  + 2\sqrt y }}\)
+ERROR: I expected something else here
+\frac{4}{{\sqrt x  + 2\sqrt y }}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0086
+RAW LATEX: \(\displaystyle \frac{{10}}{{3 - 5\sqrt x }}\)
+ERROR: I expected something else here
+\frac{{10}}{{3 - 5\sqrt x }}
+~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0109
+RAW LATEX: \(\left( {2\sqrt x  + 4} \right)\left( {\sqrt x  - 7} \right)\)
+ERROR: I expected something else here
+( {2\sqrt x  + 4} )( {\sqrt x  - 7} )
+~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0111
+RAW LATEX: \(\left( {\sqrt x  + \sqrt {2y} } \right)\left( {\sqrt x  - \sqrt {2y} } \right)\)
+ERROR: I expected something else here
+( {\sqrt x  + \sqrt {2y} } )( {\sqrt x  - \sqrt {2y} } )
+~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0113
+RAW LATEX: \(\displaystyle \frac{9}{{\sqrt y }}\)
+ERROR: I expected something else here
+\frac{9}{{\sqrt y }}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0117
+RAW LATEX: \(\displaystyle \frac{2}{{4 - \sqrt x }}\)
+ERROR: I expected something else here
+\frac{2}{{4 - \sqrt x }}
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0119
+RAW LATEX: \(\displaystyle \frac{4}{{\sqrt 7  - 6\sqrt x }}\)
+ERROR: I expected something else here
+\frac{4}{{\sqrt 7  - 6\sqrt x }}
+~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0120
+RAW LATEX: \(\displaystyle \frac{{ - 6}}{{\sqrt {5x}  + 10\sqrt y }}\)
+ERROR: I expected something else here
+\frac{{ - 6}}{{\sqrt {5x}  + 10\sqrt y }}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0121
+RAW LATEX: \(\displaystyle \frac{{4 + x}}{{x - \sqrt x }}\)
+ERROR: I expected something else here
+\frac{{4 + x}}{{x - \sqrt x }}
+~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0124
+RAW LATEX: \(\sqrt[4]{{{x^2}}} = \sqrt x\)
+ERROR: I expected one of these: '{' '['
+\sqrt[4]{{{x^2}}} = \sqrt x
+~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0218
+RAW LATEX: \(x - 7\sqrt x  - 18\)
+ERROR: I expected something else here
+x - 7\sqrt x  - 18
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0436
+RAW LATEX: \(\displaystyle \frac{1}{x} - \frac{{11}}{{\sqrt x }} + 18 = 0\)
+ERROR: I expected something else here
+\frac{1}{x} - \frac{{11}}{{\sqrt x }} + 18 = 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0440
+RAW LATEX: \(x - 8\sqrt x  + 15 = 0\)
+ERROR: I expected something else here
+x - 8\sqrt x  + 15 = 0
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0556
+RAW LATEX: \(y = 2 + \sqrt x\)
+ERROR: I expected something else here
+y = 2 + \sqrt x
+~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0617
+RAW LATEX: \(\sqrt 7\)
+ERROR: I expected something else here
+\sqrt 7
+~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0642
+RAW LATEX: \(\left\{ {\left( { - 1,8} \right),\left( {4, - 7} \right),\left( { - 1,6} \right),\left( {0,0} \right)} \right\}\)
+ERROR: cannot determine truth value of Relational: 0 < oo*1
+--------------------------------------------------
+ID: pauls_alg_0650
+RAW LATEX: \(h\left( z \right) = \left\{ {\begin{array}{*{20}{l}}{3z}&{{\rm{if }}z < 2}\\{1 + {z^2}}&{{\rm{if }}z \ge 2}\end{array}} \right.\)
+ERROR: I don't understand this
+h( z ) = \{ {\begin{array}{*{20}{l}}{3z}&{{\rm{if }}z < 2}\\{1 + {z^2}}&{{\rm{if }}z \ge 2}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0651
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}6&{{\rm{if }}x \ge 9}\\{x + 9}&{{\rm{if }}2 < x < 9}\\{{x^2}}&{{\rm{if }}x \le 2}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}6&{{\rm{if }}x \ge 9}\\{x + 9}&{{\rm{if }}2 < x < 9}\\{{x^2}}&{{\rm{if }}x \le 2}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0677
+RAW LATEX: \(g\left( t \right) = \left\{ {\begin{array}{*{20}{l}}{2 + t}&{{\mbox{if }}t \ge 10}\\{t - 7}&{{\mbox{if }}t < 10}\end{array}} \right.\)
+ERROR: I don't understand this
+g( t ) = \{ {\begin{array}{*{20}{l}}{2 + t}&{{\mbox{if }}t \ge 10}\\{t - 7}&{{\mbox{if }}t < 10}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0678
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{4{x^2}}&{{\mbox{if }}x <  - 4}\\{6x}&{{\mbox{if }}x \ge  - 4}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}{4{x^2}}&{{\mbox{if }}x <  - 4}\\{6x}&{{\mbox{if }}x \ge  - 4}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0679
+RAW LATEX: \(g\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{\displaystyle \frac{1}{2}x}&{{\mbox{if }}x \le 7}\\{{x^2} + 1}&{{\mbox{if }}7 < x < 11}\\{3 - x}&{{\mbox{if }}x \ge 11}\end{array}} \right.\)
+ERROR: I don't understand this
+g( x ) = \{ {\begin{array}{*{20}{l}}{ \frac{1}{2}x}&{{\mbox{if }}x \le 7}\\{{x^2} + 1}&{{\mbox{if }}7 < x < 11}\\{3 - x}&{{\mbox{if }}x \ge 11}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0680
+RAW LATEX: \(A\left( w \right) = \left\{ {\begin{array}{*{20}{l}}{12}&{{\mbox{if }}w >  - 8}\\{2 + 3w}&{{\mbox{if }} - 10 \le w \le  - 8}\\{ - 1}&{{\mbox{if }}w <  - 10}\end{array}} \right.\)
+ERROR: I don't understand this
+A( w ) = \{ {\begin{array}{*{20}{l}}{12}&{{\mbox{if }}w >  - 8}\\{2 + 3w}&{{\mbox{if }} - 10 \le w \le  - 8}\\{ - 1}&{{\mbox{if }}w <  - 10}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0681
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{2x}&{{\mbox{if }}x < 6}\\{4 + x}&{{\mbox{if }}x = 6}\\{{x^2}}&{{\mbox{if }}x > 6}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}{2x}&{{\mbox{if }}x < 6}\\{4 + x}&{{\mbox{if }}x = 6}\\{{x^2}}&{{\mbox{if }}x > 6}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0701
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{10 - 2x}&{{\rm{if }}x < 2}\\{{x^2} + 2}&{{\rm{if }}x \ge 2}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}{10 - 2x}&{{\rm{if }}x < 2}\\{{x^2} + 2}&{{\rm{if }}x \ge 2}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0702
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{5 + x}&{{\rm{if }}x \ge 1}\\2&{{\rm{if }} - 2 \le x < 1}\\{1 - {x^2}}&{{\rm{if }}x <  - 2}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}{5 + x}&{{\rm{if }}x \ge 1}\\2&{{\rm{if }} - 2 \le x < 1}\\{1 - {x^2}}&{{\rm{if }}x <  - 2}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0711
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}3&{{\rm{if }}x \ge 0}\\{4 - x}&{{\rm{if }}x < 0}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}3&{{\rm{if }}x \ge 0}\\{4 - x}&{{\rm{if }}x < 0}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0712
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{4x}&{{\rm{if }}x \le  - 2}\\{3 - 2x}&{{\rm{if }}x >  - 2}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}{4x}&{{\rm{if }}x \le  - 2}\\{3 - 2x}&{{\rm{if }}x >  - 2}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0713
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{2 - {x^2}}&{{\rm{if }}x < 1}\\{{{\left( {x - 2} \right)}^2}}&{{\rm{if }}x \ge 1}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}{2 - {x^2}}&{{\rm{if }}x < 1}\\{{{( {x - 2} )}^2}}&{{\rm{if }}x \ge 1}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0714
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{{x^2}}&{{\rm{if }}x > 3}\\4&{{\rm{if }} - 2 \le x \le 3}\\{1 - x}&{{\rm{if }}x <  - 2}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}{{x^2}}&{{\rm{if }}x > 3}\\4&{{\rm{if }} - 2 \le x \le 3}\\{1 - x}&{{\rm{if }}x <  - 2}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0715
+RAW LATEX: \(f\left( x \right) = \left\{ {\begin{array}{*{20}{l}}{1 - x}&{{\rm{if }}x \ge 1}\\{{x^2} - 1}&{{\rm{if }} - 1 < x < 1}\\{ - 1 - x}&{{\rm{if }}x \le  - 1}\end{array}} \right.\)
+ERROR: I don't understand this
+f( x ) = \{ {\begin{array}{*{20}{l}}{1 - x}&{{\rm{if }}x \ge 1}\\{{x^2} - 1}&{{\rm{if }} - 1 < x < 1}\\{ - 1 - x}&{{\rm{if }}x \le  - 1}\end{array}} 0.
+~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0720
+RAW LATEX: \(R\left( t \right) = \sqrt t  - 2\)
+ERROR: I expected one of these: '{' '['
+R( t ) = \sqrt t  - 2
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0810
+RAW LATEX: \(f\left( x \right) = \sqrt x  + 4\)
+ERROR: I expected one of these: '{' '['
+f( x ) = \sqrt x  + 4
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0818
+RAW LATEX: \(f\left( x \right) = \sqrt x  - 3\)
+ERROR: I expected one of these: '{' '['
+f( x ) = \sqrt x  - 3
+~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0824
+RAW LATEX: \(f\left( x \right) =  - \sqrt x\)
+ERROR: I expected one of these: '{' '['
+f( x ) =  - \sqrt x
+~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0876
+RAW LATEX: \(\begin{align*}A\left( x \right) & = {x^8} + 2{x^7} - 29{x^6} - 76{x^5} + 199{x^4} + 722{x^3} + 261{x^2} - 648x - 432\\ &  = {\left( {x + 1} \right)^2}{\left( {x - 4} \right)^2}\left( {x - 1} \right){\left( {x + 3} \right)^3}\end{align*}\)
+ERROR: I don't understand this
+= {( {x + 1} )^2}{( {x - 4} )^2}( {x - 1} ){( {x + 3} )^3}
+^
+--------------------------------------------------
+ID: pauls_alg_0964
+RAW LATEX: \({\log _2}\,32 = 5\)
+ERROR: I expected something else here
+{\log _2}32 = 5
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0965
+RAW LATEX: \({\log _{\frac{1}{5}}}\,\displaystyle \frac{1}{{625}} = 4\)
+ERROR: I expected something else here
+{\log _{\frac{1}{5}}} \frac{1}{{625}} = 4
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0966
+RAW LATEX: \({\log _9}\,\displaystyle \frac{1}{{81}} =  - 2\)
+ERROR: I expected something else here
+{\log _9} \frac{1}{{81}} =  - 2
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0967
+RAW LATEX: \({\log _3}81\)
+ERROR: I expected something else here
+{\log _3}81
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0968
+RAW LATEX: \({\log _5}125\)
+ERROR: I expected something else here
+{\log _5}125
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0969
+RAW LATEX: \({\log _2}\displaystyle \frac{1}{8}\)
+ERROR: I expected something else here
+{\log _2} \frac{1}{8}
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0970
+RAW LATEX: \({\log _{\frac{1}{4}}}16\)
+ERROR: I expected something else here
+{\log _{\frac{1}{4}}}16
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0975
+RAW LATEX: \({\log _4}\left( {\displaystyle \frac{{x - 4}}{{{y^2}\,\sqrt[5]{z}}}} \right)\)
+ERROR: I expected something else here
+{\log _4}( { \frac{{x - 4}}{{{y^2}\sqrt[5]{z}}}} )
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0976
+RAW LATEX: \(2{\log _4}x + 5{\log _4}y - \frac{1}{2}{\log _4}z\)
+ERROR: I expected something else here
+2{\log _4}x + 5{\log _4}y - \frac{1}{2}{\log _4}z
+~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0979
+RAW LATEX: \({\log _{12}}35\)
+ERROR: I expected something else here
+{\log _{12}}35
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0980
+RAW LATEX: \({\log _{\frac{2}{3}}}53\)
+ERROR: I expected something else here
+{\log _{\frac{2}{3}}}53
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0989
+RAW LATEX: \({\log _{\frac{1}{6}}}\,36 =  - 2\)
+ERROR: I expected something else here
+{\log _{\frac{1}{6}}}36 =  - 2
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0990
+RAW LATEX: \({\log _{12}}\,20736 = 4\)
+ERROR: I expected something else here
+{\log _{12}}20736 = 4
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0991
+RAW LATEX: \({\log _9}\,243 =\displaystyle  \frac{5}{2}\)
+ERROR: I expected something else here
+{\log _9}243 =  \frac{5}{2}
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0992
+RAW LATEX: \(\displaystyle {\log _4}\,\frac{1}{{128}} =  - \frac{7}{2}\)
+ERROR: I expected something else here
+{\log _4}\frac{1}{{128}} =  - \frac{7}{2}
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0993
+RAW LATEX: \({\log _8}\,32768 = 5\)
+ERROR: I expected something else here
+{\log _8}32768 = 5
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0994
+RAW LATEX: \({\log _7}343\)
+ERROR: I expected something else here
+{\log _7}343
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0995
+RAW LATEX: \({\log _4}1024\)
+ERROR: I expected something else here
+{\log _4}1024
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0996
+RAW LATEX: \({\log _{\frac{3}{8}}}\displaystyle \frac{{27}}{{512}}\)
+ERROR: I expected something else here
+{\log _{\frac{3}{8}}} \frac{{27}}{{512}}
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0997
+RAW LATEX: \({\log _{11}}\displaystyle \frac{1}{{121}}\)
+ERROR: I expected something else here
+{\log _{11}} \frac{1}{{121}}
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0998
+RAW LATEX: \({\log _{0.1}}0.0001\)
+ERROR: I expected something else here
+{\log _{0.1}}0.0001
+~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_0999
+RAW LATEX: \({\log _{16}}4\)
+ERROR: I expected something else here
+{\log _{16}}4
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1002
+RAW LATEX: \({\log _7}\left( {10{a^7}{b^3}{c^{ - 8}}} \right)\)
+ERROR: I expected something else here
+{\log _7}( {10{a^7}{b^3}{c^{ - 8}}} )
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1007
+RAW LATEX: \(2{\log _3}\left( {x + y} \right) + 6{\log _3}x - \displaystyle \frac{1}{3}\)
+ERROR: I expected something else here
+2{\log _3}( {x + y} ) + 6{\log _3}x -  \frac{1}{3}
+~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1008
+RAW LATEX: \({\log _7}100\)
+ERROR: I expected something else here
+{\log _7}100
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1009
+RAW LATEX: \({\log _{\frac{5}{7}}}\displaystyle \frac{1}{8}\)
+ERROR: I expected something else here
+{\log _{\frac{5}{7}}} \frac{1}{8}
+~~~~~~~~~~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1040
+RAW LATEX: \({\log _4}\left( {{x^2} - 2x} \right) = {\log _4}\left( {5x - 12} \right)\)
+ERROR: I expected something else here
+{\log _4}( {{x^2} - 2x} ) = {\log _4}( {5x - 12} )
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1043
+RAW LATEX: \({\log _3}\left( {25 - {x^2}} \right) = 2\)
+ERROR: I expected something else here
+{\log _3}( {25 - {x^2}} ) = 2
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1044
+RAW LATEX: \({\log _2}\left( {x + 1} \right) - {\log _2}\left( {2 - x} \right) = 3\)
+ERROR: I expected something else here
+{\log _2}( {x + 1} ) - {\log _2}( {2 - x} ) = 3
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1045
+RAW LATEX: \({\log _4}\left( { - x} \right) + {\log _4}\left( {6 - x} \right) = 2\)
+ERROR: I expected something else here
+{\log _4}( { - x} ) + {\log _4}( {6 - x} ) = 2
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1049
+RAW LATEX: \({\log _{11}}\left( {{x^2} + 3x} \right) = {\log _{11}}\left( {3x + 16} \right)\)
+ERROR: I expected something else here
+{\log _{11}}( {{x^2} + 3x} ) = {\log _{11}}( {3x + 16} )
+~~~~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1053
+RAW LATEX: \({\log _8}\left( {4x + 1} \right) =  - 1\)
+ERROR: I expected something else here
+{\log _8}( {4x + 1} ) =  - 1
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1054
+RAW LATEX: \({\log _6}\left( {3x} \right) - {\log _6}\left( {x + 5} \right) = 1\)
+ERROR: I expected something else here
+{\log _6}( {3x} ) - {\log _6}( {x + 5} ) = 1
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1055
+RAW LATEX: \({\log _3}\left( x \right) + {\log _3}\left( {x + 6} \right) = 3\)
+ERROR: I expected something else here
+{\log _3}( x ) + {\log _3}( {x + 6} ) = 3
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1056
+RAW LATEX: \({\log _2}\left( {{x^2}} \right) = 2 + {\log _2}\left( {8 - x} \right)\)
+ERROR: I expected something else here
+{\log _2}( {{x^2}} ) = 2 + {\log _2}( {8 - x} )
+~~~~~~~~^
+--------------------------------------------------
+ID: pauls_alg_1057
+RAW LATEX: \({\log _4}\left( x \right) = 2 - {\log _4}\left( {x + 6} \right)\)
+ERROR: I expected something else here
+{\log _4}( x ) = 2 - {\log _4}( {x + 6} )
+~~~~~~~~^
+--------------------------------------------------
