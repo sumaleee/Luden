@@ -1,47 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luden Math Tutor MVP</title>
-    
+
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script defer src="https://unpkg.com/mathlive"></script>
-    
+
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
-        .search-box { background: #f4f4f9; padding: 25px; border-radius: 8px; margin-bottom: 30px; }
-        
-        /* Styling the MathLive component to look like a clean input box */
-        math-field { font-size: 24px; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; background: white; width: 100%; box-sizing: border-box; }
-        math-field::part(virtual-keyboard-toggle) { color: #0056b3; } /* Colors the keyboard icon */
-        
-        button { background: #0056b3; color: white; border: none; padding: 12px 24px; font-size: 16px; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #004494; }
-        .result-card { border: 1px solid #e0e0e0; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .meta { color: #666; font-size: 0.9em; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
-        .ast-box { background: #fdfdfd; padding: 15px; border-left: 4px solid #0056b3; overflow-x: auto; margin-top: 15px; font-family: monospace; font-size: 14px; color: #444; }
-        .query-ast-box { background: #eef2f5; padding: 15px; border-radius: 4px; border-left: 4px solid #6c757d; font-family: monospace; margin-bottom: 25px; overflow-x: auto;}
-        .distance { font-weight: bold; color: #d9534f; }
-        .distance.strong { color: #28a745; }
+        :root[data-theme="dark"] {
+            --bg:           #0f0f1a;
+            --surface:      #1a1a2e;
+            --card:         #1e1e35;
+            --border:       #2e2e50;
+            --text:         #e0e0f0;
+            --text-muted:   #8888aa;
+            --accent:       #4d8eea;
+            --accent-hover: #3a78d4;
+            --input-bg:     #12122a;
+            --ast-bg:       #13132a;
+            --ast-border:   #4d8eea;
+            --query-bg:     #1a1a35;
+            --query-border: #555580;
+            --divider:      #2e2e50;
+            --shadow:       rgba(0,0,0,0.4);
+        }
+        :root[data-theme="light"] {
+            --bg:           #f4f4f9;
+            --surface:      #ffffff;
+            --card:         #ffffff;
+            --border:       #e0e0e0;
+            --text:         #333333;
+            --text-muted:   #666666;
+            --accent:       #0056b3;
+            --accent-hover: #004494;
+            --input-bg:     #ffffff;
+            --ast-bg:       #fdfdfd;
+            --ast-border:   #0056b3;
+            --query-bg:     #eef2f5;
+            --query-border: #6c757d;
+            --divider:      #eeeeee;
+            --shadow:       rgba(0,0,0,0.05);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        /* ── Header ── */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .header h1 { margin: 0; }
+
+        /* ── Theme toggle ── */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 6px 14px;
+            color: var(--text);
+            font-size: 14px;
+            transition: background 0.2s, border-color 0.2s;
+            user-select: none;
+        }
+        .theme-toggle:hover { background: var(--card); }
+        .theme-toggle .icon { font-size: 16px; }
+
+        /* ── Search box ── */
+        .search-box {
+            background: var(--surface);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        math-field {
+            font-size: 24px;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: var(--input-bg);
+            color: var(--text);
+            width: 100%;
+        }
+        math-field::part(virtual-keyboard-toggle) { color: var(--accent); }
+
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        button:hover { background: var(--accent-hover); }
+
+        /* ── Result cards ── */
+        .result-card {
+            border: 1px solid var(--border);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            background: var(--card);
+            box-shadow: 0 2px 6px var(--shadow);
+        }
+
+        .meta {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--divider);
+        }
+        .meta a { color: var(--accent); }
+
+        .ast-box {
+            background: var(--ast-bg);
+            padding: 15px;
+            border-left: 4px solid var(--ast-border);
+            overflow-x: auto;
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 14px;
+            color: var(--text);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .query-ast-box {
+            background: var(--query-bg);
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid var(--query-border);
+            font-family: monospace;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            color: var(--text);
+        }
+
+        .raw-query {
+            font-family: monospace;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* ── Distance color coding ── */
+        .distance { font-weight: bold; }
+        .dist-green  { color: #28c76f; }   /* close */
+        .dist-yellow { color: #f5a623; }   /* iffy  */
+        .dist-red    { color: #e05c5c; }   /* far   */
     </style>
 </head>
 <body>
-    <h1>Luden Math Tutor</h1>
+    <div class="header">
+        <h1>Luden Math Tutor</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">
+            <span class="icon" id="theme-icon">☀️</span>
+            <span id="theme-label">Light Mode</span>
+        </button>
+    </div>
     <p>Use the math keyboard below to enter an equation. The system will parse its Abstract Syntax Tree (AST) and retrieve the most topologically identical problems.</p>
-    
+
     <div class="search-box">
         <form method="POST" id="search-form">
             <math-field id="math-input" virtual-keyboard-mode="manual">{% if query %}{{ query }}{% endif %}</math-field>
-            
             <input type="hidden" name="query" id="hidden-query" value="{{ query }}">
-            
-            <button type="submit">Find Exact Structural Matches</button>
+            <button type="submit">Find Matches</button>
         </form>
     </div>
 
     {% if query %}
-        <p style="font-family:monospace;font-size:12px;color:#999;">Raw submitted: {{ query | e }}</p>
+        <p class="raw-query">Raw submitted: {{ query | e }}</p>
     {% endif %}
     {% if query_ast %}
         <h3>Your Query's Mathematical Structure:</h3>
@@ -49,17 +200,24 @@
     {% endif %}
 
     {% if results %}
-        <h2>Top 5 Matches</h2>
+        <h2>Top 10 Matches</h2>
         {% for res in results %}
             <div class="result-card">
                 <div class="meta">
-                    <strong>Structural Match Score:</strong> <span class="distance {% if res.distance > 0.85 %}strong{% endif %}">{{ res.distance }}</span> | 
+                    <strong>Structural Match Score:</strong>
+                    <span class="distance
+                        {% if res.distance >= 0.70 %}dist-green
+                        {% elif res.distance >= 0.45 %}dist-yellow
+                        {% else %}dist-red{% endif %}">
+                        {{ res.distance }}
+                    </span>
+                    &nbsp;|&nbsp;
                     <a href="{{ res.url }}" target="_blank">View on Paul's Online Notes</a>
                 </div>
-                
+
                 <p><strong>Problem:</strong></p>
                 <div style="font-size: 1.2em; padding: 10px 0;">{{ res.problem_latex | safe }}</div>
-                
+
                 <p><strong>Database AST Signature:</strong></p>
                 <div class="ast-box">{{ res.ast_signature }}</div>
             </div>
@@ -70,55 +228,67 @@
 
     {% raw %}
     <script>
-        // 1. Intercept the form submission to grab the raw LaTeX from the visual editor
-        document.getElementById('search-form').addEventListener('submit', function(e) {
-            const mathField = document.getElementById('math-input');
-            const hiddenInput = document.getElementById('hidden-query');
+        // ── Theme ──────────────────────────────────────────────
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const isDark = theme === 'dark';
+            document.getElementById('theme-icon').textContent  = isDark ? '☀️' : '🌙';
+            document.getElementById('theme-label').textContent = isDark ? 'Light Mode' : 'Dark Mode';
+            localStorage.setItem('luden-theme', theme);
+        }
 
-            // Extract the perfect LaTeX string and pass it to Python
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        }
+
+        // Apply saved preference on load (default: dark)
+        (function() {
+            const saved = localStorage.getItem('luden-theme') || 'dark';
+            applyTheme(saved);
+        })();
+
+        // ── Form submit ────────────────────────────────────────
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            const mathField  = document.getElementById('math-input');
+            const hiddenInput = document.getElementById('hidden-query');
             const latex = mathField.getValue('latex');
             console.log('Submitting LaTeX:', JSON.stringify(latex));
             hiddenInput.value = latex;
         });
 
-        // 2. Override the MathLive Virtual Keyboard with our strict DB Schema
+        // ── Virtual keyboard layout ────────────────────────────
         window.addEventListener('DOMContentLoaded', () => {
             mathVirtualKeyboard.layouts = [
                 {
                     label: 'Database Schema',
                     tooltip: 'Strict Database Keyboard',
                     rows: [
-                        // Row 1: Function notation & Specific Variables (f, g, h, A, P, Q, R)
                         [
                             { latex: "f" }, { latex: "g" }, { latex: "h" }, { class: "separator", width: 10 },
                             { latex: "A" }, { latex: "P" }, { latex: "Q" }, { latex: "R" },
                             { class: "action", label: "⌫", command: ["performWithFeedback", "deleteBackward"] }
                         ],
-                        // Row 2: Standard Variables, Tuples, and FiniteSets
                         [
                             { latex: "x" }, { latex: "y" }, { latex: "z" }, { latex: "t" }, { latex: "w" },
                             { latex: "(" }, { latex: ")" }, { latex: "\\{" }, { latex: "\\}" }, { latex: "," }
                         ],
-                        // Row 3: Pow, Roots, Fractions, Abs
                         [
                             { latex: "^" }, { insert: "_{#?}", label: "x\u2082" }, { insert: "\\sqrt{#?}", label: "√" }, { insert: "\\sqrt[#?]{#?}", label: "ⁿ√" },
                             { insert: "\\frac{#?}{#?}", label: "a/b" }, { insert: "\\left|#?\\right|", label: "|x|" },
                             { latex: "7" }, { latex: "8" }, { latex: "9" }, { latex: "\\div" }
                         ],
-                        // Row 4: Logarithms, Exp1 (e), and Equalities
                         [
                             { latex: "\\log" }, { insert: "\\log_{#?}(#?)", label: "log_n" }, { latex: "\\ln" }, { latex: "e" },
                             { latex: "=" },
                             { latex: "4" }, { latex: "5" }, { latex: "6" }, { latex: "\\times" }
                         ],
-                        // Row 5: Relational Operators (GreaterThan, LessThan, etc.) and Navigation
                         [
                             { latex: "<" }, { latex: ">" }, { latex: "\\le" }, { latex: "\\ge" },
                             { class: "action", label: "◀", command: ["performWithFeedback", "moveToPreviousChar"] },
                             { class: "action", label: "▶", command: ["performWithFeedback", "moveToNextChar"] },
                             { latex: "1" }, { latex: "2" }, { latex: "3" }, { latex: "-" }
                         ],
-                        // Row 6: Numbers and Execution
                         [
                             { class: "separator", width: 5 },
                             { latex: "0" }, { latex: "." }, { latex: "+" },

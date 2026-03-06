@@ -1,4 +1,5 @@
 .venv/
+venv/
 Luden.code-workspace
 __pycache__/
 math_knowledge_base/

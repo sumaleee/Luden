@@ -1,12 +1,14 @@
 import json
+import os
 import re
 from sympy.core.parameters import evaluate
 from sympy import Tuple
 from latex2sympy2_extended import latex2sympy
 
-DATA_FILE = "algebra_data.json"
-DB_FILE = "ast_database.json"
-LOG_FILE = "failed_parses.log"
+_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(_DIR, "algebra_data.json")
+DB_FILE   = os.path.join(_DIR, "ast_database.json")
+LOG_FILE  = os.path.join(_DIR, "failed_parses.log")
 
 def clean_latex(latex_str):
     s = latex_str.strip()
@@ -56,6 +58,28 @@ def parse_to_ast(cleaned_latex):
     # Normal single equation parsing
     return latex2sympy(cleaned_latex)
 
+def _root_degree(exp):
+    """Return integer n if exp represents 1/n (a root exponent), else None.
+
+    Handles both SymPy forms:
+      - Rational(1, n)  — produced when evaluate=True or by some parsers
+      - Pow(n, -1)      — produced when evaluate=False keeps it unevaluated
+    """
+    # Rational(1, n) form
+    if (getattr(exp, 'is_Rational', False)
+            and not getattr(exp, 'is_Integer', False)
+            and getattr(exp, 'p', None) == 1):
+        return getattr(exp, 'q', None)
+    # Pow(n, -1) form
+    if exp.func.__name__ == 'Pow' and len(exp.args) == 2:
+        b, e = exp.args
+        if (getattr(b, 'is_Integer', False)
+                and getattr(b, 'is_positive', False)
+                and e == -1):
+            return int(b)
+    return None
+
+
 def to_prefix(node, var_map):
     if getattr(node, 'is_Number', False):
         if getattr(node, 'is_Rational', False) and not getattr(node, 'is_Integer', False):
@@ -63,6 +87,12 @@ def to_prefix(node, var_map):
             # explicitly as division: numerator C / denominator C
             return "Div C C"
         return "C"
+    # Imaginary unit: latex2sympy yields Symbol('i'), SymPy core yields ImaginaryUnit.
+    # Either way, treat as a named constant so it never maps to X1/X2/…
+    if node.func.__name__ == 'ImaginaryUnit':
+        return "I"
+    if node.is_Symbol and getattr(node, 'name', None) == 'i':
+        return "I"
     if node in var_map:
         return var_map[node]
     if not node.args:
@@ -86,28 +116,79 @@ def to_prefix(node, var_map):
             elif len(numer_args) == 1:
                 numer_str = to_prefix(numer_args[0], var_map)
             else:
-                numer_str = "Mul " + " ".join(to_prefix(a, var_map) for a in numer_args)
+                parts = sorted(to_prefix(a, var_map) for a in numer_args)
+                numer_str = "Mul " + " ".join(parts)
             if len(denom_args) == 1:
                 denom_str = to_prefix(denom_args[0], var_map)
             else:
-                denom_str = "Mul " + " ".join(to_prefix(d, var_map) for d in denom_args)
+                parts = sorted(to_prefix(d, var_map) for d in denom_args)
+                denom_str = "Mul " + " ".join(parts)
             return f"Div {numer_str} {denom_str}"
+
+    # Distinguish sqrt / nthroot from general Pow so they don't cross-match.
+    # SymPy can represent 1/n exponents two ways depending on evaluate context:
+    #   Rational(1, n)  — e.g. sqrt(x) -> Pow(x, Rational(1,2))
+    #   Pow(n, -1)      — e.g. cbrt(x^2) -> Pow(Pow(x,2), Pow(3,-1))
+    if func_name == 'Pow' and len(node.args) == 2:
+        base, exp = node.args
+        n = _root_degree(exp)
+        if n == 2:
+            return f"sqrt {to_prefix(base, var_map)}"
+        if n is not None and n > 2:
+            return f"nthroot {to_prefix(base, var_map)} C"
+
+    # Commutative ops: sort arg prefixes so x+3 and 3+x produce the same signature
+    if func_name in ('Add', 'Mul'):
+        arg_prefixes = sorted(to_prefix(arg, var_map) for arg in node.args)
+        return f"{func_name} {' '.join(arg_prefixes)}"
 
     args_prefix = " ".join(to_prefix(arg, var_map) for arg in node.args)
     return f"{func_name} {args_prefix}"
+
+def _is_label_side(node):
+    """True if this side of an equation is just a variable label with no
+    structural content — i.e. it shouldn't drive similarity matching.
+
+    Covers:
+      - bare Symbol:            y, A, f
+      - applied undefined fn:   f(x), g(x, y)  — the function name carries no
+                                structure beyond the variables it wraps
+    """
+    if node.is_Symbol:
+        return True
+    if (node.args
+            and all(getattr(a, 'is_Symbol', False) for a in node.args)
+            and type(node.func).__name__ == 'UndefinedFunction'):
+        return True
+    return False
+
 
 def get_canonical_ast_signature(latex_str):
     cleaned = clean_latex(latex_str)
     try:
         with evaluate(False):
             expr = parse_to_ast(cleaned)
-            
-            free_syms = sorted(list(expr.free_symbols), key=lambda var: var.name)
+
+            # For equations like  y = 3x-1 / A = Pe^{rt} / f(x) = x^2,
+            # one side is just a label — strip it so matching focuses on
+            # the structurally rich side only.
+            if expr.func.__name__ == 'Equality' and len(expr.args) == 2:
+                lhs, rhs = expr.args
+                if _is_label_side(lhs):
+                    expr = rhs
+                elif _is_label_side(rhs):
+                    expr = lhs
+
+            # Exclude 'i' — it's the imaginary unit, not a problem variable
+            free_syms = sorted(
+                [s for s in expr.free_symbols if getattr(s, 'name', None) != 'i'],
+                key=lambda var: var.name
+            )
             var_map = {sym: f"X{i+1}" for i, sym in enumerate(free_syms)}
-            
+
             prefix_str = to_prefix(expr, var_map)
             return prefix_str, len(free_syms), None
-            
+
     except Exception as e:
         return None, 0, str(e)
 
