@@ -5,3 +5,5 @@ latex2sympy==1.0.3
 latex2sympy2_extended==1.11.0
 requests==2.31.0
 sympy==1.14.0
+pix2tex[gui]
+Pillow

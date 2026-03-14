@@ -1,7 +1,9 @@
 import os
 import json
 import difflib
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from PIL import Image
+import io
 from build_ast import get_canonical_ast_signature
 
 app = Flask(__name__)
@@ -42,6 +44,26 @@ def hierarchical_score(query_ast, db_ast):
     seq_match = difflib.SequenceMatcher(None, query_ast, db_ast).ratio()
 
     return 0.45 * top_match + 0.30 * op_match + 0.25 * seq_match
+
+_ocr_model = None
+
+def get_ocr_model():
+    global _ocr_model
+    if _ocr_model is None:
+        from pix2tex.cli import LatexOCR
+        _ocr_model = LatexOCR()
+    return _ocr_model
+
+@app.route("/ocr", methods=["POST"])
+def ocr():
+    if "image" not in request.files:
+        return jsonify({"error": "No image provided"}), 400
+    img = Image.open(io.BytesIO(request.files["image"].read())).convert("RGB")
+    try:
+        latex = get_ocr_model()(img)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    return jsonify({"latex": latex})
 
 @app.route("/", methods=["GET", "POST"])
 def index():

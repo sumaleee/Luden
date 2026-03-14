@@ -7,6 +7,8 @@
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script defer src="https://unpkg.com/mathlive"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"></script>
 
     <style>
         :root[data-theme="dark"] {
@@ -118,6 +120,82 @@
         }
         button:hover { background: var(--accent-hover); }
 
+        .drop-zone {
+            border: 2px dashed var(--border);
+            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 14px;
+            transition: border-color 0.15s, background 0.15s;
+            user-select: none;
+        }
+        .drop-zone:hover, .drop-zone.drag-over {
+            border-color: var(--accent);
+            background: var(--input-bg);
+            color: var(--text);
+        }
+        #ocr-status {
+            display: block;
+            margin-top: 6px;
+            font-size: 13px;
+            color: var(--text-muted);
+            min-height: 18px;
+        }
+
+        /* ── Crop modal ── */
+        .crop-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.75);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .crop-overlay.active { display: flex; }
+        .crop-modal {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .crop-modal p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .crop-container {
+            max-height: 65vh;
+            overflow: hidden;
+        }
+        .crop-container img {
+            display: block;
+            max-width: 100%;
+        }
+        .crop-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        .btn-secondary {
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-secondary:hover { background: var(--surface); }
+
         /* ── Result cards ── */
         .result-card {
             border: 1px solid var(--border);
@@ -184,6 +262,11 @@
     <p>Use the math keyboard below to enter an equation. The system will parse its Abstract Syntax Tree (AST) and retrieve the most topologically identical problems.</p>
 
     <div class="search-box">
+        <div class="drop-zone" id="drop-zone">
+            Drop an image here, or click to upload
+            <span id="ocr-status"></span>
+        </div>
+        <input type="file" id="ocr-file" accept="image/*" style="display:none">
         <form method="POST" id="search-form">
             <math-field id="math-input" virtual-keyboard-mode="manual">{% if query %}{{ query }}{% endif %}</math-field>
             <input type="hidden" name="query" id="hidden-query" value="{{ query }}">
@@ -226,6 +309,20 @@
         <p>No matches found or equation could not be mathematically parsed.</p>
     {% endif %}
 
+    <!-- Crop modal -->
+    <div class="crop-overlay" id="crop-overlay">
+        <div class="crop-modal">
+            <p>Select the region containing the equation, then click Crop &amp; Scan.</p>
+            <div class="crop-container">
+                <img id="crop-img" src="" alt="crop target">
+            </div>
+            <div class="crop-actions">
+                <button type="button" class="btn-secondary" id="crop-cancel">Cancel</button>
+                <button type="button" id="crop-confirm">Crop &amp; Scan</button>
+            </div>
+        </div>
+    </div>
+
     {% raw %}
     <script>
         // ── Theme ──────────────────────────────────────────────
@@ -255,6 +352,75 @@
             const latex = mathField.getValue('latex');
             console.log('Submitting LaTeX:', JSON.stringify(latex));
             hiddenInput.value = latex;
+        });
+
+        // ── OCR + Crop ─────────────────────────────────────────
+        const dropZone    = document.getElementById('drop-zone');
+        const ocrFile     = document.getElementById('ocr-file');
+        const ocrStatus   = document.getElementById('ocr-status');
+        const cropOverlay = document.getElementById('crop-overlay');
+        const cropImg     = document.getElementById('crop-img');
+        let cropper       = null;
+
+        function openCropper(file) {
+            const url = URL.createObjectURL(file);
+            cropImg.src = url;
+            cropOverlay.classList.add('active');
+            // Init cropper after image loads
+            cropImg.onload = () => {
+                if (cropper) cropper.destroy();
+                cropper = new Cropper(cropImg, { viewMode: 1, autoCropArea: 0.8 });
+            };
+        }
+
+        document.getElementById('crop-cancel').addEventListener('click', () => {
+            cropOverlay.classList.remove('active');
+            if (cropper) { cropper.destroy(); cropper = null; }
+            URL.revokeObjectURL(cropImg.src);
+            ocrFile.value = '';
+        });
+
+        document.getElementById('crop-confirm').addEventListener('click', async () => {
+            if (!cropper) return;
+            cropOverlay.classList.remove('active');
+            ocrStatus.textContent = 'Processing…';
+
+            cropper.getCroppedCanvas().toBlob(async (blob) => {
+                cropper.destroy(); cropper = null;
+                URL.revokeObjectURL(cropImg.src);
+                ocrFile.value = '';
+
+                const fd = new FormData();
+                fd.append('image', blob, 'crop.png');
+                try {
+                    const res  = await fetch('/ocr', { method: 'POST', body: fd });
+                    const data = await res.json();
+                    if (data.latex) {
+                        document.getElementById('math-input').setValue(data.latex);
+                        ocrStatus.textContent = '✓ Equation loaded';
+                    } else {
+                        ocrStatus.textContent = 'Error: ' + (data.error || 'unknown');
+                    }
+                } catch(e) {
+                    ocrStatus.textContent = 'Request failed';
+                }
+            }, 'image/png');
+        });
+
+        // Click to open file picker
+        dropZone.addEventListener('click', () => ocrFile.click());
+        ocrFile.addEventListener('change', function() {
+            if (this.files[0]) openCropper(this.files[0]);
+        });
+
+        // Drag and drop
+        dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+        dropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+            const file = e.dataTransfer.files[0];
+            if (file) openCropper(file);
         });
 
         // ── Virtual keyboard layout ────────────────────────────
