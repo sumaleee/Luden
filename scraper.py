@@ -9,25 +9,39 @@ BASE_URL = "https://tutorial.math.lamar.edu"
 INDEX_URL = f"{BASE_URL}/Classes/Alg/Alg.aspx"
 OUTPUT_FILE = "algebra_data.json"
 
-def extract_latex_from_element(el):
-    tex = el.find("script", type="math/tex")
-    if tex:
-        return tex.get_text(strip=True)
+def extract_all_latex_from_element(el):
+    """Return every distinct LaTeX expression found in a problem <li>.
 
+    Paul's site embeds math either as <script type="math/tex"> nodes or as
+    inline \(...\) / \[...\] delimiters in the text.  A single problem often
+    contains multiple expressions (e.g. "Add 10x^5+2x^3-1 to 8x^4-x^3+16x^2"
+    has two separate polynomials).  We collect all of them so each gets its
+    own entry in the dataset and, later, its own AST signature.
+    """
+    results = []
+
+    # Strategy 1: <script type="math/tex"> nodes (older MathJax inline markup)
+    for script in el.find_all("script", type="math/tex"):
+        t = script.get_text(strip=True)
+        if t:
+            results.append(t)
+
+    if results:
+        return results
+
+    # Strategy 2: \(...\) and \[...\] delimiters in plain text
     el_copy = copy.deepcopy(el)
     for a in el_copy.find_all("a"):
         a.decompose()
     raw = el_copy.get_text(" ", strip=True)
 
-    m = re.search(r'\\\((.+?)\\\)', raw, re.DOTALL)
-    if m:
-        return "\\(" + m.group(1).strip() + "\\)"
-        
-    m2 = re.search(r'\\\[(.+?)\\\]', raw, re.DOTALL)
-    if m2:
-        return "\\[" + m2.group(1).strip() + "\\]"
+    for m in re.finditer(r'\\\((.+?)\\\)', raw, re.DOTALL):
+        results.append("\\(" + m.group(1).strip() + "\\)")
 
-    return None
+    for m in re.finditer(r'\\\[(.+?)\\\]', raw, re.DOTALL):
+        results.append("\\[" + m.group(1).strip() + "\\]")
+
+    return results
 
 def main():
     session = requests.Session()
@@ -82,8 +96,7 @@ def main():
             found_here = 0
             for ol in problem_lists:
                 for li in ol.find_all('li', recursive=False):
-                    tex = extract_latex_from_element(li)
-                    if tex:
+                    for tex in extract_all_latex_from_element(li):
                         problem_count += 1
                         found_here += 1
                         dataset.append({
